@@ -1,0 +1,123 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package com.roxolanus.gle.domain;
+
+import java.io.Serializable;
+import java.util.List;
+import javax.persistence.Basic;
+import javax.persistence.CascadeType;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.NamedQueries;
+import javax.persistence.NamedQuery;
+import javax.persistence.OneToMany;
+import javax.persistence.Table;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
+
+/**
+ *
+ * @author 1
+ */
+@Entity
+@Table(name = "gle_assignment")
+@NamedQueries({
+    @NamedQuery(name = "Assignment.findAll", query = "SELECT a FROM Assignment a"),
+    @NamedQuery(name = "Assignment.findByIdAssignment", query = "SELECT a FROM Assignment a WHERE a.idAssignment = :idAssignment"),
+    @NamedQuery(name = "Assignment.findByAssignmentTitle", query = "SELECT a FROM Assignment a WHERE a.assignmentTitle = :assignmentTitle")})
+public class Assignment implements Serializable {
+    private static final long serialVersionUID = 1L;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Basic(optional = false)
+    @Column(name = "id_assignment")
+    private Integer idAssignment;
+    @Basic(optional = false)
+    @NotNull
+    @Size(min = 1, max = 200)
+    @Column(name = "assignment_title")
+    private String assignmentTitle;
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "idAssignment")
+    private List<AssignmentSubmission> assignmentSubmissionList;
+    @JoinColumn(name = "id_course", referencedColumnName = "id_course")
+    @ManyToOne(optional = false)
+    private Course idCourse;
+
+    public Assignment() {
+    }
+
+    public Assignment(Integer idAssignment) {
+        this.idAssignment = idAssignment;
+    }
+
+    public Assignment(Integer idAssignment, String assignmentTitle) {
+        this.idAssignment = idAssignment;
+        this.assignmentTitle = assignmentTitle;
+    }
+
+    public Integer getIdAssignment() {
+        return idAssignment;
+    }
+
+    public void setIdAssignment(Integer idAssignment) {
+        this.idAssignment = idAssignment;
+    }
+
+    public String getAssignmentTitle() {
+        return assignmentTitle;
+    }
+
+    public void setAssignmentTitle(String assignmentTitle) {
+        this.assignmentTitle = assignmentTitle;
+    }
+
+    public List<AssignmentSubmission> getAssignmentSubmissionList() {
+        return assignmentSubmissionList;
+    }
+
+    public void setAssignmentSubmissionList(List<AssignmentSubmission> assignmentSubmissionList) {
+        this.assignmentSubmissionList = assignmentSubmissionList;
+    }
+
+    public Course getIdCourse() {
+        return idCourse;
+    }
+
+    public void setIdCourse(Course idCourse) {
+        this.idCourse = idCourse;
+    }
+
+    @Override
+    public int hashCode() {
+        int hash = 0;
+        hash += (idAssignment != null ? idAssignment.hashCode() : 0);
+        return hash;
+    }
+
+    @Override
+    public boolean equals(Object object) {
+        // TODO: Warning - this method won't work in the case the id fields are not set
+        if (!(object instanceof Assignment)) {
+            return false;
+        }
+        Assignment other = (Assignment) object;
+        if ((this.idAssignment == null && other.idAssignment != null) || (this.idAssignment != null && !this.idAssignment.equals(other.idAssignment))) {
+            return false;
+        }
+        return true;
+    }
+
+    @Override
+    public String toString() {
+        return "com.roxolanus.gle.domain.Assignment[ idAssignment=" + idAssignment + " ]";
+    }
+    
+}
