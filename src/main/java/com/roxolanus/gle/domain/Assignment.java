@@ -6,9 +6,7 @@
 package com.roxolanus.gle.domain;
 
 import java.io.Serializable;
-import java.util.List;
 import javax.persistence.Basic;
-import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -18,7 +16,6 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
-import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
@@ -45,11 +42,9 @@ public class Assignment implements Serializable {
     @Size(min = 1, max = 200)
     @Column(name = "assignment_title")
     private String assignmentTitle;
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "idAssignment")
-    private List<AssignmentSubmission> assignmentSubmissionList;
     @JoinColumn(name = "id_course", referencedColumnName = "id_course")
     @ManyToOne(optional = false)
-    private Course idCourse;
+    private Course course;
 
     public Assignment() {
     }
@@ -79,20 +74,12 @@ public class Assignment implements Serializable {
         this.assignmentTitle = assignmentTitle;
     }
 
-    public List<AssignmentSubmission> getAssignmentSubmissionList() {
-        return assignmentSubmissionList;
+    public Course getCourse() {
+        return course;
     }
 
-    public void setAssignmentSubmissionList(List<AssignmentSubmission> assignmentSubmissionList) {
-        this.assignmentSubmissionList = assignmentSubmissionList;
-    }
-
-    public Course getIdCourse() {
-        return idCourse;
-    }
-
-    public void setIdCourse(Course idCourse) {
-        this.idCourse = idCourse;
+    public void setCourse(Course course) {
+        this.course = course;
     }
 
     @Override

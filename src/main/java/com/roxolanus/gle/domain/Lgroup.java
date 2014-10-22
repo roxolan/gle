@@ -20,72 +20,74 @@ import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
+import javax.xml.bind.annotation.XmlRootElement;
 
 /**
  *
  * @author 1
  */
 @Entity
-@Table(name = "gle_group")
+@Table(name = "gle_lgroup")
+@XmlRootElement
 @NamedQueries({
     @NamedQuery(name = "Lgroup.findAll", query = "SELECT l FROM Lgroup l"),
-    @NamedQuery(name = "Lgroup.findByIdGroup", query = "SELECT l FROM Lgroup l WHERE l.idGroup = :idGroup"),
-    @NamedQuery(name = "Lgroup.findByGroupTitle", query = "SELECT l FROM Lgroup l WHERE l.groupTitle = :groupTitle")})
+    @NamedQuery(name = "Lgroup.findByIdLgroup", query = "SELECT l FROM Lgroup l WHERE l.idLgroup = :idLgroup"),
+    @NamedQuery(name = "Lgroup.findByLgroupTitle", query = "SELECT l FROM Lgroup l WHERE l.lgroupTitle = :lgroupTitle")})
 public class Lgroup implements Serializable {
     private static final long serialVersionUID = 1L;
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Basic(optional = false)
-    @Column(name = "id_group")
-    private Integer idGroup;
+    @Column(name = "id_lgroup")
+    private Integer idLgroup;
     @Basic(optional = false)
     @NotNull
     @Size(min = 1, max = 200)
-    @Column(name = "group_title")
-    private String groupTitle;
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "idGroup")
-    private List<Course> courseList;
+    @Column(name = "lgroup_title")
+    private String lgroupTitle;
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "lgroup")
+    private List<Course> courses;
 
     public Lgroup() {
     }
 
-    public Lgroup(Integer idGroup) {
-        this.idGroup = idGroup;
+    public Lgroup(Integer idLgroup) {
+        this.idLgroup = idLgroup;
     }
 
-    public Lgroup(Integer idGroup, String groupTitle) {
-        this.idGroup = idGroup;
-        this.groupTitle = groupTitle;
+    public Lgroup(Integer idLgroup, String lgroupTitle) {
+        this.idLgroup = idLgroup;
+        this.lgroupTitle = lgroupTitle;
     }
 
-    public Integer getIdGroup() {
-        return idGroup;
+    public Integer getIdLgroup() {
+        return idLgroup;
     }
 
-    public void setIdGroup(Integer idGroup) {
-        this.idGroup = idGroup;
+    public void setIdLgroup(Integer idLgroup) {
+        this.idLgroup = idLgroup;
     }
 
-    public String getGroupTitle() {
-        return groupTitle;
+    public String getLgroupTitle() {
+        return lgroupTitle;
     }
 
-    public void setGroupTitle(String groupTitle) {
-        this.groupTitle = groupTitle;
+    public void setLgroupTitle(String lgroupTitle) {
+        this.lgroupTitle = lgroupTitle;
     }
 
-    public List<Course> getCourseList() {
-        return courseList;
+    public List<Course> getCourses() {
+        return courses;
     }
 
-    public void setCourseList(List<Course> courseList) {
-        this.courseList = courseList;
-    }
+    public void setCourses(List<Course> courses) {
+        this.courses = courses;
+    } 
 
     @Override
     public int hashCode() {
         int hash = 0;
-        hash += (idGroup != null ? idGroup.hashCode() : 0);
+        hash += (idLgroup != null ? idLgroup.hashCode() : 0);
         return hash;
     }
 
@@ -96,7 +98,7 @@ public class Lgroup implements Serializable {
             return false;
         }
         Lgroup other = (Lgroup) object;
-        if ((this.idGroup == null && other.idGroup != null) || (this.idGroup != null && !this.idGroup.equals(other.idGroup))) {
+        if ((this.idLgroup == null && other.idLgroup != null) || (this.idLgroup != null && !this.idLgroup.equals(other.idLgroup))) {
             return false;
         }
         return true;
@@ -104,7 +106,7 @@ public class Lgroup implements Serializable {
 
     @Override
     public String toString() {
-        return "com.roxolanus.gle.domain.Lgroup[ idGroup=" + idGroup + " ]";
+        return "com.roxolanus.gle.domain.Lgroup[ idLgroup=" + idLgroup + " ]";
     }
     
 }

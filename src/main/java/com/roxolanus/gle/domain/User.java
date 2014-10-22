@@ -6,17 +6,15 @@
 package com.roxolanus.gle.domain;
 
 import java.io.Serializable;
-import java.util.List;
 import javax.persistence.Basic;
-import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
-import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Size;
 
 /**
@@ -51,7 +49,7 @@ public class User implements Serializable {
     @Size(min = 1, max = 100)
     @Column(name = "last_name")
     private String lastName;
-    // @Pattern(regexp="[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?", message="Invalid email")//if the field contains email address consider using this annotation to enforce field validation
+    @Pattern(regexp="[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?", message="Invalid email")//if the field contains email address consider using this annotation to enforce field validation
     @Basic(optional = false)
     @NotNull
     @Size(min = 1, max = 100)
@@ -66,8 +64,7 @@ public class User implements Serializable {
     @NotNull
     @Column(name = "admin_role")
     private Character adminRole;
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "username")
-    private List<AssignmentSubmission> assignmentSubmissionList;
+
 
     public User() {
     }
@@ -131,14 +128,6 @@ public class User implements Serializable {
 
     public void setAdminRole(Character adminRole) {
         this.adminRole = adminRole;
-    }
-
-    public List<AssignmentSubmission> getAssignmentSubmissionList() {
-        return assignmentSubmissionList;
-    }
-
-    public void setAssignmentSubmissionList(List<AssignmentSubmission> assignmentSubmissionList) {
-        this.assignmentSubmissionList = assignmentSubmissionList;
     }
 
     @Override

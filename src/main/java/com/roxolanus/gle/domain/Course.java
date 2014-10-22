@@ -45,11 +45,11 @@ public class Course implements Serializable {
     @Size(min = 1, max = 200)
     @Column(name = "course_title")
     private String courseTitle;
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "idCourse")
-    private List<Assignment> assignmentList;
-    @JoinColumn(name = "id_group", referencedColumnName = "id_group")
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "course")
+    private List<Assignment> assignments;
+    @JoinColumn(name = "id_lgroup", referencedColumnName = "id_lgroup")
     @ManyToOne(optional = false)
-    private Lgroup idGroup;
+    private Lgroup lgroup;
 
     public Course() {
     }
@@ -79,20 +79,20 @@ public class Course implements Serializable {
         this.courseTitle = courseTitle;
     }
 
-    public List<Assignment> getAssignmentList() {
-        return assignmentList;
+    public List<Assignment> getAssignments() {
+        return assignments;
     }
 
-    public void setAssignmentList(List<Assignment> assignmentList) {
-        this.assignmentList = assignmentList;
+    public void setAssignments(List<Assignment> assignments) {
+        this.assignments = assignments;
     }
 
-    public Lgroup getIdGroup() {
-        return idGroup;
+    public Lgroup getLgroup() {
+        return lgroup;
     }
 
-    public void setIdGroup(Lgroup idGroup) {
-        this.idGroup = idGroup;
+    public void setLgroup(Lgroup lgroup) {
+        this.lgroup = lgroup;
     }
 
     @Override

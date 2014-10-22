@@ -46,10 +46,10 @@ public class AssignmentSubmission implements Serializable {
     private Date submissionDate;
     @JoinColumn(name = "id_assignment", referencedColumnName = "id_assignment")
     @ManyToOne(optional = false)
-    private Assignment idAssignment;
+    private Assignment assignment;
     @JoinColumn(name = "username", referencedColumnName = "username")
     @ManyToOne(optional = false)
-    private User username;
+    private User user;
 
     public AssignmentSubmission() {
     }
@@ -79,20 +79,20 @@ public class AssignmentSubmission implements Serializable {
         this.submissionDate = submissionDate;
     }
 
-    public Assignment getIdAssignment() {
-        return idAssignment;
+    public Assignment getAssignment() {
+        return assignment;
     }
 
-    public void setIdAssignment(Assignment idAssignment) {
-        this.idAssignment = idAssignment;
+    public void setAssignment(Assignment assignment) {
+        this.assignment = assignment;
     }
 
-    public User getUsername() {
-        return username;
+    public User getUser() {
+        return user;
     }
 
-    public void setUsername(User username) {
-        this.username = username;
+    public void setUser(User user) {
+        this.user = user;
     }
 
     @Override
