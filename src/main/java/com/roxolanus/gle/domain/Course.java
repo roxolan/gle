@@ -7,6 +7,7 @@ package com.roxolanus.gle.domain;
 
 import java.io.Serializable;
 import java.util.List;
+import java.util.Objects;
 import javax.persistence.Basic;
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
@@ -103,16 +104,15 @@ public class Course implements Serializable {
     }
 
     @Override
-    public boolean equals(Object object) {
-        // TODO: Warning - this method won't work in the case the id fields are not set
-        if (!(object instanceof Course)) {
+    public boolean equals(Object obj) {
+        if (obj == null) {
             return false;
         }
-        Course other = (Course) object;
-        if ((this.idCourse == null && other.idCourse != null) || (this.idCourse != null && !this.idCourse.equals(other.idCourse))) {
+        if (getClass() != obj.getClass()) {
             return false;
         }
-        return true;
+        final Course other = (Course) obj;
+        return Objects.equals(this.idCourse, other.idCourse);
     }
 
     @Override

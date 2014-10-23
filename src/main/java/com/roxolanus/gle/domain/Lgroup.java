@@ -7,6 +7,7 @@ package com.roxolanus.gle.domain;
 
 import java.io.Serializable;
 import java.util.List;
+import java.util.Objects;
 import javax.persistence.Basic;
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
@@ -92,17 +93,17 @@ public class Lgroup implements Serializable {
     }
 
     @Override
-    public boolean equals(Object object) {
-        // TODO: Warning - this method won't work in the case the id fields are not set
-        if (!(object instanceof Lgroup)) {
+    public boolean equals(Object obj) {
+        if (obj == null) {
             return false;
         }
-        Lgroup other = (Lgroup) object;
-        if ((this.idLgroup == null && other.idLgroup != null) || (this.idLgroup != null && !this.idLgroup.equals(other.idLgroup))) {
+        if (getClass() != obj.getClass()) {
             return false;
         }
-        return true;
+        final Lgroup other = (Lgroup) obj;
+        return Objects.equals(this.idLgroup, other.idLgroup);
     }
+    
 
     @Override
     public String toString() {

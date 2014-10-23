@@ -7,6 +7,7 @@ package com.roxolanus.gle.domain;
 
 import java.io.Serializable;
 import java.util.Date;
+import java.util.Objects;
 import javax.persistence.Basic;
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -103,21 +104,19 @@ public class AssignmentSubmission implements Serializable {
     }
 
     @Override
-    public boolean equals(Object object) {
-        // TODO: Warning - this method won't work in the case the id fields are not set
-        if (!(object instanceof AssignmentSubmission)) {
-            return false;
-        }
-        AssignmentSubmission other = (AssignmentSubmission) object;
-        if ((this.idAssignmentSubmission == null && other.idAssignmentSubmission != null) || (this.idAssignmentSubmission != null && !this.idAssignmentSubmission.equals(other.idAssignmentSubmission))) {
-            return false;
-        }
-        return true;
-    }
-
-    @Override
     public String toString() {
         return "com.roxolanus.gle.domain.AssignmentSubmission[ idAssignmentSubmission=" + idAssignmentSubmission + " ]";
     }
-    
+
+    @Override
+    public boolean equals(Object obj) {
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        final AssignmentSubmission other = (AssignmentSubmission) obj;
+        return Objects.equals(this.idAssignmentSubmission, other.idAssignmentSubmission);
+    }
 }

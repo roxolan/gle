@@ -4,24 +4,24 @@ USE `gle`;
 
 /* Structure for table `gle_group` */
 SET FOREIGN_KEY_CHECKS=0;
-DROP TABLE IF EXISTS `gle_group`;
+DROP TABLE IF EXISTS `gle_lgroup`;
 SET FOREIGN_KEY_CHECKS=1;
-CREATE TABLE `gle_group` (
-    id_group int unsigned not null auto_increment,
-    group_title varchar(200) not null,
-    primary key(id_group)
+CREATE TABLE `gle_lgroup` (
+    id_lgroup int unsigned not null auto_increment,
+    lgroup_title varchar(200) not null,
+    primary key(id_lgroup)
 );
 
 /* Data for table `gle_group` */
-insert into gle_group(group_title) values ('EMBA-20');
-insert into gle_group(group_title) values ('EMBA-21');
-insert into gle_group(group_title) values ('EMBA-22');
-insert into gle_group(group_title) values ('EMBA-23');
-insert into gle_group(group_title) values ('PMBA-6');
-insert into gle_group(group_title) values ('PMBA-7');
-insert into gle_group(group_title) values ('PMBA-8');
-insert into gle_group(group_title) values ('PMBA-9');
-insert into gle_group(group_title) values ('PMBA-10');
+insert into gle_lgroup(lgroup_title) values ('EMBA-20');
+insert into gle_lgroup(lgroup_title) values ('EMBA-21');
+insert into gle_lgroup(lgroup_title) values ('EMBA-22');
+insert into gle_lgroup(lgroup_title) values ('EMBA-23');
+insert into gle_lgroup(lgroup_title) values ('PMBA-6');
+insert into gle_lgroup(lgroup_title) values ('PMBA-7');
+insert into gle_lgroup(lgroup_title) values ('PMBA-8');
+insert into gle_lgroup(lgroup_title) values ('PMBA-9');
+insert into gle_lgroup(lgroup_title) values ('PMBA-10');
 
 
 /* Structure for table `gle_course` */
@@ -31,30 +31,30 @@ SET FOREIGN_KEY_CHECKS=1;
 CREATE TABLE `gle_course` (
     id_course int unsigned not null auto_increment,
     course_title varchar(200) not null,
-    id_group int unsigned not null,
+    id_lgroup int unsigned not null,
     primary key(id_course),
-    foreign key(id_group) references gle_group(id_group)
+    foreign key(id_lgroup) references gle_lgroup(id_lgroup)
 );
 
 /* Data for table `gle_course` */
-insert into gle_course(course_title, id_group) values ('Стратегічна ідея', 1);
-insert into gle_course(course_title, id_group) values ('Філософія бізнесу', 3);
-insert into gle_course(course_title, id_group) values ('Маркетинг', 2);
-insert into gle_course(course_title, id_group) values ('Стратегічна ідея', 6);
-insert into gle_course(course_title, id_group) values ('Філософія бізнесу', 5);
-insert into gle_course(course_title, id_group) values ('Маркетинг', 4);
-insert into gle_course(course_title, id_group) values ('Стратегічна ідея', 8);
-insert into gle_course(course_title, id_group) values ('Системне мислення', 9);
-insert into gle_course(course_title, id_group) values ('Бізнес-комунікації', 7);
-insert into gle_course(course_title, id_group) values ('Стратегічна ідея', 2);
-insert into gle_course(course_title, id_group) values ('Бізнес-комунікації', 3);
-insert into gle_course(course_title, id_group) values ('Бізнес-комунікації', 2);
-insert into gle_course(course_title, id_group) values ('Стратегічна ідея', 7);
-insert into gle_course(course_title, id_group) values ('Системне мислення', 5);
-insert into gle_course(course_title, id_group) values ('Філософія бізнесу', 4);
-insert into gle_course(course_title, id_group) values ('Стратегічна ідея', 9);
-insert into gle_course(course_title, id_group) values ('Маркетинг', 9);
-insert into gle_course(course_title, id_group) values ('Системне мислення', 7);
+insert into gle_course(course_title, id_lgroup) values ('Стратегічна ідея', 1);
+insert into gle_course(course_title, id_lgroup) values ('Філософія бізнесу', 3);
+insert into gle_course(course_title, id_lgroup) values ('Маркетинг', 2);
+insert into gle_course(course_title, id_lgroup) values ('Стратегічна ідея', 6);
+insert into gle_course(course_title, id_lgroup) values ('Філософія бізнесу', 5);
+insert into gle_course(course_title, id_lgroup) values ('Маркетинг', 4);
+insert into gle_course(course_title, id_lgroup) values ('Стратегічна ідея', 8);
+insert into gle_course(course_title, id_lgroup) values ('Системне мислення', 9);
+insert into gle_course(course_title, id_lgroup) values ('Бізнес-комунікації', 7);
+insert into gle_course(course_title, id_lgroup) values ('Стратегічна ідея', 2);
+insert into gle_course(course_title, id_lgroup) values ('Бізнес-комунікації', 3);
+insert into gle_course(course_title, id_lgroup) values ('Бізнес-комунікації', 2);
+insert into gle_course(course_title, id_lgroup) values ('Стратегічна ідея', 7);
+insert into gle_course(course_title, id_lgroup) values ('Системне мислення', 5);
+insert into gle_course(course_title, id_lgroup) values ('Філософія бізнесу', 4);
+insert into gle_course(course_title, id_lgroup) values ('Стратегічна ідея', 9);
+insert into gle_course(course_title, id_lgroup) values ('Маркетинг', 9);
+insert into gle_course(course_title, id_lgroup) values ('Системне мислення', 7);
 
 
 /* Structure for table `gle_assignment` */

@@ -6,6 +6,7 @@
 package com.roxolanus.gle.domain;
 
 import java.io.Serializable;
+import java.util.Objects;
 import javax.persistence.Basic;
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -138,17 +139,18 @@ public class User implements Serializable {
     }
 
     @Override
-    public boolean equals(Object object) {
-        // TODO: Warning - this method won't work in the case the id fields are not set
-        if (!(object instanceof User)) {
+    public boolean equals(Object obj) {
+        if (obj == null) {
             return false;
         }
-        User other = (User) object;
-        if ((this.username == null && other.username != null) || (this.username != null && !this.username.equals(other.username))) {
+        if (getClass() != obj.getClass()) {
             return false;
         }
-        return true;
+        final User other = (User) obj;
+        return Objects.equals(this.username, other.username);
     }
+
+    
 
     @Override
     public String toString() {

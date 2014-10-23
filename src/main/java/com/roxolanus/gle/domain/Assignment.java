@@ -6,6 +6,7 @@
 package com.roxolanus.gle.domain;
 
 import java.io.Serializable;
+import java.util.Objects;
 import javax.persistence.Basic;
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -90,16 +91,15 @@ public class Assignment implements Serializable {
     }
 
     @Override
-    public boolean equals(Object object) {
-        // TODO: Warning - this method won't work in the case the id fields are not set
-        if (!(object instanceof Assignment)) {
+    public boolean equals(Object obj) {
+        if (obj == null) {
             return false;
         }
-        Assignment other = (Assignment) object;
-        if ((this.idAssignment == null && other.idAssignment != null) || (this.idAssignment != null && !this.idAssignment.equals(other.idAssignment))) {
+        if (getClass() != obj.getClass()) {
             return false;
         }
-        return true;
+        final Assignment other = (Assignment) obj;
+        return Objects.equals(this.idAssignment, other.idAssignment);
     }
 
     @Override
