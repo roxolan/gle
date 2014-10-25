@@ -38,7 +38,7 @@ public class Lgroup extends AbstractEntity implements EntityItem<Integer> {
     @Size(min = 1, max = 200)
     @Column(name = "lgroup_title")
     private String lgroupTitle;
-    @OneToMany(cascade = {CascadeType.MERGE, CascadeType.PERSIST}, mappedBy = "lgroup")
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "lgroup")
     private List<Course> courses;
 
     public Lgroup() {
