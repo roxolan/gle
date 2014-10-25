@@ -1,11 +1,5 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package com.roxolanus.gle.domain;
 
-import java.io.Serializable;
 import java.util.List;
 import java.util.Objects;
 import javax.persistence.Basic;
@@ -23,18 +17,16 @@ import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 import javax.xml.bind.annotation.XmlRootElement;
 
-/**
- *
- * @author 1
- */
+
+
 @Entity
 @Table(name = "gle_lgroup")
 @XmlRootElement
 @NamedQueries({
-    @NamedQuery(name = "Lgroup.findAll", query = "SELECT l FROM Lgroup l"),
+    @NamedQuery(name = "Lgroup.findAll", query = "SELECT l FROM Lgroup l ORDER BY l.lgroupTitle ASC"),
     @NamedQuery(name = "Lgroup.findByIdLgroup", query = "SELECT l FROM Lgroup l WHERE l.idLgroup = :idLgroup"),
     @NamedQuery(name = "Lgroup.findByLgroupTitle", query = "SELECT l FROM Lgroup l WHERE l.lgroupTitle = :lgroupTitle")})
-public class Lgroup implements Serializable {
+public class Lgroup extends AbstractEntity implements EntityItem<Integer> {
     private static final long serialVersionUID = 1L;
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -60,7 +52,7 @@ public class Lgroup implements Serializable {
         this.idLgroup = idLgroup;
         this.lgroupTitle = lgroupTitle;
     }
-
+    
     public Integer getIdLgroup() {
         return idLgroup;
     }
@@ -84,7 +76,7 @@ public class Lgroup implements Serializable {
     public void setCourses(List<Course> courses) {
         this.courses = courses;
     } 
-
+    
     @Override
     public int hashCode() {
         int hash = 0;
@@ -104,10 +96,13 @@ public class Lgroup implements Serializable {
         return Objects.equals(this.idLgroup, other.idLgroup);
     }
     
-
     @Override
     public String toString() {
         return "com.roxolanus.gle.domain.Lgroup[ idLgroup=" + idLgroup + " ]";
     }
     
+    @Override
+    public Integer getId(){
+        return idLgroup;
+    }
 }

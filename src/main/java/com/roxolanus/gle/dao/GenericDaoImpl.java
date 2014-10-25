@@ -1,5 +1,6 @@
 package com.roxolanus.gle.dao;
 
+import com.roxolanus.gle.domain.EntityItem;
 import java.io.Serializable;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
@@ -32,6 +33,17 @@ public class GenericDaoImpl<T, ID extends Serializable> implements GenericDao<T,
     @Transactional(readOnly = false, propagation = Propagation.REQUIRED)
     public void persist(T o){
         em.persist(o);
+        // insert to the DB now so that the ID is populated
+        // If not flushed, subsequent actions that require a ID
+        // may fail (depends on when transaction is committed)
+        
+        em.flush(); // was added for testing of ID inserted in Ch 5
+
+        if (o instanceof EntityItem) {
+            EntityItem<ID> item = (EntityItem<ID>) o;
+            ID id = item.getId();
+            logger.info("The " + o.getClass().getName() + " record with ID=" + id + " has been inserted");
+        }
     }
     
     @Override
@@ -46,6 +58,12 @@ public class GenericDaoImpl<T, ID extends Serializable> implements GenericDao<T,
     public void remove(T o){
         o = merge(o);
         em.remove(o);
+        
+        if (o instanceof EntityItem) {
+            EntityItem<ID> item = (EntityItem<ID>) o;
+            ID id = item.getId();
+            logger.warn("The " + o.getClass().getName() + " record with ID=" + id + " has been deleted");
+        }
     }
     
 }

@@ -1,11 +1,5 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package com.roxolanus.gle.domain;
 
-import java.io.Serializable;
 import java.util.Date;
 import java.util.Objects;
 import javax.persistence.Basic;
@@ -23,17 +17,13 @@ import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import javax.validation.constraints.NotNull;
 
-/**
- *
- * @author 1
- */
+
 @Entity
 @Table(name = "gle_assignment_submission")
 @NamedQueries({
     @NamedQuery(name = "AssignmentSubmission.findAll", query = "SELECT a FROM AssignmentSubmission a"),
-    @NamedQuery(name = "AssignmentSubmission.findByIdAssignmentSubmission", query = "SELECT a FROM AssignmentSubmission a WHERE a.idAssignmentSubmission = :idAssignmentSubmission"),
-    @NamedQuery(name = "AssignmentSubmission.findBySubmissionDate", query = "SELECT a FROM AssignmentSubmission a WHERE a.submissionDate = :submissionDate")})
-public class AssignmentSubmission implements Serializable {
+    @NamedQuery(name = "AssignmentSubmission.findSubmissionsByUserAssignment", query = "SELECT a FROM AssignmentSubmission a WHERE a.user = :user AND a.assignment = :assignment")})
+public class AssignmentSubmission extends AbstractEntity implements EntityItem<Integer> {
     private static final long serialVersionUID = 1L;
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -118,5 +108,10 @@ public class AssignmentSubmission implements Serializable {
         }
         final AssignmentSubmission other = (AssignmentSubmission) obj;
         return Objects.equals(this.idAssignmentSubmission, other.idAssignmentSubmission);
+    }
+    
+    @Override
+    public Integer getId(){
+        return idAssignmentSubmission;
     }
 }

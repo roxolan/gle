@@ -1,11 +1,5 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package com.roxolanus.gle.domain;
 
-import java.io.Serializable;
 import java.util.Objects;
 import javax.persistence.Basic;
 import javax.persistence.Column;
@@ -21,17 +15,14 @@ import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
-/**
- *
- * @author 1
- */
+
 @Entity
 @Table(name = "gle_assignment")
 @NamedQueries({
-    @NamedQuery(name = "Assignment.findAll", query = "SELECT a FROM Assignment a"),
+    @NamedQuery(name = "Assignment.findAll", query = "SELECT a FROM Assignment a ORDER BY a.assignmentTitle"),
     @NamedQuery(name = "Assignment.findByIdAssignment", query = "SELECT a FROM Assignment a WHERE a.idAssignment = :idAssignment"),
     @NamedQuery(name = "Assignment.findByAssignmentTitle", query = "SELECT a FROM Assignment a WHERE a.assignmentTitle = :assignmentTitle")})
-public class Assignment implements Serializable {
+public class Assignment extends AbstractEntity implements EntityItem<Integer> {
     private static final long serialVersionUID = 1L;
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -107,4 +98,8 @@ public class Assignment implements Serializable {
         return "com.roxolanus.gle.domain.Assignment[ idAssignment=" + idAssignment + " ]";
     }
     
+    @Override
+    public Integer getId(){
+        return idAssignment;
+    }
 }

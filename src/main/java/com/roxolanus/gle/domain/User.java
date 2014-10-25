@@ -1,11 +1,5 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package com.roxolanus.gle.domain;
 
-import java.io.Serializable;
 import java.util.Objects;
 import javax.persistence.Basic;
 import javax.persistence.Column;
@@ -18,21 +12,19 @@ import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Size;
 
-/**
- *
- * @author 1
- */
+
 @Entity
 @Table(name = "gle_user")
 @NamedQueries({
     @NamedQuery(name = "User.findAll", query = "SELECT u FROM User u"),
     @NamedQuery(name = "User.findByUsername", query = "SELECT u FROM User u WHERE u.username = :username"),
+    @NamedQuery(name = "User.findByUsernamePassword", query = "SELECT u FROM User u WHERE u.password = :password AND (u.email = :username OR u.username = :username)"),    
     @NamedQuery(name = "User.findByFirstName", query = "SELECT u FROM User u WHERE u.firstName = :firstName"),
     @NamedQuery(name = "User.findByLastName", query = "SELECT u FROM User u WHERE u.lastName = :lastName"),
     @NamedQuery(name = "User.findByEmail", query = "SELECT u FROM User u WHERE u.email = :email"),
     @NamedQuery(name = "User.findByPassword", query = "SELECT u FROM User u WHERE u.password = :password"),
     @NamedQuery(name = "User.findByAdminRole", query = "SELECT u FROM User u WHERE u.adminRole = :adminRole")})
-public class User implements Serializable {
+public class User extends AbstractEntity implements EntityItem<String> {
     private static final long serialVersionUID = 1L;
     @Id
     @Basic(optional = false)
@@ -150,11 +142,14 @@ public class User implements Serializable {
         return Objects.equals(this.username, other.username);
     }
 
-    
-
     @Override
     public String toString() {
         return "com.roxolanus.gle.domain.User[ username=" + username + " ]";
+    }
+    
+    @Override
+    public String getId(){
+        return username;
     }
     
 }

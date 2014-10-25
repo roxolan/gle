@@ -1,11 +1,5 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package com.roxolanus.gle.domain;
 
-import java.io.Serializable;
 import java.util.List;
 import java.util.Objects;
 import javax.persistence.Basic;
@@ -24,17 +18,13 @@ import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
-/**
- *
- * @author 1
- */
 @Entity
 @Table(name = "gle_course")
 @NamedQueries({
-    @NamedQuery(name = "Course.findAll", query = "SELECT c FROM Course c"),
+    @NamedQuery(name = "Course.findAll", query = "SELECT c FROM Course c ORDER BY c.courseTitle"),
     @NamedQuery(name = "Course.findByIdCourse", query = "SELECT c FROM Course c WHERE c.idCourse = :idCourse"),
     @NamedQuery(name = "Course.findByCourseTitle", query = "SELECT c FROM Course c WHERE c.courseTitle = :courseTitle")})
-public class Course implements Serializable {
+public class Course extends AbstractEntity implements EntityItem<Integer> {
     private static final long serialVersionUID = 1L;
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -118,6 +108,11 @@ public class Course implements Serializable {
     @Override
     public String toString() {
         return "com.roxolanus.gle.domain.Course[ idCourse=" + idCourse + " ]";
+    }
+    
+    @Override
+    public Integer getId(){
+        return idCourse;
     }
     
 }
