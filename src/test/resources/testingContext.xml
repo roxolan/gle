@@ -12,7 +12,7 @@
           class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer"
           p:location="classpath:jdbc.properties" />
           
-    <bean id="tttDataSource"
+    <bean id="gleDataSource"
           class="org.springframework.jdbc.datasource.DriverManagerDataSource"
           p:driverClassName="${jdbc.driverClassName}"
           p:url="${jdbc.url}"
@@ -29,7 +29,7 @@
     
     <bean id="entityManagerFactory" 
         class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean"
-        p:dataSource-ref="tttDataSource"
+        p:dataSource-ref="gleDataSource"
         p:jpaVendorAdapter-ref="jpaVendorAdapter"
         p:persistenceXmlLocation="test-persistence.xml"
     />
@@ -37,16 +37,16 @@
     <!-- Transaction manager for a single JPA EntityManagerFactory (alternative to JTA) -->
     <bean id="transactionManager" 
         class="org.springframework.orm.jpa.JpaTransactionManager"
-        p:dataSource-ref="tttDataSource" 
+        p:dataSource-ref="gleDataSource" 
         p:entityManagerFactory-ref="entityManagerFactory"/>
 
     <!-- checks for annotated configured beans -->
     <context:annotation-config/>  
 
     <!-- Scan for Repository/Service annotations -->
-    <context:component-scan base-package="com.gieman.tttracker.dao" />
-    <context:component-scan base-package="com.gieman.tttracker.service" />
-    <context:component-scan base-package="com.gieman.tttracker.web" />
+    <context:component-scan base-package="com.roxolanus.gle.dao" />
+    <context:component-scan base-package="com.roxolanus.gle.service" />
+    <context:component-scan base-package="com.roxolanus.gle.web" />
     <!-- enable the configuration of transactional behavior based on annotations -->
     <tx:annotation-driven />
     
