@@ -50,6 +50,7 @@ public class GenericDaoImpl<T, ID extends Serializable> implements GenericDao<T,
     @Transactional(readOnly = false, propagation = Propagation.REQUIRED)
     public T merge(T o){
         o = em.merge(o);
+        // em.flush(); in Enterprise it is advisable not to call .flush(), p.147
         return o;
     }
     
