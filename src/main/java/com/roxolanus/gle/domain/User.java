@@ -152,4 +152,7 @@ public class User extends AbstractEntity implements EntityItem<String> {
         return username;
     }
     
+    public boolean isAdmin() {
+        return adminRole == null ? false : adminRole.equals('Y');
+    }
 }
