@@ -127,3 +127,12 @@ CREATE TABLE `gle_assignment_submission` (
 /* Data for table `gle_assignment_submission` */
 insert into gle_assignment_submission(id_assignment, username, submission_date) values (3, 'vkotusenko', now());
 insert into gle_assignment_submission(id_assignment, username, submission_date) values (5, 'vpavelko', now());
+
+
+/*
+SHOW COLLATION WHERE COLLATION LIKE "%_cs"
+*/
+
+ALTER TABLE gle_user MODIFY
+    password VARCHAR(100)
+      COLLATE latin1_general_cs;
