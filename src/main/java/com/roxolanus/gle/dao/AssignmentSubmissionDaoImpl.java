@@ -23,7 +23,15 @@ public class AssignmentSubmissionDaoImpl extends GenericDaoImpl<AssignmentSubmis
         return em.createNamedQuery("AssignmentSubmission.findAll").getResultList();
     }
     
-    public List<AssignmentSubmission> findSubmissions(User user, Assignment assignment) {
+    @Override
+    public List<AssignmentSubmission> findUserSubmissions(User user) {
+        return em.createNamedQuery("AssignmentSubmission.findSubmissionsByUser")
+                .setParameter("user", user)
+                .getResultList();
+    }
+    
+    @Override
+    public List<AssignmentSubmission> findUserAssignmentSubmissions(User user, Assignment assignment) {
         return em.createNamedQuery("AssignmentSubmission.findSubmissionsByUserAssignment")
                 .setParameter("user", user)
                 .setParameter("assignment", assignment)

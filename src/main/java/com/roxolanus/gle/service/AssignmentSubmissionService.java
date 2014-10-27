@@ -16,6 +16,6 @@ public interface AssignmentSubmissionService {
 
     public Result<AssignmentSubmission> remove(Integer idAssignmentSubmission, String actionUsername);
     public Result<AssignmentSubmission> find(Integer idAssignmentSubmission, String actionUsername);
-    public Result<List<AssignmentSubmission>> findByUser(String username, String actionUsername);
+    public Result<List<AssignmentSubmission>> findAssignmentSubmissionsByUser(String username, String actionUsername);
 
 }

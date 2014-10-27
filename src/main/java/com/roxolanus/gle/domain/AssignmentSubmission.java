@@ -22,6 +22,7 @@ import javax.validation.constraints.NotNull;
 @Table(name = "gle_assignment_submission")
 @NamedQueries({
     @NamedQuery(name = "AssignmentSubmission.findAll", query = "SELECT a FROM AssignmentSubmission a"),
+    @NamedQuery(name = "AssignmentSubmission.findSubmissionsByUser", query = "SELECT a FROM AssignmentSubmission a WHERE a.user = :user"),
     @NamedQuery(name = "AssignmentSubmission.findSubmissionsByUserAssignment", query = "SELECT a FROM AssignmentSubmission a WHERE a.user = :user AND a.assignment = :assignment")})
 public class AssignmentSubmission extends AbstractEntity implements EntityItem<Integer> {
     private static final long serialVersionUID = 1L;

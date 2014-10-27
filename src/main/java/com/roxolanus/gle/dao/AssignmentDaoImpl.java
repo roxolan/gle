@@ -20,4 +20,5 @@ public class AssignmentDaoImpl extends GenericDaoImpl<Assignment, Integer> imple
     public List<Assignment> findAll() {
         return em.createNamedQuery("Assignment.findAll").getResultList();
     }
+
 }

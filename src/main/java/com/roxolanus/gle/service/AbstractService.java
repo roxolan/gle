@@ -13,8 +13,8 @@ public abstract class AbstractService {
     @Autowired
     protected UserDao userDao;
 
-    protected  final String USER_INVALID = "Not a valid user";
-    protected  final String USER_NOT_ADMIN = "Not an admin user";
+    protected final String USER_INVALID = "Not a valid user";
+    protected final String USER_NOT_ADMIN = "Not an admin user";
 
     protected boolean isValidUser(String username){
 

@@ -7,9 +7,11 @@ import java.util.List;
 
 public interface AssignmentSubmissionDao extends GenericDao<AssignmentSubmission, Integer>{
 
-        public List<AssignmentSubmission> findAll();
+    public List<AssignmentSubmission> findAll();
         
-        public List<AssignmentSubmission> findSubmissions (User user, Assignment assignment);
+    public List<AssignmentSubmission> findUserSubmissions (User user);
+        
+    public List<AssignmentSubmission> findUserAssignmentSubmissions (User user, Assignment assignment);
 
 }
 
