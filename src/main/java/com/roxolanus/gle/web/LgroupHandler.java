@@ -37,6 +37,9 @@ public class LgroupHandler extends AbstractHandler {
             HttpServletRequest request) {
 
         User sessionUser = getSessionUser(request);
+        if (sessionUser == null) {
+            return getJsonErrorMsg("User is not logged on");
+        }
         
         Result<Lgroup> ar = lgroupService.find(idLgroup, sessionUser.getUsername());
 
@@ -58,6 +61,9 @@ public class LgroupHandler extends AbstractHandler {
             HttpServletRequest request) {
 
         User sessionUser = getSessionUser(request);
+        if (sessionUser == null) {
+            return getJsonErrorMsg("User is not logged on");
+        }
 
         JsonObject jsonObj = parseJsonObject(jsonData);
                 
@@ -82,6 +88,9 @@ public class LgroupHandler extends AbstractHandler {
     public String findAll(HttpServletRequest request) {
 
         User sessionUser = getSessionUser(request);
+        if (sessionUser == null) {
+            return getJsonErrorMsg("User is not logged on");
+        }
 
         Result<List<Lgroup>> ar = lgroupService.findAll(sessionUser.getUsername());
 
@@ -103,6 +112,9 @@ public class LgroupHandler extends AbstractHandler {
             HttpServletRequest request) {
 
         User sessionUser = getSessionUser(request);
+        if (sessionUser == null) {
+            return getJsonErrorMsg("User is not logged on");
+        }
 
         JsonObject jsonObj = parseJsonObject(jsonData);
 
@@ -126,6 +138,9 @@ public class LgroupHandler extends AbstractHandler {
     public String getLgroupTreeJson(HttpServletRequest request) {
 
         User sessionUser = getSessionUser(request);
+        if (sessionUser == null) {
+            return getJsonErrorMsg("User is not logged on");
+        }
 
         Result<List<Lgroup>> ar = lgroupService.findAll(sessionUser.getUsername());
 
@@ -215,6 +230,9 @@ public class LgroupHandler extends AbstractHandler {
             HttpServletRequest request) {
 
         User sessionUser = getSessionUser(request);
+        if (sessionUser == null) {
+            return getJsonErrorMsg("User is not logged on");
+        }
 
         logger.info(node);
 
