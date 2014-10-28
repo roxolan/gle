@@ -1,7 +1,9 @@
 package com.roxolanus.gle.domain;
 
+import java.math.BigDecimal;
 import java.util.List;
 import java.util.Objects;
+import javax.json.JsonObjectBuilder;
 import javax.persistence.Basic;
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
@@ -104,5 +106,11 @@ public class Lgroup extends AbstractEntity implements EntityItem<Integer> {
     @Override
     public Integer getId(){
         return idLgroup;
+    }
+    
+    @Override
+    public void addJson(JsonObjectBuilder builder) {
+        builder.add("idLgroup", idLgroup)
+                .add("lgroupTitle", lgroupTitle);
     }
 }

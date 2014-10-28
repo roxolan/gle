@@ -2,6 +2,7 @@ package com.roxolanus.gle.domain;
 
 import java.util.List;
 import java.util.Objects;
+import javax.json.JsonObjectBuilder;
 import javax.persistence.Basic;
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
@@ -114,5 +115,15 @@ public class Course extends AbstractEntity implements EntityItem<Integer> {
     public Integer getId(){
         return idCourse;
     }
-    
+ 
+    @Override
+    public void addJson(JsonObjectBuilder builder) {
+        
+        builder.add("idCourse", idCourse)
+           .add("courseTitle", courseTitle);
+                
+        if(lgroup != null){
+           lgroup.addJson(builder);
+        }
+    }
 }

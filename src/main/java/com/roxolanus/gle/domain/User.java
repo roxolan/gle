@@ -1,6 +1,7 @@
 package com.roxolanus.gle.domain;
 
 import java.util.Objects;
+import javax.json.JsonObjectBuilder;
 import javax.persistence.Basic;
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -154,5 +155,16 @@ public class User extends AbstractEntity implements EntityItem<String> {
     
     public boolean isAdmin() {
         return adminRole == null ? false : adminRole.equals('Y');
+    }
+    
+    @Override
+    public void addJson(JsonObjectBuilder builder) {
+                
+        builder.add("username", username)
+                .add("firstName", firstName)
+                .add("lastName", lastName)
+                .add("email", email)
+                .add("adminRole", adminRole + "")
+                .add("fullName", firstName + " " + lastName);
     }
 }

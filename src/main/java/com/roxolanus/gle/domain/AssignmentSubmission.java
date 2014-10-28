@@ -1,7 +1,9 @@
 package com.roxolanus.gle.domain;
 
+import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Objects;
+import javax.json.JsonObjectBuilder;
 import javax.persistence.Basic;
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -25,6 +27,9 @@ import javax.validation.constraints.NotNull;
     @NamedQuery(name = "AssignmentSubmission.findSubmissionsByUser", query = "SELECT a FROM AssignmentSubmission a WHERE a.user = :user"),
     @NamedQuery(name = "AssignmentSubmission.findSubmissionsByUserAssignment", query = "SELECT a FROM AssignmentSubmission a WHERE a.user = :user AND a.assignment = :assignment")})
 public class AssignmentSubmission extends AbstractEntity implements EntityItem<Integer> {
+    
+    static final SimpleDateFormat DATE_FORMAT_yyyyMMdd = new SimpleDateFormat("yyyyMMdd");
+
     private static final long serialVersionUID = 1L;
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -115,4 +120,19 @@ public class AssignmentSubmission extends AbstractEntity implements EntityItem<I
     public Integer getId(){
         return idAssignmentSubmission;
     }
+    
+    @Override
+    public void addJson(JsonObjectBuilder builder) {
+
+        builder.add("idAssignmentSubmission", idAssignmentSubmission)
+                .add("submissionDate", submissionDate == null ? "" : DATE_FORMAT_yyyyMMdd.format(submissionDate));
+
+        if (user != null) {
+            user.addJson(builder);
+        }
+        if (assignment != null) {
+            assignment.addJson(builder);            
+        }
+    }
+
 }

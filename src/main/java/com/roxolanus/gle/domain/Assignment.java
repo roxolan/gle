@@ -1,6 +1,7 @@
 package com.roxolanus.gle.domain;
 
 import java.util.Objects;
+import javax.json.JsonObjectBuilder;
 import javax.persistence.Basic;
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -101,5 +102,19 @@ public class Assignment extends AbstractEntity implements EntityItem<Integer> {
     @Override
     public Integer getId(){
         return idAssignment;
+    }
+    
+    @Override
+    public void addJson(JsonObjectBuilder builder) {
+        
+        builder .add("idAssignment", idAssignment)
+           .add("assignmentTitle", assignmentTitle);
+         
+        if(course != null){
+           course.addJson(builder);
+           
+           Lgroup lgroup = course.getLgroup();
+           lgroup.addJson(builder);
+        }        
     }
 }
