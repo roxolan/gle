@@ -1,2 +1,3 @@
 jdbc.properties
 target/*
+glassfish-resources.xml
