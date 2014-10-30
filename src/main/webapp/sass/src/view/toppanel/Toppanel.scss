@@ -1,0 +1,25 @@
+.toppanel * {
+    background-color: $neutral-dark-color;      
+    color: $base-color;
+    font-weight: bold;
+}
+
+.hoveronname, .hoveronlogo {
+    cursor: pointer;
+}
+
+#toppanelleftnavmenu {
+    border: 0px;
+}
+
+#toppanelleftnavmenu .x-menu-item-text-default {
+    font-size: $font-size;
+}
+
+#toppaneluseropsmenu {
+    border: 0px;
+}
+
+#toppaneluseropsmenu .x-menu-item-text-default {
+    font-size: $font-size;
+}
