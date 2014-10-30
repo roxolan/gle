@@ -174,6 +174,36 @@
                     <argLine>-javaagent:target/lib/spring-instrument-${spring.version}.jar</argLine>
                 </configuration>
             </plugin>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>exec-maven-plugin</artifactId>
+                <version>1.3.2</version>                    
+                <executions>
+                    <execution>
+                        <id>sencha-compile</id>
+                        <phase>compile</phase>
+                        <goals>
+                            <goal>exec</goal>
+                        </goals>
+                        <configuration>
+                            <executable>/Users/1/bin/Sencha/Cmd/5.0.2.270/sencha</executable>
+                            <arguments>
+                                <argument>-sdk</argument>
+                                <argument>/Users/1/js/ext-5.0.1</argument>                                
+                                <argument>compile</argument>
+                                <argument>-classpath</argument>
+                                <argument>${basedir}/src/main/webapp/app</argument>
+                                <argument>page</argument>
+                                <argument>-yui</argument>
+                                <argument>-in</argument>
+                                <argument>${basedir}/src/main/webapp/index-dev.html</argument>
+                                <argument>-out</argument>
+                                <argument>${basedir}/src/main/webapp/index-prod.html</argument>
+                            </arguments>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
         </plugins>
     </build>
     <repositories>
