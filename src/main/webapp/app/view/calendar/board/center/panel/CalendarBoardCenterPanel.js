@@ -14,7 +14,7 @@ Ext.define('Kmbsvle.view.calendar.board.center.panel.CalendarBoardCenterPanel', 
     bodyPadding: 10,
     title: 'Calendar Center',
   
-    html: 'Main Events will unfold here about the Calendars',
+    html: 'Main Events will unfold here about the Календарі',
     minWidth: 800,
     minHeight: 300
 

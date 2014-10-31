@@ -187,7 +187,7 @@
                         </goals>
                         <configuration>
                             <executable>/Users/1/bin/Sencha/Cmd/5.0.2.270/sencha</executable>
-                            <arguments>
+                            <arguments>       
                                 <argument>-sdk</argument>
                                 <argument>/Users/1/js/ext-5.0.1</argument>                                
                                 <argument>compile</argument>
