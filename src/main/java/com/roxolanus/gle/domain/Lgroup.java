@@ -1,6 +1,5 @@
 package com.roxolanus.gle.domain;
 
-import java.math.BigDecimal;
 import java.util.List;
 import java.util.Objects;
 import javax.json.JsonObjectBuilder;
