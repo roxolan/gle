@@ -5,15 +5,14 @@
  *
  * TODO - Replace this content of this view to suite the needs of your application.
  */
-Ext.define('Kmbsvle.view.main.MainController', {
+Ext.define('Kmbsvle.view.main.MainViewController', {
     extend: 'Kmbsvle.view.base.BaseViewController',
 
     requires: [
-        'Ext.MessageBox'
-         
+        'Ext.MessageBox' 
     ],
 
-    alias: 'controller.main',
+    alias: 'controller.mainview',
 
     routes: {
         'profile/edit' : 'openMyProfileEdit'
@@ -48,7 +47,7 @@ Ext.define('Kmbsvle.view.main.MainController', {
     },
 
     openMyProfileEdit: function(btn) {
-      var mainTabPanel = btn.up('app-main').down('#mainTabPanel');
+      var mainTabPanel = btn.up('mainview').down('#mainTabPanel');
         console.log(mainTabPanel);
     }
     

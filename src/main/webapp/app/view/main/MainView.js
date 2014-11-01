@@ -7,14 +7,14 @@
  */
 
 
-Ext.define('Kmbsvle.view.main.Main', {
+Ext.define('Kmbsvle.view.main.MainView', {
   extend: 'Ext.container.Container',
   
-  xtype: 'app-main',
+  xtype: 'mainview',
   
-  controller: 'main',
+  controller: 'mainview',
   viewModel: {
-    type: 'main'
+    type: 'mainview'
   },
   
   layout: {

@@ -1,10 +1,10 @@
 /**
  * This class is the view model for the Main view of the application.
  */
-Ext.define('Kmbsvle.view.main.MainModel', {
+Ext.define('Kmbsvle.view.main.MainViewModel', {
     extend: 'Ext.app.ViewModel',
 
-    alias: 'viewmodel.main',
+    alias: 'viewmodel.mainview',
 
     data: {
 
