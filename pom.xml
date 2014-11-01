@@ -200,6 +200,12 @@
                                 <argument>-out</argument>
                                 <argument>${basedir}/src/main/webapp/index-prod.html</argument>
                             </arguments>
+                            <executable>/Users/1/bin/Sencha/Cmd/5.0.2.270/sencha</executable>
+                            <workingDirectory>${basedir}/src/main/webapp</workingDirectory>
+                            <arguments>
+                                <argument>app</argument>
+                                <argument>build</argument>
+                            </arguments>
                         </configuration>
                     </execution>
                 </executions>
