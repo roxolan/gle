@@ -17,10 +17,11 @@ Ext.define('Kmbsvle.Application', {
     name: 'Kmbsvle',
 
     requires: [
+        'Kmbsvle.view.auth.form.LoginForm'
     ],
 
     controllers: [
-
+        'MainController'
     ],
 
     stores: [
@@ -34,7 +35,12 @@ Ext.define('Kmbsvle.Application', {
 
 
     launch: function() {
-        console.log('Завантажилося!');
+        var me = this;
+        me.logonWindow = Ext.create('Kmbsvle.view.auth.form.LoginForm');
+        me.logonWindow.show();
+    },
+    doAfterLogon: function() {
+        alert('from doAfterLogon');
     }
 
 });

@@ -1,11 +1,15 @@
-Ext.define('Kmbsvle.view.form.LoginForm', {
+Ext.define('Kmbsvle.view.auth.form.LoginForm', {
     extend: 'Ext.window.Window',
-    alias: 'widget.login.form',
-    autoShow: true,
+    alias: 'widget.auth.login.form',
+    controller: 'auth.form.login',
+    //autoShow: true,
     modal: true,
+    closable: false,
 
     requires: [
-        'Ext.form.Panel'
+        'Ext.form.Panel',
+        'Ext.form.field.Text',
+        'Kmbsvle.view.auth.form.LoginFormController'
     ],
 
     title: 'Login Form',
@@ -19,11 +23,16 @@ Ext.define('Kmbsvle.view.form.LoginForm', {
             defaultType: 'textfield',
 
             items: [
-                { name: 'user', fieldLabel: 'ID користувача', allowBlank: false, emptyText: 'id' },
-                { name: 'password', fieldLabel: 'Пароль', allowBlank: false, emptyText: 'пароль' }
+                { name: 'user', fieldLabel: 'ID користувача', allowBlank: false, validateOnBlur: true, emptyText: 'id' },
+                { name: 'password', fieldLabel: 'Пароль', allowBlank: false, validateOnBlur: true, emptyText: 'пароль' }
             ],
             buttons: [
-                { text:'Ввійти' }
+                { 
+                    text:'Ввійти',
+                    listeners: {
+                        click: 'openMain'
+                    }
+                }
             ]
         }
     ]

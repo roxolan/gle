@@ -7,9 +7,9 @@
 Ext.application({
     name: 'Kmbsvle',
 
-    extend: 'Kmbsvle.Application',
+    extend: 'Kmbsvle.Application'
     
-    autoCreateViewport: 'Kmbsvle.view.main.Main'
+    // autoCreateViewport: 'Kmbsvle.view.main.MainView'
 
     //-------------------------------------------------------------------------
     // Most customizations should be made to Kmbsvle.Application. If you need to
