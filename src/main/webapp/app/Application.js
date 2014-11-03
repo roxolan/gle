@@ -17,7 +17,10 @@ Ext.define('Kmbsvle.Application', {
     name: 'Kmbsvle',
 
     requires: [
-        'Kmbsvle.view.auth.form.LoginForm'
+        'Kmbsvle.view.auth.form.LoginForm',
+        'Kmbsvle.view.main.MainView',
+        'Kmbsvle.view.main.MainViewController',
+        'Ext.layout.container.Border'
     ],
 
     controllers: [
@@ -40,7 +43,9 @@ Ext.define('Kmbsvle.Application', {
         me.logonWindow.show();
     },
     doAfterLogon: function() {
-        alert('from doAfterLogon');
+        var me = this;
+        me.logonWindow.hide();
+        me.mainViewport = Ext.create('Kmbsvle.view.main.MainView');
     }
 
 });

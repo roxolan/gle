@@ -7,8 +7,8 @@ Ext.define('Kmbsvle.controller.MainController', {
         });
     },
     
-    instantiateMain: function() {
-        alert('instantiateMain run');
+    doLogon: function() {
+        Kmbsvle.getApplication().doAfterLogon();
     }
 });
 

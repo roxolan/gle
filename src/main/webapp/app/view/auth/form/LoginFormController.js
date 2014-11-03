@@ -4,14 +4,13 @@ Ext.define('Kmbsvle.view.auth.form.LoginFormController', {
   alias: 'controller.auth.form.login',
 
   requires: [
-    //'Kmbsvle.controller.MainController'
   ],
 
   routes: {
   },
 
   openMain: function() {
-      Kmbsvle.app.getController('MainController').instantiateMain();
+      Kmbsvle.app.getController('MainController').doLogon();
   }
 
 }); 

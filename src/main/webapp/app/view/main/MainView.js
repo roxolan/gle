@@ -8,7 +8,7 @@
 
 
 Ext.define('Kmbsvle.view.main.MainView', {
-  extend: 'Ext.container.Container',
+  extend: 'Ext.container.Viewport',
   
   xtype: 'mainview',
   

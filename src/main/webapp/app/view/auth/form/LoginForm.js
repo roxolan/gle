@@ -23,8 +23,20 @@ Ext.define('Kmbsvle.view.auth.form.LoginForm', {
             defaultType: 'textfield',
 
             items: [
-                { name: 'user', fieldLabel: 'ID користувача', allowBlank: false, validateOnBlur: true, emptyText: 'id' },
-                { name: 'password', fieldLabel: 'Пароль', allowBlank: false, validateOnBlur: true, emptyText: 'пароль' }
+                { 
+                    name: 'user', 
+                    fieldLabel: 'ID користувача', 
+                    allowBlank: false, 
+                    validateOnBlur: true, 
+                    emptyText: 'id' 
+                },
+                { 
+                    name: 'password', 
+                    fieldLabel: 'Пароль', 
+                    allowBlank: false, 
+                    validateOnBlur: true, 
+                    emptyText: 'пароль' 
+                }
             ],
             buttons: [
                 { 
