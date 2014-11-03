@@ -2,6 +2,11 @@ Ext.define('Kmbsvle.view.toppanel.Toppanel', {
     extend: 'Ext.panel.Panel',
 
     alias: 'widget.toppanel',
+    requires: [
+        'Kmbsvle.view.toppanel.leftnav.ToppanelLeftnav',
+        'Kmbsvle.view.toppanel.userops.ToppanelUserops',
+        'Ext.Img'
+    ],
 
     controller: 'toppanel',
 

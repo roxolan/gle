@@ -2,6 +2,9 @@ Ext.define('Kmbsvle.view.toppanel.leftnav.ToppanelLeftnav', {
   extend: 'Ext.panel.Panel',
   
   alias: 'widget.toppanel.leftnav',
+  requires: [
+      'Kmbsvle.view.toppanel.leftnav.menu.ToppanelLeftnavMenu'
+  ],
   
   padding: '0 0 0 0',
   margin: '4 0 0 10',

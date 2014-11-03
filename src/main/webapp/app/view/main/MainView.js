@@ -11,6 +11,14 @@ Ext.define('Kmbsvle.view.main.MainView', {
   extend: 'Ext.container.Viewport',
   
   xtype: 'mainview',
+  requires: [
+      'Kmbsvle.view.main.MainViewModel',
+      'Kmbsvle.view.toppanel.Toppanel',
+      'Kmbsvle.view.toppanel.ToppanelController',
+      'Kmbsvle.view.dashboard.left.panel.DashboardLeftPanel',
+      'Kmbsvle.view.dashboard.center.panel.DashboardCenterPanel',
+      'Kmbsvle.view.dashboard.right.panel.DashboardRightPanel'
+  ],
   
   controller: 'mainview',
   viewModel: {

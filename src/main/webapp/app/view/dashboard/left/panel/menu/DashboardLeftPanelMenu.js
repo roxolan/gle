@@ -2,7 +2,9 @@ Ext.define('Kmbsvle.view.dashboard.left.panel.menu.DashboardLeftPanelMenu', {
   extend: 'Ext.menu.Menu',
   
   alias: 'widget.dashboard.left.panel.menu',
-  
+  requires: [
+      'Kmbsvle.view.dashboard.left.panel.menu.DashboardLeftPanelMenuController'
+  ],
   controller: 'dashboard.left.panel.menu',
   viewModel: {
     type: 'dashboard.left.panel.menu'

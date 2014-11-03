@@ -2,6 +2,10 @@ Ext.define('Kmbsvle.view.toppanel.userops.menu.ToppanelUseropsMenu', {
   extend: 'Ext.menu.Menu',
   
   alias: 'widget.toppanel.userops.menu',
+  requires: [
+      'Kmbsvle.view.toppanel.userops.menu.ToppanelUseropsMenuController',
+      'Kmbsvle.view.toppanel.userops.menu.ToppanelUseropsMenuModel'
+  ],
   
   controller: 'toppanel.userops.menu',
   viewModel: {

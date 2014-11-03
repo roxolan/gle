@@ -2,6 +2,10 @@ Ext.define('Kmbsvle.view.dashboard.center.panel.DashboardCenterPanel', {
     extend: 'Ext.tab.Panel',
 
     alias: 'widget.dashboard.center.panel',
+    requires: [
+        'Kmbsvle.view.dashboard.center.panel.DashboardCenterPanelController',
+        'Kmbsvle.view.dashboard.center.panel.DashboardCenterPanelModel'
+    ],
     controller: 'dashboard.center.panel',
     viewModel: {
         type: 'dashboard.center.panel'

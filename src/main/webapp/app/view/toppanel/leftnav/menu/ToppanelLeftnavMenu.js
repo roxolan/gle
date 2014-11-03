@@ -2,6 +2,10 @@ Ext.define('Kmbsvle.view.toppanel.leftnav.menu.ToppanelLeftnavMenu', {
   extend: 'Ext.menu.Menu',
   
   alias: 'widget.toppanel.leftnav.menu',
+  requires: [
+      'Kmbsvle.view.toppanel.leftnav.menu.ToppanelLeftnavMenuController',
+      'Kmbsvle.view.toppanel.leftnav.menu.ToppanelLeftnavMenuModel'
+  ],
   
   controller: 'toppanel.leftnav.menu',
   viewModel: {

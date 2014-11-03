@@ -2,6 +2,11 @@ Ext.define('Kmbsvle.view.toppanel.userops.ToppanelUserops', {
   extend: 'Ext.panel.Panel',
   
   alias: 'widget.toppanel.userops',
+  requires: [
+      'Kmbsvle.view.toppanel.userops.ToppanelUseropsController',
+      'Kmbsvle.view.toppanel.useropa.ToppanelUseropsModel',
+      'Kmbsvle.view.toppanel.userops.menu.ToppanelUseropsMenu'
+  ],
   
   controller: 'toppanel.userops',
   viewModel: {
