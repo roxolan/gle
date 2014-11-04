@@ -30,7 +30,7 @@ public class LgroupHandler extends AbstractHandler {
     @Autowired
     protected CourseService courseService;
     
-    @RequestMapping(value = "/find", method = RequestMethod.GET, produces = {"application/json"})
+    @RequestMapping(value = "/find", method = RequestMethod.GET, produces = {"application/json;charset=UTF-8"})
     @ResponseBody
     public String find(
             @RequestParam(value = "idLgroup", required = true) Integer idLgroup,
@@ -54,7 +54,7 @@ public class LgroupHandler extends AbstractHandler {
         }
     }
 
-    @RequestMapping(value = "/store", method = RequestMethod.POST, produces = {"application/json"})
+    @RequestMapping(value = "/store", method = RequestMethod.POST, produces = {"application/json;charset=UTF-8"})
     @ResponseBody
     public String store(
             @RequestParam(value = "data", required = true) String jsonData,
@@ -83,7 +83,7 @@ public class LgroupHandler extends AbstractHandler {
         }
     }
 
-    @RequestMapping(value = "/findAll", method = RequestMethod.GET, produces = {"application/json"})
+    @RequestMapping(value = "/findAll", method = RequestMethod.GET, produces = {"application/json;charset=UTF-8"})
     @ResponseBody
     public String findAll(HttpServletRequest request) {
 
@@ -105,7 +105,7 @@ public class LgroupHandler extends AbstractHandler {
         }
     }
 
-    @RequestMapping(value = "/remove", method = RequestMethod.POST, produces = {"application/json"})
+    @RequestMapping(value = "/remove", method = RequestMethod.POST, produces = {"application/json;charset=UTF-8"})
     @ResponseBody
     public String remove(
             @RequestParam(value = "data", required = true) String jsonData,
@@ -133,7 +133,7 @@ public class LgroupHandler extends AbstractHandler {
         }
     }
     
-    @RequestMapping(value = "/tree", method = RequestMethod.GET, produces = {"application/json"})
+    @RequestMapping(value = "/tree", method = RequestMethod.GET, produces = {"application/json;charset=UTF-8"})
     @ResponseBody
     public String getLgroupTreeJson(HttpServletRequest request) {
 
@@ -223,7 +223,7 @@ public class LgroupHandler extends AbstractHandler {
         return id;
     }
 
-    @RequestMapping(value = "/treenode", method = RequestMethod.GET, produces = {"application/json"})
+    @RequestMapping(value = "/treenode", method = RequestMethod.GET, produces = {"application/json;charset=UTF-8"})
     @ResponseBody
     public String getLgroupTreeNode(
             @RequestParam(value = "node", required = true) String node,

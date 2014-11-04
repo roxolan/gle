@@ -23,7 +23,7 @@ public class CourseHandler extends AbstractHandler {
     @Autowired
     protected CourseService courseService;
     
-    @RequestMapping(value = "/find", method = RequestMethod.GET, produces = {"application/json"})
+    @RequestMapping(value = "/find", method = RequestMethod.GET, produces = {"application/json;charset=UTF-8"})
     @ResponseBody
     public String find(
             @RequestParam(value = "idCourse", required = true) Integer idCourse,
@@ -47,7 +47,7 @@ public class CourseHandler extends AbstractHandler {
         }
     }
 
-    @RequestMapping(value = "/store", method = RequestMethod.POST, produces = {"application/json"})
+    @RequestMapping(value = "/store", method = RequestMethod.POST, produces = {"application/json;charset=UTF-8"})
     @ResponseBody
     public String store(
             @RequestParam(value = "data", required = true) String jsonData,
@@ -77,7 +77,7 @@ public class CourseHandler extends AbstractHandler {
         }
     }
 
-    @RequestMapping(value = "/remove", method = RequestMethod.POST, produces = {"application/json"})
+    @RequestMapping(value = "/remove", method = RequestMethod.POST, produces = {"application/json;charset=UTF-8"})
     @ResponseBody
     public String remove(
             @RequestParam(value = "data", required = true) String jsonData,
@@ -105,7 +105,7 @@ public class CourseHandler extends AbstractHandler {
         }
     }
 
-    @RequestMapping(value = "/findAll", method = RequestMethod.GET, produces = {"application/json"})
+    @RequestMapping(value = "/findAll", method = RequestMethod.GET, produces = {"application/json;charset=UTF-8"})
     @ResponseBody
     public String findAll(
             HttpServletRequest request) {

@@ -21,7 +21,7 @@ public class SecurityHandler extends AbstractHandler {
     @Autowired
     protected UserService userService;
 
-    @RequestMapping(value = "/logon", method = RequestMethod.POST, produces = {"application/json"})
+    @RequestMapping(value = "/logon", method = RequestMethod.POST, produces = {"application/json;charset=UTF-8"})
     @ResponseBody
     public String logon(
             @RequestParam(value = "username", required = true) String username,
@@ -44,7 +44,7 @@ public class SecurityHandler extends AbstractHandler {
         }
     }
 
-    @RequestMapping(value = "/logout", produces = {"application/json"})
+    @RequestMapping(value = "/logout", produces = {"application/json;charset=UTF-8"})
     @ResponseBody
     public String logout(HttpServletRequest request) {
 
