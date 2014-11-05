@@ -10,9 +10,7 @@ CREATE TABLE `gle_lgroup` (
     id_lgroup int unsigned not null auto_increment,
     lgroup_title varchar(200) not null,
     primary key(id_lgroup)
-    )     
-    default character set utf8mb4
-    default collate utf8mb4_unicode_ci;
+    );
 
 /* Data for table `gle_group` */
 insert into gle_lgroup(lgroup_title) values ('EMBA-20');
@@ -36,9 +34,7 @@ CREATE TABLE `gle_course` (
     id_lgroup int unsigned not null,
     primary key(id_course),
     foreign key(id_lgroup) references gle_lgroup(id_lgroup)
-    )
-    default character set utf8mb4
-    default collate utf8mb4_unicode_ci;
+    );
 
 /* Data for table `gle_course` */
 insert into gle_course(course_title, id_lgroup) values ('Стратегічна ідея', 1);
@@ -71,9 +67,7 @@ CREATE TABLE `gle_assignment` (
     id_course int unsigned not null,
     primary key(id_assignment),
     foreign key(id_course) references gle_course(id_course)
-    )
-    default character set utf8mb4
-    default collate utf8mb4_unicode_ci;
+    );
 
 /* Data for table `gle_assignment` */
 insert into gle_assignment(assignment_title, id_course) values ('Написати есе', 1);
@@ -108,9 +102,7 @@ CREATE TABLE `gle_user` (
     password varchar(100) not null,
     admin_role char(1) not null,
     primary key(username)
-    )
-    default character set utf8mb4
-    default collate utf8mb4_unicode_ci;
+    );
 
 /* Data for table `gle_user` */
 insert into gle_user(username, first_name, last_name, email, password, admin_role) values ('osavruk', 'Олександр', 'Саврук', 'os@kmbs.ua', 'admin', 'Y');
@@ -130,9 +122,7 @@ CREATE TABLE `gle_assignment_submission` (
     primary key(id_assignment_submission),
     foreign key(id_assignment) references gle_assignment(id_assignment),
     foreign key(username) references gle_user(username)
-    )
-    default character set utf8mb4
-    default collate utf8mb4_unicode_ci;
+    );
 
 /* Data for table `gle_assignment_submission` */
 insert into gle_assignment_submission(id_assignment, username, submission_date) values (3, 'vkotusenko', now());
