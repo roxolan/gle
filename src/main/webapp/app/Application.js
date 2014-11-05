@@ -35,7 +35,12 @@ Ext.define('Kmbsvle.Application', {
     views: [
     ],
 
-
+    init: function() {
+        Kmbsvle.URL_PREFIX = 'gle/';
+        Ext.Ajax.on('beforerequest', function(conn, options, eOpts){
+            options.url = Kmbsvle.URL_PREFIX + options.url;
+        });    
+    },
 
     launch: function() {
         var me = this;

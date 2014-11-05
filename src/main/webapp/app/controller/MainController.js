@@ -9,7 +9,7 @@ Ext.define('Kmbsvle.controller.MainController', {
     
     doLogon: function(username, password) {
         Ext.Ajax.request({
-            url: 'gle/security/logon.json',
+            url: 'security/logon.json',
             params: {
                 username: username,
                 password: password
