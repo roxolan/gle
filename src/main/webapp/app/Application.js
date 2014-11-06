@@ -44,6 +44,11 @@ Ext.define('Kmbsvle.Application', {
 
     launch: function() {
         var me = this;
+        Kmbsvle.console = function(output) {
+            if (typeof console !== undefined) {
+                console.info(output);
+            }
+        };
         me.logonWindow = Ext.create('Kmbsvle.view.auth.form.LoginForm');
         me.logonWindow.show();
     },

@@ -16,8 +16,7 @@ Ext.define('Kmbsvle.controller.MainController', {
             },
             success: function(response) {
                 var responseT = response.responseText;
-                console.log(responseT);
-                Ext.Msg.alert('alert', responseT);
+                Kmbsvle.console(responseT);
             }
         });
         Kmbsvle.getApplication().doAfterLogon();
