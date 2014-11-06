@@ -28,6 +28,7 @@ Ext.define('Kmbsvle.view.toppanel.userops.menu.ToppanelUseropsMenu', {
         click: 'openProfileEdit'
       }
     }
-  ]
+  ],
+  bind: '{theUser.fullName}'
 
 });
