@@ -15,11 +15,16 @@ Ext.define('Kmbsvle.controller.MainController', {
                 password: password
             },
             success: function(response) {
-                var responseT = response.responseText;
-                Kmbsvle.console(responseT);
+                var obj = Ext.JSON.decode(response.responseText);
+                if (obj.success) {
+                    Kmbsvle.console(obj.data);
+                    Kmbsvle.getApplication().doAfterLogon(obj.data);
+                } else {
+                    Ext.Msg.alert('Невірні дані входу', 'Будь ласка, введіть дійсні ID та пароль');
+                }
             }
         });
-        Kmbsvle.getApplication().doAfterLogon();
+        
     }
 });
 

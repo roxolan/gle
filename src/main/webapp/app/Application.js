@@ -30,7 +30,7 @@ Ext.define('Kmbsvle.Application', {
     stores: [
     ],
 
-    models: [],
+    models: ['User'],
 
     views: [
     ],
@@ -52,10 +52,17 @@ Ext.define('Kmbsvle.Application', {
         me.logonWindow = Ext.create('Kmbsvle.view.auth.form.LoginForm');
         me.logonWindow.show();
     },
-    doAfterLogon: function() {
+    doAfterLogon: function(userObj) {
         var me = this;
-        me.logonWindow.hide();
+        me.getUser = function() {
+            return userObj;
+        };
+        me.isAdmin = function() {
+            return userObj.adminRole === 'Y';
+        };
+        Kmbsvle.console('adminRole: ' + userObj.adminRole);
         me.mainViewport = Ext.create('Kmbsvle.view.main.MainView');
+        me.logonWindow.hide();
     }
 
 });

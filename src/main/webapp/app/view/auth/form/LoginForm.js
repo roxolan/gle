@@ -12,7 +12,7 @@ Ext.define('Kmbsvle.view.auth.form.LoginForm', {
         'Kmbsvle.view.auth.form.LoginFormController'
     ],
 
-    title: 'Login Form',
+    title: 'Форма входу',
 
     items: [
         {

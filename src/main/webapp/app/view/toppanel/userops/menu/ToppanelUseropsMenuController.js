@@ -12,16 +12,11 @@ Ext.define('Kmbsvle.view.toppanel.userops.menu.ToppanelUseropsMenuController', {
   },
 
   setUserName: function() {
-    var userSelectedLocale = 'uk';
-
-    var menuitem = this.lookupReference('userops_username');
-    if (userSelectedLocale === 'en') {
-      var username = this.getViewModel().getData().en.toppanel_username;
-    } else if (userSelectedLocale === 'uk') {
-      var username = this.getViewModel().getData().uk.toppanel_username;
-    }
-
-    menuitem.setConfig('text', username);
+    var me = this;
+    var menuitem = me.lookupReference('userops_username');
+    var fullname = Kmbsvle.getApplication().getUser().fullName;
+    
+    menuitem.setConfig('text', fullname);
   },
 
   control: {
