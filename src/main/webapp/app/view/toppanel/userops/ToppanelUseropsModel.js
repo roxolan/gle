@@ -13,15 +13,6 @@ Ext.define('Kmbsvle.view.toppanel.userops.ToppanelUseropsModel', {
 
         }
 
-    },
-    
-    links: {
-        theUser: {
-            type: 'Kmbsvle.model.User',
-            fullName: 'fullName',
-            create: true
-        }
     }
-
 });
 
