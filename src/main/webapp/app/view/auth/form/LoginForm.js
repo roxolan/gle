@@ -33,7 +33,8 @@ Ext.define('Kmbsvle.view.auth.form.LoginForm', {
                 },
                 { 
                     name: 'password', 
-                    fieldLabel: 'Пароль', 
+                    fieldLabel: 'Пароль',
+                    inputType: 'password',
                     allowBlank: false, 
                     validateOnBlur: true, 
                     emptyText: 'пароль',
