@@ -8,15 +8,46 @@ Ext.define('Kmbsvle.view.admin.board.left.panel.AdminBoardLeftPanel', {
   },
   requires: [
     'Kmbsvle.view.admin.board.left.panel.AdminBoardLeftPanelController',
-    'Kmbsvle.view.admin.board.left.panel.AdminBoardLeftPanelModel',
-    'Kmbsvle.view.admin.board.left.panel.menu.AdminBoardLeftPanelMenu'
+    'Kmbsvle.view.admin.board.left.panel.AdminBoardLeftPanelModel'
   ],
   header: false,
   width: 250,
   items: [
     {
-      xtype: 'admin.board.left.panel.menu'
+        xtype: 'menu',
+        floating: false,
+        items: [
+            {
+                xtype: 'menuitem',
+                reference: 'admin_board_auth_board',
+                text: 'Автентифікація',
+                listeners: {
+                    click: 'openAuthBoard'
+                }
+            },
+            { 
+                xtype: 'menuseparator' 
+            },
+            { 
+                xtype: 'menuitem',
+                reference: 'admin_board_group_board',
+                text: 'Групи',
+                listeners: {
+                    click: 'openGroupBoard'
+                }
+            },
+            { 
+                xtype: 'menuseparator' 
+            },
+            { 
+                xtype: 'menuitem',
+                reference: 'admin_board_library_board',
+                text: 'Бібліотека',
+                listeners: {
+                    click: 'openLibraryBoard'
+                }
+            }
+        ]
     }
   ]
-
 });

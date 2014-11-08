@@ -73,14 +73,7 @@ Ext.define('Kmbsvle.view.base.BaseViewController', {
   
   loadCenterPanel: function() {
         // This will be function loading something and possibly resizing
-  },
-  
-  loadRightPanel: function(name) {
-      var requestedComponent = Ext.ComponentQuery.query(name);
-      Kmbsvle.console(requestedComponent);
-      
   }
-
 
 });
            
