@@ -15,37 +15,7 @@ Ext.define('Kmbsvle.view.assign.board.left.panel.menu.AssignBoardLeftPanelMenu',
   floating: false,
 
   items: [
-    { 
-      xtype: 'menuitem',
-      reference: 'assign_board_assignment_1',
-      text: 'Завдання №1',
-      listeners: {
-        click: 'openAssignment'
-      }
-    },
-    { 
-      xtype: 'menuseparator' 
-    },
-    { 
-      xtype: 'menuitem',
-      reference: 'assign_board_assignment_2',
-      text: 'Завдання №2',
-      listeners: {
-        click: 'openAssignment'
-      }
-    },
-    { 
-      xtype: 'menuseparator' 
-    },
-    { 
-      xtype: 'menuitem',
-      reference: 'assign_board_assignment_3',
-      text: 'Завдання №3',
-      listeners: {
-        click: 'openAssignment'
-      }
-    }
-
+    
   ]
 
 });
