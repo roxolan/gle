@@ -19,7 +19,6 @@ Ext.define('Kmbsvle.view.admin.board.left.panel.AdminBoardLeftPanel', {
             items: [
                 {
                     xtype: 'menuitem',
-                    reference: 'admin_board_auth_board',
                     text: 'Автентифікація',
                     listeners: {
                         click: 'openAuthBoard'
@@ -30,7 +29,6 @@ Ext.define('Kmbsvle.view.admin.board.left.panel.AdminBoardLeftPanel', {
                 },
                 { 
                     xtype: 'menuitem',
-                    reference: 'admin_board_group_board',
                     text: 'Групи',
                     listeners: {
                         click: 'openGroupBoard'
@@ -41,7 +39,6 @@ Ext.define('Kmbsvle.view.admin.board.left.panel.AdminBoardLeftPanel', {
                 },
                 { 
                     xtype: 'menuitem',
-                    reference: 'admin_board_library_board',
                     text: 'Бібліотека',
                     listeners: {
                         click: 'openLibraryBoard'

@@ -19,7 +19,6 @@ Ext.define('Kmbsvle.view.assign.board.left.panel.AssignBoardLeftPanel', {
             items: [
                 { 
                     xtype: 'menuitem',
-                    reference: 'assign_board_assignment_1',
                     text: 'Завдання №1',
                     listeners: {
                         click: 'openAssignment'
@@ -30,7 +29,6 @@ Ext.define('Kmbsvle.view.assign.board.left.panel.AssignBoardLeftPanel', {
                 },
                 { 
                     xtype: 'menuitem',
-                    reference: 'assign_board_assignment_2',
                     text: 'Завдання №2',
                     listeners: {
                         click: 'openAssignment'
@@ -41,7 +39,6 @@ Ext.define('Kmbsvle.view.assign.board.left.panel.AssignBoardLeftPanel', {
                 },
                 { 
                     xtype: 'menuitem',
-                    reference: 'assign_board_assignment_3',
                     text: 'Завдання №3',
                     listeners: {
                         click: 'openAssignment'
