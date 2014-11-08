@@ -63,6 +63,22 @@ Ext.define('Kmbsvle.view.base.BaseViewController', {
       }
     }
 
+  },
+  
+  resizePanel: function(panelId, panelWidth) {
+      var chosenPanel = Ext.getCmp(panelId);
+      chosenPanel.setWidth(panelWidth);
+      chosenPanel.expand();
+  },
+  
+  loadCenterPanel: function() {
+        // This will be function loading something and possibly resizing
+  },
+  
+  loadRightPanel: function(name) {
+      var requestedComponent = Ext.ComponentQuery.query(name);
+      Kmbsvle.console(requestedComponent);
+      
   }
 
 

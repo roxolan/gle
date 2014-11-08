@@ -14,9 +14,24 @@ Ext.define('Kmbsvle.view.auth.board.left.panel.AuthBoardLeftPanel', {
 
   header: false,
   width: 250,
+  reference: 'authBoardLeftPanel',
   items: [
+    // { xtype: 'auth.board.left.panel.menu }
     {
-      xtype: 'auth.board.left.panel.menu'
+        xtype: 'menu',
+        width: 250,
+        floating: false,
+        items: [
+            { 
+                xtype: 'menuitem',
+                reference: 'auth_board_user_board',
+                text: 'Користувачі',
+                listeners: {
+                    click: 'openUserBoard',
+                    scope: 'controller'
+                }
+            }
+        ]
     }
   ]
 

@@ -14,6 +14,8 @@ Ext.define('Kmbsvle.view.auth.board.right.panel.AuthBoardRightPanel', {
   header: false,
   html: 'Settings for Authentication Board',
   width: 200,
-  bodyPadding: 10
+  bodyPadding: 10,
+  reference: 'authBoardRightPanel',
+  id: 'authBoardRightPanel'
   
 });
