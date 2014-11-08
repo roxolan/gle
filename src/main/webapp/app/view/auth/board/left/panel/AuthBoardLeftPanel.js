@@ -8,15 +8,13 @@ Ext.define('Kmbsvle.view.auth.board.left.panel.AuthBoardLeftPanel', {
   },
   requires: [
     'Kmbsvle.view.auth.board.left.panel.AuthBoardLeftPanelController',
-    'Kmbsvle.view.auth.board.left.panel.AuthBoardLeftPanelModel',
-    'Kmbsvle.view.auth.board.left.panel.menu.AuthBoardLeftPanelMenu'    
+    'Kmbsvle.view.auth.board.left.panel.AuthBoardLeftPanelModel'
   ],
 
   header: false,
   width: 250,
   reference: 'authBoardLeftPanel',
   items: [
-    // { xtype: 'auth.board.left.panel.menu }
     {
         xtype: 'menu',
         width: 250,
