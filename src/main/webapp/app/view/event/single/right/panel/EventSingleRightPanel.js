@@ -6,6 +6,10 @@ Ext.define('Kmbsvle.view.event.single.right.panel.EventSingleRightPanel', {
     viewModel: {
         type: 'event.single.right.panel'
     },
+    requires: [
+        'Kmbsvle.view.event.single.right.panel.EventSingleRightPanelController',
+        'Kmbsvle.view.event.single.right.panel.EventSingleRightPanelModel'
+    ],
     header: false,
     html: 'Settings for Single Event',
     width: 200,

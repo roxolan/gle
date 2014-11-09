@@ -6,9 +6,12 @@ Ext.define('Kmbsvle.view.chat.board.right.panel.ChatBoardRightPanel', {
     viewModel: {
         type: 'chat.board.right.panel'
     },
+    requires: [
+        'Kmbsvle.view.chat.board.right.panel.ChatBoardRightPanelController',
+        'Kmbsvle.view.chat.board.right.panel.ChatBoardRightPanelModel'        
+    ],
     header: false,
     html: 'Settings for Chat Board',
     width: 200,
     bodyPadding: 10
-
 });

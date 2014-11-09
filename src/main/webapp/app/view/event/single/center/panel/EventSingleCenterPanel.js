@@ -6,6 +6,10 @@ Ext.define('Kmbsvle.view.event.single.center.panel.EventSingleCenterPanel', {
     viewModel: {
         type: 'event.single.center.panel'
     },
+    requires: [
+        'Kmbsvle.view.event.single.center.panel.EventSingleCenterPanelController',
+        'Kmbsvle.view.event.single.center.panel.EventSingleCenterPanelModel'
+    ],
     html: 'Particular Event -- Окрема подія',
     bodyPadding: 10
 

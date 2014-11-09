@@ -12,7 +12,6 @@ Ext.define('Kmbsvle.view.course.single.left.panel.CourseSingleLeftPanelControlle
         'Kmbsvle.view.assign.board.center.panel.AssignBoardCenterPanel',
         'Kmbsvle.view.assign.board.right.panel.AssignBoardRightPanel',
 
-        // chat.single is a modal window
         'Kmbsvle.view.chat.board.left.panel.ChatBoardLeftPanel',
         'Kmbsvle.view.chat.board.center.panel.ChatBoardCenterPanel',
         'Kmbsvle.view.chat.board.right.panel.ChatBoardRightPanel'
@@ -21,7 +20,7 @@ Ext.define('Kmbsvle.view.course.single.left.panel.CourseSingleLeftPanelControlle
     routes: {
         'content' : 'openContentBoard',
         'assignments' : 'openAssignBoard',
-        'chat' : 'openChatBoard'
+        'chats' : 'openChatBoard'
     },
 
     openContentBoard: function() {
