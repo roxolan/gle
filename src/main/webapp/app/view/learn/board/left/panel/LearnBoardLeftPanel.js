@@ -8,15 +8,54 @@ Ext.define('Kmbsvle.view.learn.board.left.panel.LearnBoardLeftPanel', {
     },
     requires: [
         'Kmbsvle.view.learn.board.left.panel.LearnBoardLeftPanelController',
-        'Kmbsvle.view.learn.board.left.panel.LearnBoardLeftPanelModel',
-        'Kmbsvle.view.learn.board.left.panel.menu.LearnBoardLeftPanelMenu'        
+        'Kmbsvle.view.learn.board.left.panel.LearnBoardLeftPanelModel'
     ],  
   
     header: false,
     width: 250,
     items: [
         {
-            xtype: 'learn.board.left.panel.menu'
+            xtype: 'menu',
+            floating: false,
+            items: [
+                { 
+                    xtype: 'menuitem',
+                    text: 'Курс №1',
+                    listeners: {
+                        click: 'openCourseSingle'
+                    }
+                },
+                { 
+                    xtype: 'menuseparator' 
+                },
+                { 
+                    xtype: 'menuitem',
+                    text: 'Курс №2',
+                    listeners: {
+                        click: 'openCourseSingle'
+                    }
+                },
+                { 
+                    xtype: 'menuseparator' 
+                },
+                { 
+                    xtype: 'menuitem',
+                    text: 'Курс №3',
+                    listeners: {
+                        click: 'openCourseSingle'
+                    }
+                },
+                { 
+                    xtype: 'menuseparator' 
+                },
+                { 
+                    xtype: 'menuitem',
+                    text: 'Мої курси',
+                    listeners: {
+                        click: 'openCourseBoard'
+                    }
+                }
+            ]
         }
     ]
 
