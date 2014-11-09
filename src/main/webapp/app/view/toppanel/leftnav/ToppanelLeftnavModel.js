@@ -1,7 +1,7 @@
-Ext.define('Kmbsvle.view.toppanel.leftnav.menu.ToppanelLeftnavMenuModel', {
+Ext.define('Kmbsvle.view.toppanel.leftnav.ToppanelLeftnavModel', {
     extend: 'Ext.app.ViewModel',
 
-    alias: 'viewmodel.toppanel.leftnav.menu',
+    alias: 'viewmodel.toppanel.leftnav',
 
     data: {
 
@@ -20,3 +20,5 @@ Ext.define('Kmbsvle.view.toppanel.leftnav.menu.ToppanelLeftnavMenuModel', {
     }
 
 });
+
+

@@ -1,7 +1,7 @@
-Ext.define('Kmbsvle.view.toppanel.leftnav.menu.ToppanelLeftnavMenuController', {
+Ext.define('Kmbsvle.view.toppanel.leftnav.ToppanelLeftnavController', {
     extend: 'Kmbsvle.view.base.BaseViewController',
 
-    alias: 'controller.toppanel.leftnav.menu',
+    alias: 'controller.toppanel.leftnav',
 
     requires: [
         'Kmbsvle.view.calendar.board.left.panel.CalendarBoardLeftPanel',
@@ -24,22 +24,24 @@ Ext.define('Kmbsvle.view.toppanel.leftnav.menu.ToppanelLeftnavMenuController', {
     },
 
     setLeftnavCaptions: function() {
+        // TODO refactor setLeftnavCaptions method
+        var me = this;
         var userSelectedLocale = 'uk';
 
-        var learnItem = this.lookupReference('leftnav_learn');
-        var socialItem = this.lookupReference('leftnav_social');
-        var calendarItem = this.lookupReference('leftnav_calendar');
+        var learnItem = me.lookupReference('leftnav_learn');
+        var socialItem = me.lookupReference('leftnav_social');
+        var calendarItem = me.lookupReference('leftnav_calendar');
 
         console.log(this.getViewModel().getData());
 
         if (userSelectedLocale === 'en') {
-            var learnCaption = this.getViewModel().getData().en.toppanel_leftnav_learn_caption;
-            var socialCaption = this.getViewModel().getData().en.toppanel_leftnav_social_caption;
-            var calendarCaption = this.getViewModel().getData().en.toppanel_leftnav_calendar_caption;
+            var learnCaption = me.getViewModel().getData().en.toppanel_leftnav_learn_caption;
+            var socialCaption = me.getViewModel().getData().en.toppanel_leftnav_social_caption;
+            var calendarCaption = me.getViewModel().getData().en.toppanel_leftnav_calendar_caption;
         } else if (userSelectedLocale === 'uk') {
-            var learnCaption = this.getViewModel().getData().uk.toppanel_leftnav_learn_caption;
-            var socialCaption = this.getViewModel().getData().uk.toppanel_leftnav_social_caption;
-            var calendarCaption = this.getViewModel().getData().uk.toppanel_leftnav_calendar_caption;
+            var learnCaption = me.getViewModel().getData().uk.toppanel_leftnav_learn_caption;
+            var socialCaption = me.getViewModel().getData().uk.toppanel_leftnav_social_caption;
+            var calendarCaption = me.getViewModel().getData().uk.toppanel_leftnav_calendar_caption;
         }
 
         learnItem.setConfig('text', learnCaption);
@@ -50,7 +52,7 @@ Ext.define('Kmbsvle.view.toppanel.leftnav.menu.ToppanelLeftnavMenuController', {
     openLearnBoard: function() {
         var me = this;
         me.changeLeftPanel('widget.learn.board.left.panel', 'learn_board_left_panel_title', 'expand');
-        me.changeCenterPanel('widget.learn.board.center.panel', 'learn_board_center_panel_title');
+        me.changeCenterPanel('widget.learn.board.center.panel');
         me.changeRightPanel('widget.learn.board.right.panel', 'learn_board_right_panel_title', 'collapse');
         me.redirectTo('learn/board');
     },
@@ -58,7 +60,7 @@ Ext.define('Kmbsvle.view.toppanel.leftnav.menu.ToppanelLeftnavMenuController', {
     openSocialBoard: function() {
         var me = this;
         me.changeLeftPanel('widget.social.board.left.panel', 'social_board_left_panel_title', 'expand');
-        me.changeCenterPanel('widget.social.board.center.panel', 'social_board_center_panel_title');
+        me.changeCenterPanel('widget.social.board.center.panel');
         me.changeRightPanel('widget.social.board.right.panel', 'social_board_right_panel_title', 'collapse');
         me.redirectTo('social/board');
     },
@@ -67,7 +69,7 @@ Ext.define('Kmbsvle.view.toppanel.leftnav.menu.ToppanelLeftnavMenuController', {
     openCalendarBoard: function() {
         var me = this;
         me.changeLeftPanel('widget.calendar.board.left.panel', 'calendar_board_left_panel_title', 'expand');
-        me.changeCenterPanel('widget.calendar.board.center.panel', 'calendar_board_center_panel_title');
+        me.changeCenterPanel('widget.calendar.board.center.panel');
         me.changeRightPanel('widget.calendar.board.right.panel', 'calendar_board_right_panel_title', 'collapse');
         me.redirectTo('calendar');
     },
@@ -78,4 +80,6 @@ Ext.define('Kmbsvle.view.toppanel.leftnav.menu.ToppanelLeftnavMenuController', {
         }
     }
 
-}); 
+});
+
+
