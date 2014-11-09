@@ -1,3 +1,6 @@
 jdbc.properties
 target/*
 glassfish-resources.xml
+src/main/webapp/build/*
+bootstrap.json
+all-classes.js
