@@ -6,11 +6,11 @@ Ext.define('Kmbsvle.view.auth.board.left.panel.AuthBoardLeftPanelModel', {
     data: {
 
         en: {
-          auth_board_left_panel_title: 'Authentication'
+          auth_board_left_panel_title: 'Users'
         },
 
         uk: {
-          auth_board_left_panel_title: 'Автентифікація'
+          auth_board_left_panel_title: 'Користувачі системи'
         }
 
     }

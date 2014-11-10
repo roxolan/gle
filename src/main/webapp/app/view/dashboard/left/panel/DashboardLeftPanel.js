@@ -19,40 +19,13 @@ Ext.define('Kmbsvle.view.dashboard.left.panel.DashboardLeftPanel', {
             items: [
                 { 
                     xtype: 'menuitem',
-                    text: 'Місце менеджера',
-                    listeners: {
-                        click: 'openManageBoard'
-                    }
-                },
-                { 
-                    xtype: 'menuseparator' 
-                },
-                { 
-                    xtype: 'menuitem',
-                    text: 'Місце адміністратора',
-                    listeners: {
-                        click: 'openAdminBoard'
-                    }
-                },
-                { 
-                    xtype: 'menuseparator' 
-                },
-                { 
-                    xtype: 'menuitem',
-                    text: 'Звіти',
-                    listeners: {
-                        click: 'openReportBoard'
-                    }
-                },
-                { 
-                    xtype: 'menuseparator' 
-                },
-                { 
-                    xtype: 'menuitem',
                     text: 'Повідомлення',
                     listeners: {
                         click: 'openMessageBoard'
                     }
+                },
+                { 
+                    xtype: 'menuseparator' 
                 }
             ]
         }

@@ -21,10 +21,19 @@ Ext.define('Kmbsvle.view.auth.board.left.panel.AuthBoardLeftPanel', {
         items: [
             { 
                 xtype: 'menuitem',
-                text: 'Користувачі',
+                text: 'Загальний список',
                 listeners: {
-                    click: 'openUserBoard',
-                    scope: 'controller'
+                    click: 'openUserBoard'
+                }
+            },
+            { 
+                xtype: 'menuseparator' 
+            },
+            { 
+                xtype: 'menuitem',
+                text: 'Додати користувача',
+                listeners: {
+//                    click: 'openUserBoard'
                 }
             }
         ]

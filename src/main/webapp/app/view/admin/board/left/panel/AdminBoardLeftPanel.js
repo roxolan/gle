@@ -19,7 +19,7 @@ Ext.define('Kmbsvle.view.admin.board.left.panel.AdminBoardLeftPanel', {
             items: [
                 {
                     xtype: 'menuitem',
-                    text: 'Автентифікація',
+                    text: 'Управління користувачами',
                     listeners: {
                         click: 'openAuthBoard'
                     }

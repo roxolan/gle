@@ -10,7 +10,7 @@ Ext.define('Kmbsvle.view.manage.board.left.panel.ManageBoardLeftPanelModel', {
         },
 
         uk: {
-          manage_board_left_panel_title: 'Менеджер'
+          manage_board_left_panel_title: 'Управління'
         }
 
     }
