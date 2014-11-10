@@ -67,7 +67,7 @@ Ext.define('Kmbsvle.view.toppanel.leftnav.ToppanelLeftnav', {
                             glyph: 'xf19d@FontAwesome',
                             overCls: 'hoveronname',
                             margin: '0 15 0 0',
-                            hidden: !Kmbsvle.getApplication().isAdmin(),
+                            hidden: !Kmbsvle.getApplication().isProfessor(),
                             listeners: {
                                 click: 'openProfessorBoard' // REALIZE
                             }
@@ -78,6 +78,7 @@ Ext.define('Kmbsvle.view.toppanel.leftnav.ToppanelLeftnav', {
                             glyph: 'xf06e@FontAwesome',
                             overCls: 'hoveronname',
                             margin: '0 15 0 0',
+                            hidden: !Kmbsvle.getApplication().isManager(),
                             listeners: {
                                 click: 'openManageBoard' // REALIZE
                             }
@@ -88,6 +89,7 @@ Ext.define('Kmbsvle.view.toppanel.leftnav.ToppanelLeftnav', {
                             glyph: 'xf19c@FontAwesome',
                             overCls: 'hoveronname',
                             margin: '0 15 0 0',
+                            hidden: !Kmbsvle.getApplication().isAdmin(),
                             listeners: {
                                 click: 'openAdminBoard' // REALIZE
                             }

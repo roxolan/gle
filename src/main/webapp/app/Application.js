@@ -57,6 +57,12 @@ Ext.define('Kmbsvle.Application', {
         me.getUser = function() {
             return userObj;
         };
+        me.isManager = function() {
+            return userObj.managerRole === 'Y';
+        };
+        me.isProfessor = function() {
+            return userObj.professorRole === 'Y';
+        };
         me.isAdmin = function() {
             return userObj.adminRole === 'Y';
         };
