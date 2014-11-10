@@ -56,8 +56,17 @@ public class User extends AbstractEntity implements EntityItem<String> {
     private String password;
     @Basic(optional = false)
     @NotNull
+    @Column(name = "professor_role")
+    private Character professorRole;    
+    @Basic(optional = false)
+    @NotNull
+    @Column(name = "manager_role")
+    private Character managerRole;
+    @Basic(optional = false)
+    @NotNull
     @Column(name = "admin_role")
     private Character adminRole;
+
 
 
     public User() {
@@ -67,12 +76,14 @@ public class User extends AbstractEntity implements EntityItem<String> {
         this.username = username;
     }
 
-    public User(String username, String firstName, String lastName, String email, String password, Character adminRole) {
+    public User(String username, String firstName, String lastName, String email, String password, Character professorRole, Character managerRole, Character adminRole) {
         this.username = username;
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
         this.password = password;
+        this.professorRole = professorRole;
+        this.managerRole = managerRole;
         this.adminRole = adminRole;
     }
 
@@ -115,6 +126,22 @@ public class User extends AbstractEntity implements EntityItem<String> {
     public void setPassword(String password) {
         this.password = password;
     }
+    
+    public Character getProfessorRole() {
+        return professorRole;
+    }
+
+    public void setProfessorRole(Character professorRole) {
+        this.professorRole = professorRole;
+    }
+    
+    public Character getManagerRole() {
+        return managerRole;
+    }
+
+    public void setManagerRole(Character managerRole) {
+        this.managerRole = managerRole;
+    }
 
     public Character getAdminRole() {
         return adminRole;
@@ -153,6 +180,14 @@ public class User extends AbstractEntity implements EntityItem<String> {
         return username;
     }
     
+    public boolean isProfessor() {
+        return professorRole == null ? false : professorRole.equals('Y');
+    }
+    
+    public boolean isManager() {
+        return managerRole == null ? false : managerRole.equals('Y');
+    }
+    
     public boolean isAdmin() {
         return adminRole == null ? false : adminRole.equals('Y');
     }
@@ -164,6 +199,8 @@ public class User extends AbstractEntity implements EntityItem<String> {
                 .add("firstName", firstName)
                 .add("lastName", lastName)
                 .add("email", email)
+                .add("professorRole", professorRole + "")
+                .add("managerRole", managerRole + "")
                 .add("adminRole", adminRole + "")
                 .add("fullName", firstName + " " + lastName);
     }

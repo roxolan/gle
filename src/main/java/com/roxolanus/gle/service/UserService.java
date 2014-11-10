@@ -12,6 +12,8 @@ public interface UserService {
         String lastName,
         String email,
         String password,
+        Character professorRole,
+        Character managerRole,
         Character adminRole,
         String actionUsername);
 

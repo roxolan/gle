@@ -43,6 +43,8 @@ public class UserServiceImpl extends AbstractService implements UserService {
         String lastName,
         String email,
         String password,
+        Character professorRole,
+        Character managerRole,
         Character adminRole,
         String actionUsername) {
 
@@ -64,6 +66,18 @@ public class UserServiceImpl extends AbstractService implements UserService {
         if(password == null || password.length() == 0){
 
             return ResultFactory.getFailResult("Unable to store a user without a valid non empty password");
+
+        }
+        
+        if(!professorRole.equals('Y') && !professorRole.equals('N')){
+
+            return ResultFactory.getFailResult("Unable to store the user: professorRole must be Y or N");
+
+        }
+                
+        if(!managerRole.equals('Y') && !managerRole.equals('N')){
+
+            return ResultFactory.getFailResult("Unable to store the user: managerRole must be Y or N");
 
         }
 
@@ -119,6 +133,8 @@ public class UserServiceImpl extends AbstractService implements UserService {
         user.setFirstName(firstName);
         user.setLastName(lastName);
         user.setPassword(password);
+        user.setProfessorRole(professorRole);
+        user.setManagerRole(managerRole);
         user.setAdminRole(adminRole);
 
         if(doInsert) {
