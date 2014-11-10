@@ -51,8 +51,5 @@ Ext.define('Kmbsvle.view.auth.form.LoginForm', {
             ]
         }
     ]
-
-
-
-
+    
 });

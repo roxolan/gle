@@ -18,7 +18,7 @@ Ext.define('Kmbsvle.view.dashboard.center.panel.DashboardCenterPanel', {
         var me = this;
         var tpl = new Ext.XTemplate(
                 '<tpl for=".">', 
-                '<p>Welcome, <b>{fullName}</b>!</p>',
+                '<p>Вітаємо, <b>{firstName}</b>!</p>',
                 '</tpl>'); 
                 
         var welcomeHtml = tpl.apply(Kmbsvle.getApplication().getUser());
