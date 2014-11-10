@@ -31,22 +31,36 @@ Ext.define('Kmbsvle.view.toppanel.leftnav.ToppanelLeftnavController', {
         var learnItem = me.lookupReference('leftnav_learn');
         var socialItem = me.lookupReference('leftnav_social');
         var calendarItem = me.lookupReference('leftnav_calendar');
+        var teachingItem = me.lookupReference('leftnav_teaching');
+        var manageItem = me.lookupReference('leftnav_manage');
+        var adminItem = me.lookupReference('leftnav_admin');
 
-        console.log(this.getViewModel().getData());
+        // console.log(this.getViewModel().getData());
 
         if (userSelectedLocale === 'en') {
             var learnCaption = me.getViewModel().getData().en.toppanel_leftnav_learn_caption;
             var socialCaption = me.getViewModel().getData().en.toppanel_leftnav_social_caption;
             var calendarCaption = me.getViewModel().getData().en.toppanel_leftnav_calendar_caption;
+            var teachingCaption = me.getViewModel().getData().en.toppanel_leftnav_teaching_caption;
+            var manageCaption = me.getViewModel().getData().en.toppanel_leftnav_manage_caption;
+            var adminCaption = me.getViewModel().getData().en.toppanel_leftnav_admin_caption;
+            
+
         } else if (userSelectedLocale === 'uk') {
             var learnCaption = me.getViewModel().getData().uk.toppanel_leftnav_learn_caption;
             var socialCaption = me.getViewModel().getData().uk.toppanel_leftnav_social_caption;
             var calendarCaption = me.getViewModel().getData().uk.toppanel_leftnav_calendar_caption;
+            var teachingCaption = me.getViewModel().getData().uk.toppanel_leftnav_teaching_caption;
+            var manageCaption = me.getViewModel().getData().uk.toppanel_leftnav_manage_caption;
+            var adminCaption = me.getViewModel().getData().uk.toppanel_leftnav_admin_caption;
         }
 
         learnItem.setConfig('text', learnCaption);
         socialItem.setConfig('text', socialCaption);
         calendarItem.setConfig('text', calendarCaption);
+        teachingItem.setConfig('text', teachingCaption);
+        manageItem.setConfig('text', manageCaption);
+        adminItem.setConfig('text', adminCaption);
     },
 
     openLearnBoard: function() {
@@ -64,8 +78,7 @@ Ext.define('Kmbsvle.view.toppanel.leftnav.ToppanelLeftnavController', {
         me.changeRightPanel('widget.social.board.right.panel', 'social_board_right_panel_title', 'collapse');
         me.redirectTo('social/board');
     },
-  
-  
+   
     openCalendarBoard: function() {
         var me = this;
         me.changeLeftPanel('widget.calendar.board.left.panel', 'calendar_board_left_panel_title', 'expand');
@@ -73,7 +86,19 @@ Ext.define('Kmbsvle.view.toppanel.leftnav.ToppanelLeftnavController', {
         me.changeRightPanel('widget.calendar.board.right.panel', 'calendar_board_right_panel_title', 'collapse');
         me.redirectTo('calendar');
     },
-
+    
+    openProfessorBoard: function() {
+        
+    },
+    
+    openManageBoard: function() {
+        
+    },
+    
+    openAdminBoard: function() {
+        
+    },
+ 
     control: {
         '#': {
             afterrender: 'setLeftnavCaptions'

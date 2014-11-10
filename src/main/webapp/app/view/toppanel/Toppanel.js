@@ -28,7 +28,7 @@ Ext.define('Kmbsvle.view.toppanel.Toppanel', {
           xtype: 'panel',
           cls: 'topleftlinks',
           heigth: 40,
-          minwidth: 300,
+          minWidth: 700,
           layout:{
               type: 'hbox',
               pack: 'start'
