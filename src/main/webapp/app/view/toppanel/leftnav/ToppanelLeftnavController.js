@@ -14,13 +14,20 @@ Ext.define('Kmbsvle.view.toppanel.leftnav.ToppanelLeftnavController', {
     
         'Kmbsvle.view.social.board.left.panel.SocialBoardLeftPanel',
         'Kmbsvle.view.social.board.center.panel.SocialBoardCenterPanel',    
-        'Kmbsvle.view.social.board.right.panel.SocialBoardRightPanel'
+        'Kmbsvle.view.social.board.right.panel.SocialBoardRightPanel',
+        
+        'Kmbsvle.view.course.board.left.panel.CourseBoardLeftPanel',
+        'Kmbsvle.view.course.board.center.panel.CourseBoardCenterPanel',
+        'Kmbsvle.view.course.board.right.panel.CourseBoardRightPanel'
     ],
 
     routes: {
         'calendar' : 'openCalendarBoard',
         'learn' : 'openLearnBoard',
-        'social' : 'openSocialBoard'
+        'social' : 'openSocialBoard',
+        'courses' : 'openProfessorBoard',
+        'manage' : 'openManageBoard',
+        'admin' : 'openAdminBoard'
     },
 
     setLeftnavCaptions: function() {
@@ -88,15 +95,27 @@ Ext.define('Kmbsvle.view.toppanel.leftnav.ToppanelLeftnavController', {
     },
     
     openProfessorBoard: function() {
-        
+        var me = this;
+        me.changeLeftPanel('widget.course.board.left.panel', 'course_board_left_panel_title', 'expand');
+        me.changeCenterPanel('widget.course.board.center.panel');
+        me.changeRightPanel('widget.course.board.right.panel', 'course_board_right_panel_title', 'collapse');
+        me.redirectTo('courses');
     },
     
     openManageBoard: function() {
-        
+        var me = this;
+        me.changeLeftPanel('widget.manage.board.left.panel', 'manage_board_left_panel_title', 'expand');
+        me.changeCenterPanel('widget.manage.board.center.panel');
+        me.changeRightPanel('widget.manage.board.right.panel', 'manage_board_right_panel_title', 'collapse');
+        me.redirectTo('manage');        
     },
     
     openAdminBoard: function() {
-        
+        var me = this;
+        me.changeLeftPanel('widget.admin.board.left.panel', 'admin_board_left_panel_title', 'expand');
+        me.changeCenterPanel('widget.admin.board.center.panel');
+        me.changeRightPanel('widget.admin.board.right.panel', 'admin_board_right_panel_title', 'collapse');
+        me.redirectTo('admin');        
     },
  
     control: {
