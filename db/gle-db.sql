@@ -100,14 +100,20 @@ CREATE TABLE `gle_user` (
     last_name varchar(100) not null,
     email varchar(100) not null unique,
     password varchar(100) not null,
+    professor_role char(1) not null,
+    manager_role char(1) not null,
     admin_role char(1) not null,
     primary key(username)
     );
 
 /* Data for table `gle_user` */
-insert into gle_user(username, first_name, last_name, email, password, admin_role) values ('osavruk', 'Олександр', 'Саврук', 'os@kmbs.ua', 'admin', 'Y');
-insert into gle_user(username, first_name, last_name, email, password, admin_role) values ('vkotusenko', 'Віктор', 'Котусенко', 'kotus@kmbs.ua', 'admin', 'Y');
-insert into gle_user(username, first_name, last_name, email, password, admin_role) values ('vpavelko', 'Володимир', 'Павелко', 'vp@kmbs.ua', 'admin', 'N');
+insert into gle_user(username, first_name, last_name, email, password, professor_role, manager_role, admin_role) values ('osavruk', 'Олександр', 'Саврук', 'os@kmbs.ua', 'admin', 'Y', 'Y', 'Y');
+insert into gle_user(username, first_name, last_name, email, password, professor_role, manager_role, admin_role) values ('vkotusenko', 'Віктор', 'Котусенко', 'kotus@kmbs.ua', 'admin', 'Y', 'Y', 'Y');
+insert into gle_user(username, first_name, last_name, email, password, professor_role, manager_role, admin_role) values ('vpavelko', 'Володимир', 'Павелко', 'vp@kmbs.ua', 'admin', 'Y', 'Y', 'N');
+insert into gle_user(username, first_name, last_name, email, password, professor_role, manager_role, admin_role) values ('orashko', 'Олена', 'Рашко', 'orashko@kmbs.ua', 'admin', 'N', 'Y', 'N');
+insert into gle_user(username, first_name, last_name, email, password, professor_role, manager_role, admin_role) values ('dantoniuk', 'Дмитро', 'Антонюк', 'dmytro@kmbs.ua', 'admin', 'Y', 'Y', 'Y');
+insert into gle_user(username, first_name, last_name, email, password, professor_role, manager_role, admin_role) values ('ypentsak', 'Євген', 'Пенцак', 'pentsak@kmbs.ua', 'admin', 'Y', 'N', 'N');
+
 
 
 /* Structure for table `gle_assignment_submission` */
