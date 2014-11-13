@@ -34,9 +34,10 @@ Ext.define('Kmbsvle.view.toppanel.leftnav.ToppanelLeftnav', {
                         { 
                             xtype: 'menuitem',
                             reference: 'leftnav_learn',
-                            glyph: 'xf02d@FontAwesome',
+                            glyph: 'xf0a2@FontAwesome',
                             overCls: 'hoveronname',
                             margin: '0 15 0 0',
+                            hidden: !Kmbsvle.getApplication().isLearner(),
                             listeners: {
                                 click: 'openLearnBoard'
                             }

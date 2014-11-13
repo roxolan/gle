@@ -20,6 +20,7 @@ Ext.define('Kmbsvle.view.course.board.left.panel.CourseBoardLeftPanel', {
                 { 
                     xtype: 'menuitem',
                     text: 'Курс №1',
+                    glyph: 'xf0a2@FontAwesome',
                     listeners: {
                         click: 'openCourseSingle'
                     }
@@ -30,6 +31,7 @@ Ext.define('Kmbsvle.view.course.board.left.panel.CourseBoardLeftPanel', {
                 { 
                     xtype: 'menuitem',
                     text: 'Курс №2',
+                    glyph: 'xf0a2@FontAwesome',
                     listeners: {
                         click: 'openCourseSingle'
                     }
@@ -40,6 +42,7 @@ Ext.define('Kmbsvle.view.course.board.left.panel.CourseBoardLeftPanel', {
                 { 
                     xtype: 'menuitem',
                     text: 'Курс №3',
+                    glyph: 'xf0a2@FontAwesome',
                     listeners: {
                         click: 'openCourseSingle'
                     }

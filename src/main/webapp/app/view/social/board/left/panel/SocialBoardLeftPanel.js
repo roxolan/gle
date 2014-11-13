@@ -20,6 +20,7 @@ Ext.define('Kmbsvle.view.social.board.left.panel.SocialBoardLeftPanel', {
                 {
                     xtype: 'menuitem',
                     text: 'Спільнота №1',
+                    glyph: 'xf0c0@FontAwesome',
                     listeners: {
                         click: 'openCommunitySingle'
                     }
@@ -30,6 +31,7 @@ Ext.define('Kmbsvle.view.social.board.left.panel.SocialBoardLeftPanel', {
                 {
                     xtype: 'menuitem',
                     text: 'Спільнота №2',
+                    glyph: 'xf0c0@FontAwesome',
                     listeners: {
                         click: 'openCommunitySingle'
                     }
@@ -40,6 +42,7 @@ Ext.define('Kmbsvle.view.social.board.left.panel.SocialBoardLeftPanel', {
                 {
                     xtype: 'menuitem',
                     text: 'Спільнота №3',
+                    glyph: 'xf0c0@FontAwesome',
                     listeners: {
                         click: 'openCommunitySingle'
                     }
@@ -50,6 +53,7 @@ Ext.define('Kmbsvle.view.social.board.left.panel.SocialBoardLeftPanel', {
                 {
                     xtype: 'menuitem',
                     text: 'Мої спільноти',
+                    glyph: 'xf0c0@FontAwesome',
                     listeners: {
                         click: 'openCommunityBoard'
                     }

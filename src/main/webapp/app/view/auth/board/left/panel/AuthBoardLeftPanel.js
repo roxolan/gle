@@ -21,6 +21,7 @@ Ext.define('Kmbsvle.view.auth.board.left.panel.AuthBoardLeftPanel', {
         items: [
             { 
                 xtype: 'menuitem',
+                glyph: 'xf03a@FontAwesome',
                 text: 'Загальний список',
                 listeners: {
                     click: 'openUserBoard'
@@ -31,6 +32,7 @@ Ext.define('Kmbsvle.view.auth.board.left.panel.AuthBoardLeftPanel', {
             },
             { 
                 xtype: 'menuitem',
+                glyph: 'xf055@FontAwesome',
                 text: 'Додати користувача',
                 listeners: {
 //                    click: 'openUserBoard'

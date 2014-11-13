@@ -20,6 +20,7 @@ Ext.define('Kmbsvle.view.dashboard.left.panel.DashboardLeftPanel', {
                 { 
                     xtype: 'menuitem',
                     text: 'Повідомлення',
+                    glyph: 'xf01c@FontAwesome',
                     listeners: {
                         click: 'openMessageBoard'
                     }

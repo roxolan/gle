@@ -19,7 +19,8 @@ Ext.define('Kmbsvle.view.manage.board.left.panel.ManageBoardLeftPanel', {
             items: [
                 { 
                     xtype: 'menuitem',
-                    text: 'Перелік груп',
+                    text: 'Навчальні групи',
+                    glyph: 'xf10c@FontAwesome',
                     listeners: {
                         click: 'openGroupBoard'
                     }
@@ -29,7 +30,8 @@ Ext.define('Kmbsvle.view.manage.board.left.panel.ManageBoardLeftPanel', {
                 },
                 { 
                     xtype: 'menuitem',
-                    text: 'Перелік курсів',
+                    text: 'Курси',
+                    glyph: 'xf0a2@FontAwesome',
                     listeners: {
                         click: 'openCourseBoard'
                     }
@@ -39,7 +41,8 @@ Ext.define('Kmbsvle.view.manage.board.left.panel.ManageBoardLeftPanel', {
                 },
                 { 
                     xtype: 'menuitem',
-                    text: 'Перелік спільнот',
+                    text: 'Спільноти',
+                    glyph: 'xf0c0@FontAwesome',
                     listeners: {
                         click: 'openCommunityBoard'
                     }
@@ -50,6 +53,7 @@ Ext.define('Kmbsvle.view.manage.board.left.panel.ManageBoardLeftPanel', {
                 { 
                     xtype: 'menuitem',
                     text: 'Статистика',
+                    glyph: 'xf080@FontAwesome',
                     listeners: {
                         click: 'onStatisticsClick'
                     }
@@ -59,17 +63,8 @@ Ext.define('Kmbsvle.view.manage.board.left.panel.ManageBoardLeftPanel', {
                 },
                 { 
                     xtype: 'menuitem',
-                    text: 'Календар',
-                    listeners: {
-                        click: 'openCalendarBoard'
-                    }
-                },
-                { 
-                    xtype: 'menuseparator' 
-                },
-                { 
-                    xtype: 'menuitem',
                     text: 'Звіти',
+                    glyph: 'xf200@FontAwesome',
                     listeners: {
                         click: 'openReportBoard'
                     }

@@ -20,6 +20,7 @@ Ext.define('Kmbsvle.view.admin.board.left.panel.AdminBoardLeftPanel', {
                 {
                     xtype: 'menuitem',
                     text: 'Управління користувачами',
+                    glyph: 'xf03a@FontAwesome',
                     listeners: {
                         click: 'openAuthBoard'
                     }
@@ -29,7 +30,8 @@ Ext.define('Kmbsvle.view.admin.board.left.panel.AdminBoardLeftPanel', {
                 },
                 { 
                     xtype: 'menuitem',
-                    text: 'Групи',
+                    text: 'Навчальні групи',
+                    glyph: 'xf10c@FontAwesome',
                     listeners: {
                         click: 'openGroupBoard'
                     }
@@ -40,6 +42,7 @@ Ext.define('Kmbsvle.view.admin.board.left.panel.AdminBoardLeftPanel', {
                 { 
                     xtype: 'menuitem',
                     text: 'Бібліотека',
+                    glyph: 'xf02d@FontAwesome',
                     listeners: {
                         click: 'openLibraryBoard'
                     }
