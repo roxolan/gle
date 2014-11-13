@@ -43,6 +43,7 @@ public class UserServiceImpl extends AbstractService implements UserService {
         String lastName,
         String email,
         String password,
+        Character learnerRole,
         Character professorRole,
         Character managerRole,
         Character adminRole,
@@ -133,6 +134,7 @@ public class UserServiceImpl extends AbstractService implements UserService {
         user.setFirstName(firstName);
         user.setLastName(lastName);
         user.setPassword(password);
+        user.setLearnerRole(learnerRole);
         user.setProfessorRole(professorRole);
         user.setManagerRole(managerRole);
         user.setAdminRole(adminRole);

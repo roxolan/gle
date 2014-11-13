@@ -24,6 +24,9 @@ import javax.validation.constraints.Size;
     @NamedQuery(name = "User.findByLastName", query = "SELECT u FROM User u WHERE u.lastName = :lastName"),
     @NamedQuery(name = "User.findByEmail", query = "SELECT u FROM User u WHERE u.email = :email"),
     @NamedQuery(name = "User.findByPassword", query = "SELECT u FROM User u WHERE u.password = :password"),
+    @NamedQuery(name = "User.findByLearnerRole", query = "SELECT u FROM User u WHERE u.learnerRole = :learnerRole"),
+    @NamedQuery(name = "User.findByProfessorRole", query = "SELECT u FROM User u WHERE u.professorRole = :professorRole"),
+    @NamedQuery(name = "User.findByManagerRole", query = "SELECT u FROM User u WHERE u.managerRole = :managerRole"),
     @NamedQuery(name = "User.findByAdminRole", query = "SELECT u FROM User u WHERE u.adminRole = :adminRole")})
 public class User extends AbstractEntity implements EntityItem<String> {
     private static final long serialVersionUID = 1L;
@@ -56,6 +59,10 @@ public class User extends AbstractEntity implements EntityItem<String> {
     private String password;
     @Basic(optional = false)
     @NotNull
+    @Column(name = "learner_role")
+    private Character learnerRole;    
+    @Basic(optional = false)
+    @NotNull
     @Column(name = "professor_role")
     private Character professorRole;    
     @Basic(optional = false)
@@ -76,12 +83,13 @@ public class User extends AbstractEntity implements EntityItem<String> {
         this.username = username;
     }
 
-    public User(String username, String firstName, String lastName, String email, String password, Character professorRole, Character managerRole, Character adminRole) {
+    public User(String username, String firstName, String lastName, String email, String password, Character learnerRole, Character professorRole, Character managerRole, Character adminRole) {
         this.username = username;
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
         this.password = password;
+        this.learnerRole = learnerRole;
         this.professorRole = professorRole;
         this.managerRole = managerRole;
         this.adminRole = adminRole;
@@ -125,6 +133,14 @@ public class User extends AbstractEntity implements EntityItem<String> {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+    
+    public Character getLearnerRole() {
+    	return learnerRole;
+    }
+    
+    public void setLearnerRole(Character learnerRole) {
+    	this.learnerRole = learnerRole;
     }
     
     public Character getProfessorRole() {
@@ -180,6 +196,10 @@ public class User extends AbstractEntity implements EntityItem<String> {
         return username;
     }
     
+    public boolean isLearner() {
+    	return learnerRole == null ? false : learnerRole.equals('Y');
+    }
+    
     public boolean isProfessor() {
         return professorRole == null ? false : professorRole.equals('Y');
     }
@@ -199,6 +219,7 @@ public class User extends AbstractEntity implements EntityItem<String> {
                 .add("firstName", firstName)
                 .add("lastName", lastName)
                 .add("email", email)
+                .add("learnerRole", learnerRole + "")
                 .add("professorRole", professorRole + "")
                 .add("managerRole", managerRole + "")
                 .add("adminRole", adminRole + "")

@@ -60,6 +60,7 @@ public class UserHandler extends AbstractHandler {
                 jsonObj.getString("lastName"),
                 jsonObj.getString("email"),
                 jsonObj.getString("password"),
+                jsonObj.getString("learnerRole").charAt(0),
                 jsonObj.getString("professorRole").charAt(0),
                 jsonObj.getString("managerRole").charAt(0),
                 jsonObj.getString("adminRole").charAt(0),

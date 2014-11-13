@@ -46,28 +46,28 @@ public class UserServiceTest extends AbstractServiceForTesting {
 
         logger.debug("\nSTARTED testAddNew()\n");
 
-        Result<User> ar = userService.store("nusername", "David", "Francis", "df@tttracker.com", "admpwd", 'N', 'N', 'N', ADMIN_USERNAME);
+        Result<User> ar = userService.store("nusername", "David", "Francis", "df@tttracker.com", "admpwd", 'N', 'N', 'N', 'N', ADMIN_USERNAME);
 
         // should succeed
         logger.debug(ar.getMsg());
         assertTrue(ar.isSuccess());
 
-        ar = userService.store(this.TEST_USERNAME, "David", "Francis", "df@tttracker.com", "admpwd", 'Y', 'Y', 'Y', ADMIN_USERNAME);
+        ar = userService.store(this.TEST_USERNAME, "David", "Francis", "df@tttracker.com", "admpwd", 'Y', 'Y', 'Y', 'Y', ADMIN_USERNAME);
 
         logger.debug(ar.getMsg());
         assertTrue("Cannot assign email that is currently assigned to other user", !ar.isSuccess());
 
-        ar = userService.store("user100", "David", "Francis", "user100@tttracker.com", "", 'Y', 'Y', 'Y', ADMIN_USERNAME);
+        ar = userService.store("user100", "David", "Francis", "user100@tttracker.com", "", 'Y', 'Y', 'Y', 'Y', ADMIN_USERNAME);
 
         logger.debug(ar.getMsg());
         assertTrue("Cannot set empty password for user", !ar.isSuccess());
 
-        ar = userService.store("user101", "David", "Francis", "  ", "validpwd", 'Y', 'Y', 'Y', ADMIN_USERNAME);
+        ar = userService.store("user101", "David", "Francis", "  ", "validpwd", 'Y', 'Y', 'Y', 'Y', ADMIN_USERNAME);
 
         logger.debug(ar.getMsg());
         assertTrue("Cannot set empty email for user", !ar.isSuccess());
 
-        ar = userService.store(this.TEST_USERNAME, "David", "Francis", "diff@email.com", "validpwd", 'Y', 'Y', 'Y', ADMIN_USERNAME);
+        ar = userService.store(this.TEST_USERNAME, "David", "Francis", "diff@email.com", "validpwd", 'Y', 'Y', 'Y', 'Y', ADMIN_USERNAME);
 
         logger.debug(ar.getMsg());
         assertTrue("Assigning new email to user is allowed", ar.isSuccess());

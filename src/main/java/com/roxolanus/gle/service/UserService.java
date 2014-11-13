@@ -12,6 +12,7 @@ public interface UserService {
         String lastName,
         String email,
         String password,
+        Character learnerRole,
         Character professorRole,
         Character managerRole,
         Character adminRole,
