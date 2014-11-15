@@ -24,7 +24,7 @@ Ext.define('Kmbsvle.view.auth.form.LoginForm', {
 
             items: [
                 { 
-                    name: 'user', 
+                    name: 'username', 
                     fieldLabel: 'ID користувача', 
                     allowBlank: false, 
                     validateOnBlur: true, 
