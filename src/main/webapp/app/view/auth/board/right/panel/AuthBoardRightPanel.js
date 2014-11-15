@@ -12,7 +12,7 @@ Ext.define('Kmbsvle.view.auth.board.right.panel.AuthBoardRightPanel', {
   },
 
   header: false,
-  html: 'User Form',
+  html: 'Dummy Initial Panel',
   width: 200,
   bodyPadding: 10
   
