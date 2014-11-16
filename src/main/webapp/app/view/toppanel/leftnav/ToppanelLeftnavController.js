@@ -18,7 +18,15 @@ Ext.define('Kmbsvle.view.toppanel.leftnav.ToppanelLeftnavController', {
         
         'Kmbsvle.view.course.board.left.panel.CourseBoardLeftPanel',
         'Kmbsvle.view.course.board.center.panel.CourseBoardCenterPanel',
-        'Kmbsvle.view.course.board.right.panel.CourseBoardRightPanel'
+        'Kmbsvle.view.course.board.right.panel.CourseBoardRightPanel',
+        
+        'Kmbsvle.view.manage.board.left.panel.ManageBoardLeftPanel',
+        'Kmbsvle.view.manage.board.center.panel.ManageBoardCenterPanel',
+        'Kmbsvle.view.manage.board.right.panel.ManageBoardRightPanel',
+        
+        'Kmbsvle.view.admin.board.left.panel.AdminBoardLeftPanel',
+        'Kmbsvle.view.admin.board.center.panel.AdminBoardCenterPanel',
+        'Kmbsvle.view.admin.board.right.panel.AdminBoardRightPanel'
     ],
 
     routes: {
