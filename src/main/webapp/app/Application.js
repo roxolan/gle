@@ -27,8 +27,7 @@ Ext.define('Kmbsvle.Application', {
         'MainController'
     ],
 
-    stores: [
-    ],
+    stores: ['User'],
 
     models: ['User'],
 
