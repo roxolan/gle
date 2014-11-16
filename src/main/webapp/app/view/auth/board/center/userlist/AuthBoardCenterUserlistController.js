@@ -3,18 +3,30 @@ Ext.define('Kmbsvle.view.auth.board.center.userlist.AuthBoardCenterUserlistContr
 
     alias: 'controller.auth.board.center.userlist',
     
-    initStore: function() {
+    initStore: function(view, eOpts) {
         var me = this;
         var userlist = me.getStore('users');
         userlist.load(function(records, operation, success){
-            Kmbsvle.console(records);
-            Kmbsvle.console(operation);
-            Kmbsvle.console(success);
+        
+            var rowData = view.getStore().data;
+            Kmbsvle.console(rowData);
+        });
+    },
+    
+    rowSelected: function(grid, record, tr, rowIndex, e, eOpts){
+        var rhld = Ext.getCmp('rightholder');
+        var userformPanel = Ext.create('widget.auth.board.right.userform');
+        var userform = userformPanel.getForm();
+        
+        userform.setValues({
+            username: record.data.username,
+            firstName: record.data.firstName,
+            lastName: record.data.lastName,
+            email: record.data.email
         });
         
-        // var firstRow = userlist.getData()[0];
-        // Kmbsvle.console(firstRow);
+        rhld.removeAll();
+        rhld.add(userformPanel);
     }
-
 
 }); 

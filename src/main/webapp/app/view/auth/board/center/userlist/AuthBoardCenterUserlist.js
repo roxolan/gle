@@ -54,8 +54,10 @@ Ext.define('Kmbsvle.view.auth.board.center.userlist.AuthBoardCenterUserlist', {
             text: 'Email'
         }
     ],
+
     listeners: {
-         viewready: 'initStore'    
+        viewready: 'initStore',
+        rowclick: 'rowSelected'
     }
   
 });
