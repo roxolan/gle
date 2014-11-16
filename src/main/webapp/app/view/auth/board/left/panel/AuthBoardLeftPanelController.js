@@ -12,6 +12,23 @@ Ext.define('Kmbsvle.view.auth.board.left.panel.AuthBoardLeftPanelController', {
         var me = this;
         me.changeCenterPanel('widget.auth.board.center.userlist');
         me.changeRightPanel('widget.auth.board.right.userform', 'dummy', 'expand');
+    },
+    
+    addUser: function() {
+        var rhld = Ext.getCmp('rightholder');
+        var userformPanel = Ext.create('widget.auth.board.right.userform');
+        var userform = userformPanel.getForm();
+        var newUser = Ext.create('Kmbsvle.model.User', {
+            learnerRole: 'N',
+            professorRole: 'N',
+            managerRole: 'N',
+            adminRole: 'N'
+        });
+        
+        userform.loadRecord(newUser);
+        
+        rhld.removeAll();
+        rhld.add(userformPanel);
+        
     }
-
 }); 
