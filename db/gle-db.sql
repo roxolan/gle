@@ -95,7 +95,7 @@ SET FOREIGN_KEY_CHECKS=0;
 DROP TABLE IF EXISTS `gle_user`;
 SET FOREIGN_KEY_CHECKS=1;
 CREATE TABLE `gle_user` (
-    username varchar(10) not null,
+    username varchar(20) not null,
     first_name varchar(100) not null,
     last_name varchar(100) not null,
     email varchar(100) not null unique,
