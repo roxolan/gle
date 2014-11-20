@@ -11,19 +11,21 @@ Ext.define('Kmbsvle.view.auth.board.left.panel.AuthBoardLeftPanelController', {
     openUserBoard: function() {
         var me = this;
         me.changeCenterPanel('widget.auth.board.center.userlist');
-        me.changeRightPanel('widget.auth.board.right.userform', 'dummy', 'expand');
+        me.changeRightPanel('widget.auth.board.right.userform', 'dummy', 'collapse');
     },
     
     addUser: function() {
         var me = this;
         var rhld = Ext.getCmp('rightholder');
         var userformPanel = Ext.create('widget.auth.board.right.userform');
+        var userform = userformPanel.getForm();
         
         rhld.removeAll();
         rhld.add(userformPanel);
         rhld.setConfig('title', 'Новий користувач');
+        rhld.expand();
         
-        var userform = userformPanel.getForm();
+        
         var newUser = Ext.create('Kmbsvle.model.User', {
             username: 'kmbsuser',
             learnerRole: 'N',

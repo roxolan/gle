@@ -10,20 +10,28 @@ Ext.define('Kmbsvle.view.auth.board.center.userlist.AuthBoardCenterUserlistContr
     },
     
     rowSelected: function(grid, record, tr, rowIndex, e, eOpts){
+        var me = this;
         var rhld = Ext.getCmp('rightholder');
         var userformPanel = Ext.create('widget.auth.board.right.userform');
         var userform = userformPanel.getForm();
         
+        rhld.removeAll();
+        rhld.add(userformPanel);
+        rhld.setConfig('title', 'Редагування профіля');
+        rhld.expand();
+        
+        /*
         userform.setValues({
             username: record.data.username,
             firstName: record.data.firstName,
             lastName: record.data.lastName,
-            email: record.data.email
+            email: record.data.email,
+            password: record.data.password
         });
+        */
         
-        rhld.removeAll();
-        rhld.add(userformPanel);
-        rhld.setConfig('title', 'Редагування профіля');
+        userform.loadRecord(record);
+        userform.updateRecord();
 
     },
     
