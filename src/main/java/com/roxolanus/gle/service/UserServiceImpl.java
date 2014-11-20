@@ -70,6 +70,12 @@ public class UserServiceImpl extends AbstractService implements UserService {
 
         }
         
+        if(!learnerRole.equals('Y') && !learnerRole.equals('N')){
+
+            return ResultFactory.getFailResult("Unable to store the user: learnerRole must be Y or N");
+
+        }
+        
         if(!professorRole.equals('Y') && !professorRole.equals('N')){
 
             return ResultFactory.getFailResult("Unable to store the user: professorRole must be Y or N");

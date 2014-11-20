@@ -35,7 +35,7 @@ Ext.define('Kmbsvle.view.auth.board.left.panel.AuthBoardLeftPanel', {
                 glyph: 'xf055@FontAwesome',
                 text: 'Додати користувача',
                 listeners: {
-//                    click: 'openUserBoard'
+                    click: 'addUser'
                 }
             }
         ]

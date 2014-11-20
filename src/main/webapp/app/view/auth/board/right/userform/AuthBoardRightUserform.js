@@ -134,13 +134,19 @@ Ext.define('Kmbsvle.view.auth.board.right.userform.AuthBoardRightUserform', {
                             xtype: 'button',
                             reference: 'deleteBtn',
                             glyph: 'xf00d@FontAwesome',
-                            text: 'Видалити'
+                            text: 'Видалити',
+                            listeners: {
+                                click: 'removeUser'
+                            }
                         },
                         {
                             xtype: 'button',
                             reference: 'saveBtn',
                             glyph: 'xf0c7@FontAwesome',
-                            text: 'Зберегти'
+                            text: 'Зберегти',
+                            listeners: {
+                                click: 'saveUser'
+                            }
                         }
                     ]
                 }

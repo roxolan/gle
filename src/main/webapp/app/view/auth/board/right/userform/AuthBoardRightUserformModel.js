@@ -3,14 +3,11 @@ Ext.define('Kmbsvle.view.auth.board.right.userform.AuthBoardRightUserformModel',
 
     alias: 'viewmodel.auth.board.right.userform',
 
-    data: {
-
-        en: {
-        },
-
-        uk: {
+    stores: {
+        users: {
+            model: 'Kmbsvle.model.User'
+            // autoLoad: true
         }
-
     }
 
 });

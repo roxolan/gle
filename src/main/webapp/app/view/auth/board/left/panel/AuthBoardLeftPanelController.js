@@ -15,10 +15,17 @@ Ext.define('Kmbsvle.view.auth.board.left.panel.AuthBoardLeftPanelController', {
     },
     
     addUser: function() {
+        var me = this;
         var rhld = Ext.getCmp('rightholder');
         var userformPanel = Ext.create('widget.auth.board.right.userform');
+        
+        rhld.removeAll();
+        rhld.add(userformPanel);
+        rhld.setConfig('title', 'Новий користувач');
+        
         var userform = userformPanel.getForm();
         var newUser = Ext.create('Kmbsvle.model.User', {
+            username: 'kmbsuser',
             learnerRole: 'N',
             professorRole: 'N',
             managerRole: 'N',
@@ -27,8 +34,9 @@ Ext.define('Kmbsvle.view.auth.board.left.panel.AuthBoardLeftPanelController', {
         
         userform.loadRecord(newUser);
         
-        rhld.removeAll();
-        rhld.add(userformPanel);
+        userform.updateRecord();
         
+        // record.data = form.getFieldValues();
+
     }
 }); 

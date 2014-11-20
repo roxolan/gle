@@ -13,6 +13,7 @@ Ext.define('Kmbsvle.view.auth.board.center.userlist.AuthBoardCenterUserlist', {
     },
 
     title: 'Список користувачів',
+    itemId: 'centerUserList',
     
     bind: {
         store: '{users}'

@@ -17,6 +17,7 @@ Ext.define('Kmbsvle.model.User', {
     proxy: {
         type: 'ajax',
         idParam: 'username',
+        // paramsAsJson: true,
         api:{
             create: 'user/store.json',
             read: 'user/find.json',
@@ -29,13 +30,13 @@ Ext.define('Kmbsvle.model.User', {
         },
         writer: {
             type: 'json',
-            allowSingle: false,
+            allowSingle: true,
             encode: true,
             rootProperty: 'data',
             writeAllFields: true
         }
     },
-    validations: [
+    validators: [
         {type: 'presence',  field: 'username'},
         {type: 'length', field: 'username', min: 4},
         {type: 'presence',  field: 'firstName'},
