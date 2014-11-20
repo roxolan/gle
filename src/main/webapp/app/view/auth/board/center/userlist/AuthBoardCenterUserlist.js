@@ -26,7 +26,10 @@ Ext.define('Kmbsvle.view.auth.board.center.userlist.AuthBoardCenterUserlist', {
     tools: [
         {
             type: 'refresh',
-            tooltip: 'Оновити список користувачів'
+            tooltip: 'Оновити список користувачів',
+            listeners: {
+                click: 'refreshStore'
+            }
         }
     ],
     columns: [

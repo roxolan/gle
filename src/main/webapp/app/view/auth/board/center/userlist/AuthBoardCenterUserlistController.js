@@ -5,11 +5,7 @@ Ext.define('Kmbsvle.view.auth.board.center.userlist.AuthBoardCenterUserlistContr
     
     initStore: function(view, eOpts) {
         var me = this;
-        var userlist = me.getStore('users');
-        userlist.load(function(records, operation, success){
-        
-            var rowData = view.getStore().data;
-            Kmbsvle.console(rowData);
+        me.getStore('users').load(function(records, operation, success){
         });
     },
     
@@ -27,6 +23,14 @@ Ext.define('Kmbsvle.view.auth.board.center.userlist.AuthBoardCenterUserlistContr
         
         rhld.removeAll();
         rhld.add(userformPanel);
+        rhld.setConfig('title', 'Редагування профіля');
+
+    },
+    
+    refreshStore: function() {
+        var me = this;
+        var store = me.getStore('users');
+        store.load();
     }
 
 }); 
