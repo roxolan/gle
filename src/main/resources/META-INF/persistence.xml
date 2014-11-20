@@ -4,10 +4,11 @@
     <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
     <jta-data-source>jdbc/gle</jta-data-source>
     <exclude-unlisted-classes>false</exclude-unlisted-classes>
+    <validation-mode>NONE</validation-mode>
     <properties>
-        <!-- this is absolutely critical to ensure correct integration of transaction manager!!! -->
-        <property name="eclipselink.target-server" value="SunAS9"/>
-        <property name="eclipselink.logging.level" value="INFO"/>        
+      <!-- this is absolutely critical to ensure correct integration of transaction manager!!! -->
+      <property name="eclipselink.target-server" value="SunAS9"/>
+      <property name="eclipselink.logging.level" value="INFO"/>
     </properties>
   </persistence-unit>
 </persistence>
