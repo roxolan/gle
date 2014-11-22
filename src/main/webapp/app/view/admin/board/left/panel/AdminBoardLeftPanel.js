@@ -30,7 +30,7 @@ Ext.define('Kmbsvle.view.admin.board.left.panel.AdminBoardLeftPanel', {
                 },
                 { 
                     xtype: 'menuitem',
-                    text: 'Навчальні групи',
+                    text: 'Управління навчальними групами',
                     glyph: 'xf10c@FontAwesome',
                     listeners: {
                         click: 'openGroupBoard'
