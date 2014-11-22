@@ -61,7 +61,7 @@ Ext.define('Kmbsvle.view.auth.board.center.userlist.AuthBoardCenterUserlist', {
 
     listeners: {
         viewready: 'initStore',
-        rowclick: 'rowSelected'
+        rowclick: 'selectUser'
     }
   
 });

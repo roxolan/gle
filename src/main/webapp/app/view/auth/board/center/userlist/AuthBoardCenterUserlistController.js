@@ -9,7 +9,7 @@ Ext.define('Kmbsvle.view.auth.board.center.userlist.AuthBoardCenterUserlistContr
         });
     },
     
-    rowSelected: function(grid, record, tr, rowIndex, e, eOpts){
+    selectUser: function(grid, record, tr, rowIndex, e, eOpts){
         var me = this;
         var rhld = Ext.getCmp('rightholder');
         var userformPanel = Ext.create('widget.auth.board.right.userform');
@@ -20,6 +20,7 @@ Ext.define('Kmbsvle.view.auth.board.center.userlist.AuthBoardCenterUserlistContr
         rhld.setConfig('title', 'Редагування профіля');
         rhld.expand();
         
+        // This did not work, although pulled in some data
         /*
         userform.setValues({
             username: record.data.username,
@@ -32,6 +33,11 @@ Ext.define('Kmbsvle.view.auth.board.center.userlist.AuthBoardCenterUserlistContr
         
         userform.loadRecord(record);
         userform.updateRecord();
+        
+        userformPanel.lookupReference('usernameField').disable();
+        userformPanel.lookupReference('deleteBtn').enable();
+
+        // Kmbsvle.console(uname);
 
     },
     

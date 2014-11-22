@@ -35,6 +35,7 @@ Ext.define('Kmbsvle.view.auth.board.right.userform.AuthBoardRightUserform', {
                 {
                     xtype: 'textfield',
                     name: 'username',
+                    reference: 'usernameField',
                     fieldLabel: 'ID користувача'
                 },
                 {
