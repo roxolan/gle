@@ -2,16 +2,6 @@ Ext.define('Kmbsvle.view.auth.board.right.userform.AuthBoardRightUserformControl
     extend: 'Kmbsvle.view.base.BaseViewController',
 
     alias: 'controller.auth.board.right.userform',
-  
-    removeUser: function(){
-        var me = this;
-        var form = me.getView().getForm();
-        var record = form.getRecord();
-        form.updateRecord();
-        // record.data = form.getValues();
-        var centerUserListStore = Ext.getCmp('centerholder').getComponent('centerUserList').getStore();
-        Kmbsvle.console(centerUserListStore);
-    },
     
     saveUser: function() {
         var me = this;
@@ -25,7 +15,7 @@ Ext.define('Kmbsvle.view.auth.board.right.userform.AuthBoardRightUserformControl
         var errs = record.validate();
         if (errs.isValid()) {
             
-            Kmbsvle.console(record);
+            // Kmbsvle.console(record);
             // Kmbsvle.console(record[0]);
             
             try {
@@ -47,7 +37,35 @@ Ext.define('Kmbsvle.view.auth.board.right.userform.AuthBoardRightUserformControl
             form.markInvalid(errs);
             Ext.Msg.alert('Invalid Fields', 'Please fix the invalid entries!');
         }
-        Kmbsvle.console(record);
+        // Kmbsvle.console(record);
+    },
+    
+    deleteUser: function(){
+        var me = this;
+        var form = me.getView().getForm();
+        var record = form.getRecord();
+        var authBoardLeftPanelController = Ext.getCmp('leftholder').getComponent('authBoardLeftPanel').getController();
+        var authBoardCenterUserlistController = Ext.getCmp('centerholder').getComponent('centerUserList').getController();
+
+        Ext.Msg.confirm(
+            'Підтвердіть видалення користувача', 
+            'Ви впевнені, що бажаєте видалити користувача ' + record.get('fullName') + '?',
+            function(btn) {
+                if (btn === 'yes') {
+                    record.destroy({
+                        failure: function(record, operation) {
+                            Ext.Msg.alert('Не вдалося видалити', operation.request.scope.reader.jsonData.msg);
+                        },
+                        success: function(record, operation) {
+                            Kmbsvle.console(operation);
+                        }
+                    });
+                    authBoardLeftPanelController.addUser();
+                }
+            });
+        
+        // record.data = form.getValues();
+        // var centerUserListStore = Ext.getCmp('centerholder').getComponent('centerUserList').getStore();
     }
 
 

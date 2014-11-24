@@ -19,6 +19,7 @@ public class UserInSessionInterceptor extends HandlerInterceptorAdapter {
         logger.info("calling preHandle with url=" + request.getRequestURI());
 
         User sessionUser = getSessionUser(request);
+        logger.info("calling preHandle with sessionUser: " + sessionUser);
 
         if (sessionUser == null) {
             String json = "{\"success\":false,\"msg\":\"A valid user is not logged on!\"}";

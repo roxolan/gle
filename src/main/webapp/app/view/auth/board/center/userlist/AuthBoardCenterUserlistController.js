@@ -32,13 +32,24 @@ Ext.define('Kmbsvle.view.auth.board.center.userlist.AuthBoardCenterUserlistContr
         */
         
         userform.loadRecord(record);
-        userform.updateRecord();
+        // userform.updateRecord();
         
         userformPanel.lookupReference('usernameField').disable();
         userformPanel.lookupReference('deleteBtn').enable();
 
-        // Kmbsvle.console(uname);
+        // Kmbsvle.console(record);
 
+    },
+    
+    deleteUser: function(record) {
+        var me = this;
+
+        record.destroy({
+            failure: function(record, operation) {
+                Ext.Msg.alert('Не вдалося видалити', operation.request.scope.reader.jsonData.msg);
+            }
+        });
+        me.refreshStore();
     },
     
     refreshStore: function() {

@@ -15,7 +15,8 @@ Ext.define('Kmbsvle.view.auth.board.center.userlist.AuthBoardCenterUserlistModel
                 }
             },
             
-            autoLoad: true
+            autoLoad: true,
+            autoSync: true
         }
     }
 });

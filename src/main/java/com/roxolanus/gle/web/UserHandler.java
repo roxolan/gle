@@ -10,6 +10,9 @@ import javax.json.JsonObject;
 import javax.servlet.http.HttpServletRequest;
 import org.springframework.beans.factory.annotation.Autowired;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -19,6 +22,8 @@ import org.springframework.web.bind.annotation.RequestParam;
 @Controller
 @RequestMapping("/user")
 public class UserHandler extends AbstractHandler {
+    
+    private final Logger logger = LoggerFactory.getLogger(this.getClass());
 
     @Autowired
     protected UserService userService;
@@ -66,6 +71,9 @@ public class UserHandler extends AbstractHandler {
                 jsonObj.getString("adminRole").charAt(0),
                 sessionUser.getUsername());
 
+        logger.info("calling store with sessionUser: " + sessionUser);
+
+        
         if (ar.isSuccess()) {
 
             return getJsonSuccessData(ar.getData());
@@ -77,7 +85,7 @@ public class UserHandler extends AbstractHandler {
         }
     }
 
-    @RequestMapping(value = "/remove", method = RequestMethod.POST, produces = {"application/json;charset=UTF-8"})
+    @RequestMapping(value = "/remove", method = RequestMethod.POST, produces = {"application/json"})
     @ResponseBody
     public String remove(
             @RequestParam(value = "data", required = true) String jsonData,
@@ -88,6 +96,8 @@ public class UserHandler extends AbstractHandler {
         JsonObject jsonObj = parseJsonObject(jsonData);
 
         Result<User> ar = userService.remove(jsonObj.getString("username"), sessionUser.getUsername());
+        
+        logger.info("calling remove with sessionUser: " + sessionUser);
 
         if (ar.isSuccess()) {
 

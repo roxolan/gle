@@ -17,7 +17,7 @@ Ext.define('Kmbsvle.model.User', {
     proxy: {
         type: 'ajax',
         idParam: 'username',
-        // paramsAsJson: true,
+        paramsAsJson: true,
         api:{
             create: 'user/store.json',
             read: 'user/find.json',

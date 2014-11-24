@@ -137,7 +137,7 @@ Ext.define('Kmbsvle.view.auth.board.right.userform.AuthBoardRightUserform', {
                             glyph: 'xf00d@FontAwesome',
                             text: 'Видалити',
                             listeners: {
-                                click: 'removeUser'
+                                click: 'deleteUser'
                             }
                         },
                         {
