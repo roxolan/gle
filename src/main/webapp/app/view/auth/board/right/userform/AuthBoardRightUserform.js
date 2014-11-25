@@ -16,6 +16,10 @@ Ext.define('Kmbsvle.view.auth.board.right.userform.AuthBoardRightUserform', {
         type: 'auth.board.right.userform'
     },
     
+//    bind: {
+//        store: '{userstore}'
+//    },
+    
     layout: {
         type: 'anchor'
     },
@@ -155,6 +159,10 @@ Ext.define('Kmbsvle.view.auth.board.right.userform.AuthBoardRightUserform', {
         }
     ],
     
-    header: false
+    header: false,
+    
+    listeners: {
+        viewready: 'initStore'
+    }
   
 });

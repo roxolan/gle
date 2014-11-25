@@ -5,7 +5,7 @@ Ext.define('Kmbsvle.view.auth.board.center.userlist.AuthBoardCenterUserlistContr
     
     initStore: function(view, eOpts) {
         var me = this;
-        me.getStore('users').load(function(records, operation, success){
+        me.getStore('userlist').load(function(records, operation, success){
         });
     },
     
@@ -32,29 +32,54 @@ Ext.define('Kmbsvle.view.auth.board.center.userlist.AuthBoardCenterUserlistContr
         */
         
         userform.loadRecord(record);
-        // userform.updateRecord();
+        // Kmbsvle.console('the loadRecord  has this record: ');
+        // Kmbsvle.console(record);
         
         userformPanel.lookupReference('usernameField').disable();
         userformPanel.lookupReference('deleteBtn').enable();
+
+        // userform.updateRecord();
 
         // Kmbsvle.console(record);
 
     },
     
-    deleteUser: function(record) {
+    deleteUser: function(grid, record, tr, rowIndex, e, eOpts) {
         var me = this;
-
-        record.destroy({
-            failure: function(record, operation) {
-                Ext.Msg.alert('Не вдалося видалити', operation.request.scope.reader.jsonData.msg);
+        Kmbsvle.console('deleteUser run. record.data: ');
+        Kmbsvle.console(record.data);
+        Kmbsvle.console(Ext.JSON.encode(record.data));
+//        record.destroy({
+//            success: function(record, operation) {
+//                Kmbsvle.console('success');
+//            },
+//            failure: function(record, operation) {
+//                Ext.Msg.alert('Не вдалося видалити', operation.request.scope.reader.jsonData.msg);
+//            }
+//        });
+//        var encodedRecord = {data: ""};
+//        encodedRecord.data = Ext.JSON.encode(record.data);
+//        Kmbsvle.console(encodedRecord);
+//        me.getStore('userlist').remove(encodedRecord);
+//        var selection = me.getView().getSelectionModel().getSelection()[0];
+//        if (selection) {
+//            me.getStore('userlist').remove(selection);
+//        }
+        Ext.Ajax.request({
+            url: 'user/remove.json',
+            params: {
+                data: Ext.JSON.encode(record.data)
+            },
+            success: function(response) {
+                me.refreshStore();
             }
         });
-        me.refreshStore();
+        
     },
     
     refreshStore: function() {
         var me = this;
-        var store = me.getStore('users');
+        var store = me.getStore('userlist');
         store.load();
     }
 

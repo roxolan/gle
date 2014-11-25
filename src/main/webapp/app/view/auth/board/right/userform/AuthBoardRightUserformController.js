@@ -3,12 +3,20 @@ Ext.define('Kmbsvle.view.auth.board.right.userform.AuthBoardRightUserformControl
 
     alias: 'controller.auth.board.right.userform',
     
+    initStore: function(view, eOpts) {
+        var me = this;
+        me.getStore('user').load(function(records, operation, success){
+        });
+    },
+    
     saveUser: function() {
         var me = this;
+//        me.getStore('user').load(function(records, operation, success){
+//        });
         var form = me.getView().getForm();
-        
+        var record = form.getRecord();        
         form.updateRecord();
-        var record = form.getRecord();
+
         // record.data = form.getFieldValues();
         
         
@@ -43,6 +51,7 @@ Ext.define('Kmbsvle.view.auth.board.right.userform.AuthBoardRightUserformControl
     deleteUser: function(){
         var me = this;
         var form = me.getView().getForm();
+        // form.updateRecord();
         var record = form.getRecord();
         var authBoardLeftPanelController = Ext.getCmp('leftholder').getComponent('authBoardLeftPanel').getController();
         var authBoardCenterUserlistController = Ext.getCmp('centerholder').getComponent('centerUserList').getController();
@@ -52,14 +61,19 @@ Ext.define('Kmbsvle.view.auth.board.right.userform.AuthBoardRightUserformControl
             'Ви впевнені, що бажаєте видалити користувача ' + record.get('fullName') + '?',
             function(btn) {
                 if (btn === 'yes') {
-                    record.destroy({
-                        failure: function(record, operation) {
-                            Ext.Msg.alert('Не вдалося видалити', operation.request.scope.reader.jsonData.msg);
-                        },
-                        success: function(record, operation) {
-                            Kmbsvle.console(operation);
-                        }
-                    });
+                    Kmbsvle.console(record);
+                    try {
+                        record.delete({
+                            success: function(record, operation) {
+                                Kmbsvle.console(operation);
+                            },
+                            failure: function(record, operation) {
+                                Ext.Msg.alert('Не вдалося видалити', operation.request.scope.reader.jsonData.msg);
+                            }
+                        });
+                    } catch (ConstraintViolationException) {
+                        throw new MyException("can not delete record: ", e);
+                    }
                     authBoardLeftPanelController.addUser();
                 }
             });

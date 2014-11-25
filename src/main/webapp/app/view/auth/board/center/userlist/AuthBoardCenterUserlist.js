@@ -16,7 +16,7 @@ Ext.define('Kmbsvle.view.auth.board.center.userlist.AuthBoardCenterUserlist', {
     itemId: 'centerUserList',
     
     bind: {
-        store: '{users}'
+        store: '{userlist}'
     },
     
     viewConfig: {
@@ -61,7 +61,8 @@ Ext.define('Kmbsvle.view.auth.board.center.userlist.AuthBoardCenterUserlist', {
 
     listeners: {
         viewready: 'initStore',
-        rowclick: 'selectUser'
+        rowclick: 'selectUser',
+        rowdblclick: 'deleteUser'
     }
   
 });
