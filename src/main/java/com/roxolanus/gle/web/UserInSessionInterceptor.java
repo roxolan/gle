@@ -17,6 +17,7 @@ public class UserInSessionInterceptor extends HandlerInterceptorAdapter {
             throws Exception {
 
         logger.info("calling preHandle with url=" + request.getRequestURI());
+        logger.info("calling preHandle with method: " + request.getMethod());
 
         User sessionUser = getSessionUser(request);
         logger.info("calling preHandle with sessionUser: " + sessionUser);
