@@ -54,25 +54,32 @@ Ext.define('Kmbsvle.view.auth.board.right.userform.AuthBoardRightUserformControl
         // form.updateRecord();
         var record = form.getRecord();
         var authBoardLeftPanelController = Ext.getCmp('leftholder').getComponent('authBoardLeftPanel').getController();
-        var authBoardCenterUserlistController = Ext.getCmp('centerholder').getComponent('centerUserList').getController();
 
         Ext.Msg.confirm(
             'Підтвердіть видалення користувача', 
             'Ви впевнені, що бажаєте видалити користувача ' + record.get('fullName') + '?',
             function(btn) {
                 if (btn === 'yes') {
-                    Kmbsvle.console(record);
                     try {
-                        record.delete({
-                            success: function(record, operation) {
-                                Kmbsvle.console(operation);
+                        Ext.Ajax.request({
+                            url: 'user/remove.json',
+                            params: {
+                                data: Ext.JSON.encode(record.data)
                             },
-                            failure: function(record, operation) {
-                                Ext.Msg.alert('Не вдалося видалити', operation.request.scope.reader.jsonData.msg);
+                            success: function() {
+                                me.refreshStore();
                             }
                         });
+//                        record.delete({
+//                            success: function(record, operation) {
+//                                Kmbsvle.console(operation);
+//                            },
+//                            failure: function(record, operation) {
+//                                Ext.Msg.alert('Не вдалося видалити', operation.request.scope.reader.jsonData.msg);
+//                            }
+//                        });
                     } catch (ConstraintViolationException) {
-                        throw new MyException("can not delete record: ", e);
+                        throw new ConstraintViolationException("can not delete record: ", e);
                     }
                     authBoardLeftPanelController.addUser();
                 }
@@ -80,6 +87,13 @@ Ext.define('Kmbsvle.view.auth.board.right.userform.AuthBoardRightUserformControl
         
         // record.data = form.getValues();
         // var centerUserListStore = Ext.getCmp('centerholder').getComponent('centerUserList').getStore();
+    },
+    
+    refreshStore: function() {
+        var me = this;
+        var authBoardCenterUserlistStore = Ext.getCmp('centerholder').getComponent('centerUserList').getStore('userlist');
+        
+        authBoardCenterUserlistStore.load();
     }
 
 

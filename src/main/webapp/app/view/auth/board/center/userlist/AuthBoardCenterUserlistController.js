@@ -70,7 +70,7 @@ Ext.define('Kmbsvle.view.auth.board.center.userlist.AuthBoardCenterUserlistContr
             params: {
                 data: Ext.JSON.encode(record.data)
             },
-            success: function(response) {
+            success: function() {
                 me.refreshStore();
             }
         });
