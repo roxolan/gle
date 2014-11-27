@@ -19,11 +19,11 @@ Ext.define('Kmbsvle.view.admin.board.left.panel.AdminBoardLeftPanelController', 
     },
 
 
-    openAuthBoard: function() {
+    openUserBoard: function() {
         var me = this;
         me.changeLeftPanel('widget.auth.board.left.panel', 'auth_board_left_panel_title', 'expand');
-        me.changeCenterPanel('widget.auth.board.center.panel', 'auth_board_center_panel_title');
-        me.changeRightPanel('widget.auth.board.right.panel', 'auth_board_right_panel_title', 'collapse');
+        me.changeCenterPanel('widget.auth.board.center.userlist');
+        me.changeRightPanel('widget.auth.board.right.userform', 'dummy', 'collapse');
         me.redirectTo('auth/board');
     },
 

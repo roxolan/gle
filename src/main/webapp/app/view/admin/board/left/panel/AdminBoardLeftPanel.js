@@ -22,7 +22,7 @@ Ext.define('Kmbsvle.view.admin.board.left.panel.AdminBoardLeftPanel', {
                     text: 'Управління користувачами',
                     glyph: 'xf03a@FontAwesome',
                     listeners: {
-                        click: 'openAuthBoard'
+                        click: 'openUserBoard'
                     }
                 },
                 { 
