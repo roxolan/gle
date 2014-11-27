@@ -5,9 +5,7 @@ Ext.define('Kmbsvle.view.admin.board.left.panel.AdminBoardLeftPanelController', 
   
     requires: [
         'Kmbsvle.view.auth.board.left.panel.AuthBoardLeftPanel',
-        'Kmbsvle.view.auth.board.center.panel.AuthBoardCenterPanel',
-        'Kmbsvle.view.auth.board.right.panel.AuthBoardRightPanel',
-
+        
         'Kmbsvle.view.library.board.left.panel.LibraryBoardLeftPanel',
         'Kmbsvle.view.library.board.center.panel.LibraryBoardCenterPanel',
         'Kmbsvle.view.library.board.right.panel.LibraryBoardRightPanel'
