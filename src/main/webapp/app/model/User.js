@@ -1,5 +1,13 @@
 Ext.define('Kmbsvle.model.User', {
     extend: 'Ext.data.Model',
+    
+    requires: [
+        'Ext.data.validator.Presence',
+        'Ext.data.validator.Length',
+        'Ext.data.validator.Email',
+        'Ext.data.validator.Inclusion'
+    ],
+    
     fields: [
         { name: 'username', type: 'string' },
         { name: 'firstName', type: 'string' },
