@@ -162,7 +162,7 @@ Ext.define('Kmbsvle.view.auth.board.right.userform.AuthBoardRightUserform', {
     header: false,
     
     listeners: {
-        viewready: 'initStore'
+        // viewready: 'initStore'
     }
   
 });
