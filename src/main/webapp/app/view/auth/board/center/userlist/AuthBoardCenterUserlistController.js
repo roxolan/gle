@@ -15,7 +15,7 @@ Ext.define('Kmbsvle.view.auth.board.center.userlist.AuthBoardCenterUserlistContr
         
         rhld.removeAll();
         rhld.add(userformPanel);
-        rhld.setTitle('Редагування профіля');
+        rhld.setTitle('Редагування профіля ' + record.data.username);
         rhld.expand();
         
         userform.loadRecord(record);
