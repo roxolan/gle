@@ -38,7 +38,5 @@ Ext.define('Kmbsvle.view.auth.board.left.panel.AuthBoardLeftPanelController', {
         
         userform.updateRecord();
         
-        // record.data = form.getFieldValues();
-
     }
 }); 

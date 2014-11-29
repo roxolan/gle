@@ -4,9 +4,7 @@ Ext.define('Kmbsvle.view.auth.board.center.userlist.AuthBoardCenterUserlistContr
     alias: 'controller.auth.board.center.userlist',
     
     initStore: function() {
-        var me = this;
-        me.getStore('userlist').load(function(records, operation, success){
-        });
+        this.getStore('userlist').load();
     },
     
     selectUser: function(grid, record){
