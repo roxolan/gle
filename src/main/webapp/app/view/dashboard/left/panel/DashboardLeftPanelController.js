@@ -31,7 +31,7 @@ Ext.define('Kmbsvle.view.dashboard.left.panel.DashboardLeftPanelController', {
             var leftTitle = this.getViewModel().getData().uk.dashboard_left_panel_title;
         }
 
-        lhld.setConfig('title', leftTitle);
+        lhld.setTitle(leftTitle);
     },
 
 

@@ -16,7 +16,7 @@ Ext.define('Kmbsvle.view.base.BaseViewController', {
     if (typeof title !== 'undefined') {
       var leftPanelTitlePath = Ext.String.format('leftPanel.getViewModel().getData().{0}.{1}', this.userSelectedLocale, title);
       var leftPanelTitle = eval(leftPanelTitlePath);
-      lhld.setConfig('title', leftPanelTitle);
+      lhld.setTitle(leftPanelTitle);
     }
 
     if (typeof form !== 'undefined') {
@@ -38,7 +38,7 @@ Ext.define('Kmbsvle.view.base.BaseViewController', {
     if (typeof title !== 'undefined') {
       var centerPanelTitlePath = Ext.String.format('centerPanel.getViewModel().getData().{0}.{1}', this.userSelectedLocale, title);
       var centerPanelTitle = eval(centerPanelTitlePath);
-      chld.setConfig('title', centerPanelTitle);
+      chld.setTitle(centerPanelTitle);
     }
 
   },
@@ -52,7 +52,7 @@ Ext.define('Kmbsvle.view.base.BaseViewController', {
     if (typeof title !== 'undefined') {
       var rightPanelTitlePath = Ext.String.format('rightPanel.getViewModel().getData().{0}.{1}', this.userSelectedLocale, title);
       var rightPanelTitle = eval(rightPanelTitlePath);
-      rhld.setConfig('title', rightPanelTitle);
+      rhld.setTitle(rightPanelTitle);
     }
 
     if (typeof form !== 'undefined') {

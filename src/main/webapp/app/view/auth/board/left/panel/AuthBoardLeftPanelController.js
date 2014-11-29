@@ -22,7 +22,7 @@ Ext.define('Kmbsvle.view.auth.board.left.panel.AuthBoardLeftPanelController', {
         
         rhld.removeAll();
         rhld.add(userformPanel);
-        rhld.setConfig('title', 'Новий користувач');
+        rhld.setTitle('Новий користувач');
         rhld.expand();
         
         
@@ -36,7 +36,7 @@ Ext.define('Kmbsvle.view.auth.board.left.panel.AuthBoardLeftPanelController', {
         
         userform.loadRecord(newUser);
         
-        userform.updateRecord();
+        // userform.updateRecord();
         
     }
 }); 

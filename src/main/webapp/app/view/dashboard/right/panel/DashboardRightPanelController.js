@@ -13,7 +13,7 @@ Ext.define('Kmbsvle.view.dashboard.right.panel.DashboardRightPanelController', {
       var rightTitle = this.getViewModel().getData().uk.dashboard_right_panel_title;
     }
 
-    rhld.setConfig('title', rightTitle);
+    rhld.setTitle(rightTitle);
   },
 
 
