@@ -35,6 +35,7 @@ Ext.define('Kmbsvle.view.auth.board.left.panel.AuthBoardLeftPanelController', {
         });
         
         userform.loadRecord(newUser);
+        userformPanel.lookupReference('deleteBtn').disable();
                 
     }
 }); 
