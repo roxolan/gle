@@ -35,8 +35,6 @@ Ext.define('Kmbsvle.view.auth.board.left.panel.AuthBoardLeftPanelController', {
         });
         
         userform.loadRecord(newUser);
-        
-        // userform.updateRecord();
-        
+                
     }
 }); 
