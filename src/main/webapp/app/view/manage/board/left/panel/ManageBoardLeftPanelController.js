@@ -4,9 +4,9 @@ Ext.define('Kmbsvle.view.manage.board.left.panel.ManageBoardLeftPanelController'
     alias: 'controller.manage.board.left.panel',
   
     requires: [
-        'Kmbsvle.view.group.board.left.panel.GroupBoardLeftPanel',
-        'Kmbsvle.view.group.board.center.panel.GroupBoardCenterPanel',
-        'Kmbsvle.view.group.board.right.panel.GroupBoardRightPanel',
+        'Kmbsvle.view.lgroup.board.left.panel.LgroupBoardLeftPanel',
+        'Kmbsvle.view.lgroup.board.center.panel.LgroupBoardCenterPanel',
+        'Kmbsvle.view.lgroup.board.right.panel.LgroupBoardRightPanel',
 
         'Kmbsvle.view.course.board.left.panel.CourseBoardLeftPanel',
         'Kmbsvle.view.course.board.center.panel.CourseBoardCenterPanel',
@@ -25,19 +25,19 @@ Ext.define('Kmbsvle.view.manage.board.left.panel.ManageBoardLeftPanelController'
         'Kmbsvle.view.report.board.right.panel.ReportBoardRightPanel'
     ],
     routes: {
-        'groups': 'openGroupBoard',
-        'courses': 'openCourseBoard',
-        'communities': 'openCommunityBoard',
+        'lgroup/board': 'openLgroupBoard',
+        'course/board': 'openCourseBoard',
+        'community/board': 'openCommunityBoard',
         'calendar': 'openCalendarBoard',
         'reports': 'openReportBoard'
     },
 
-    openGroupBoard: function() {
+    openLgroupBoard: function() {
         var me = this;
-        me.changeLeftPanel('widget.group.board.left.panel', 'group_board_left_panel_title');
-        me.changeCenterPanel('widget.group.board.center.panel');
-        me.changeRightPanel('widget.group.board.right.panel', 'group_board_right_panel_title');
-        me.redirectTo('groups');
+        me.changeLeftPanel('widget.lgroup.board.left.panel', 'lgroup_board_left_panel_title');
+        me.changeCenterPanel('widget.lgroup.board.center.panel');
+        me.changeRightPanel('widget.lgroup.board.right.panel', 'lgroup_board_right_panel_title');
+        me.redirectTo('lgroup/board');
     },
 
     openCourseBoard: function() {
@@ -45,7 +45,7 @@ Ext.define('Kmbsvle.view.manage.board.left.panel.ManageBoardLeftPanelController'
         me.changeLeftPanel('widget.course.board.left.panel', 'course_board_left_panel_title');
         me.changeCenterPanel('widget.course.board.center.panel');
         me.changeRightPanel('widget.course.board.right.panel', 'course_board_right_panel_title');
-        me.redirectTo('courses');
+        me.redirectTo('course/board');
     },
 
     openCommunityBoard: function() {
@@ -53,7 +53,7 @@ Ext.define('Kmbsvle.view.manage.board.left.panel.ManageBoardLeftPanelController'
         me.changeLeftPanel('widget.community.board.left.panel', 'community_board_left_panel_title');
         me.changeCenterPanel('widget.community.board.center.panel');
         me.changeRightPanel('widget.community.board.right.panel', 'community_board_right_panel_title');
-        me.redirectTo('communities');
+        me.redirectTo('community/board');
     },
 
     onStatisticsClick: function() {

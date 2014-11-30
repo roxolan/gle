@@ -6,6 +6,10 @@ Ext.define('Kmbsvle.view.admin.board.left.panel.AdminBoardLeftPanelController', 
     requires: [
         'Kmbsvle.view.auth.board.left.panel.AuthBoardLeftPanel',
         
+        'Kmbsvle.view.community.board.left.panel.CommunityBoardLeftPanel',
+        'Kmbsvle.view.community.board.center.panel.CommunityBoardCenterPanel',
+        'Kmbsvle.view.community.board.right.panel.CommunityBoardRightPanel',
+        
         'Kmbsvle.view.library.board.left.panel.LibraryBoardLeftPanel',
         'Kmbsvle.view.library.board.center.panel.LibraryBoardCenterPanel',
         'Kmbsvle.view.library.board.right.panel.LibraryBoardRightPanel'
@@ -13,7 +17,8 @@ Ext.define('Kmbsvle.view.admin.board.left.panel.AdminBoardLeftPanelController', 
 
     routes: {
         'library/board' : 'openLibraryBoard',
-        'auth/board' : 'openAuthBoard'
+        'auth/board' : 'openAuthBoard',
+        'community/board' : 'openCommunityBoard'
     },
 
 
@@ -25,12 +30,20 @@ Ext.define('Kmbsvle.view.admin.board.left.panel.AdminBoardLeftPanelController', 
         me.redirectTo('auth/board');
     },
 
-    openGroupBoard: function() {
+    openLgroupBoard: function() {
         var me = this;
-        me.changeLeftPanel('widget.group.board.left.panel', 'group_board_left_panel_title', 'expand');
-        me.changeCenterPanel('widget.group.board.center.panel', 'group_board_center_panel_title');
-        me.changeRightPanel('widget.group.board.right.panel', 'group_board_right_panel_title', 'collapse');
-        me.redirectTo('group/board');
+        me.changeLeftPanel('widget.lgroup.board.left.panel', 'lgroup_board_left_panel_title', 'expand');
+        me.changeCenterPanel('widget.lgroup.board.center.panel', 'lgroup_board_center_panel_title');
+        me.changeRightPanel('widget.lgroup.board.right.panel', 'lgroup_board_right_panel_title', 'collapse');
+        me.redirectTo('lgroup/board');
+    },
+    
+    openCommunityBoard: function() {
+        var me = this;
+        me.changeLeftPanel('widget.community.board.left.panel', 'community_board_left_panel_title');
+        me.changeCenterPanel('widget.community.board.center.panel');
+        me.changeRightPanel('widget.community.board.right.panel', 'community_board_right_panel_title');
+        me.redirectTo('community/board');
     },
 
     openLibraryBoard: function() {

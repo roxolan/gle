@@ -33,7 +33,18 @@ Ext.define('Kmbsvle.view.admin.board.left.panel.AdminBoardLeftPanel', {
                     text: 'Управління навчальними групами',
                     glyph: 'xf10c@FontAwesome',
                     listeners: {
-                        click: 'openGroupBoard'
+                        click: 'openLgroupBoard'
+                    }
+                },
+                { 
+                    xtype: 'menuseparator' 
+                },
+                                { 
+                    xtype: 'menuitem',
+                    text: 'Управління спільнотами',
+                    glyph: 'xf0c0@FontAwesome',
+                    listeners: {
+                        click: 'openCommunityBoard'
                     }
                 },
                 { 

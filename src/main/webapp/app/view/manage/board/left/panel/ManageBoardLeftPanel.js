@@ -22,7 +22,7 @@ Ext.define('Kmbsvle.view.manage.board.left.panel.ManageBoardLeftPanel', {
                     text: 'Навчальні групи',
                     glyph: 'xf10c@FontAwesome',
                     listeners: {
-                        click: 'openGroupBoard'
+                        click: 'openLgroupBoard'
                     }
                 },
                 { 
