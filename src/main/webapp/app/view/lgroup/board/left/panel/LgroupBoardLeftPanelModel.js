@@ -6,11 +6,11 @@ Ext.define('Kmbsvle.view.lgroup.board.left.panel.LgroupBoardLeftPanelModel', {
     data: {
 
         en: {
-            lgroup_board_left_panel_title: 'Learning Group List'
+            lgroup_board_left_panel_title: 'Learning Groups'
         },
 
         uk: {
-            lgroup_board_left_panel_title: 'Список навчальних груп'
+            lgroup_board_left_panel_title: 'Навчальні групи'
         }
 
     }
