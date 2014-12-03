@@ -1,4 +1,4 @@
-Ext.define('Kmbsvle.view.lgroup.board.center.userlist.LgroupBoardCenterLgrouplistController', {
+Ext.define('Kmbsvle.view.lgroup.board.center.lgrouplist.LgroupBoardCenterLgrouplistController', {
     extend: 'Kmbsvle.view.base.BaseViewController',
 
     alias: 'controller.lgroup.board.center.lgrouplist',
