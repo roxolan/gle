@@ -1,7 +1,7 @@
 Ext.define('Kmbsvle.model.Lgroup', {
     extend: 'Ext.data.Model',
     fields: [
-        { name: 'idLgroup', type: 'int' },
+        { name: 'idLgroup', type: 'int', useNull:true },
         { name: 'lgroupTitle', type: 'string'}
     ],
     idProperty: 'idLgroup',
@@ -28,8 +28,8 @@ Ext.define('Kmbsvle.model.Lgroup', {
         }
     },
     validators: [
-        {type: 'presence',  field: 'idLgroup'},
-        {type: 'presence',  field: 'lgroupTitle'}
+        {type: 'presence',  field: 'lgroupTitle'},
+        {type: 'length',  field: 'lgroupTitle',  min: 2}
     ]
     
     

@@ -20,29 +20,12 @@ Ext.define('Kmbsvle.view.lgroup.board.center.lgrouplist.LgroupBoardCenterLgroupl
         
         lgroupform.loadRecord(record);
         
-        lgroupformPanel.lookupReference('usernameField').disable();
         lgroupformPanel.lookupReference('deleteBtn').enable();
-    },
-    
-    deleteLgroup: function(grid, record, tr, rowIndex, e, eOpts) {
-        var me = this;
-
-        Ext.Ajax.request({
-            url: 'lgroup/remove.json',
-            params: {
-                data: Ext.JSON.encode(record.data)
-            },
-            success: function() {
-                me.refreshStore();
-            }
-        });
-        
     },
     
     refreshStore: function() {
         var me = this;
-        var store = me.getStore('lgrouplist');
-        store.load();
+        me.getStore('lgrouplist').load();
     }
 
 }); 

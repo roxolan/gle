@@ -1,4 +1,4 @@
-Ext.define('Kmbsvle.view.lgroup.board.center.lgrouplist.LgroupBoardCenterGrouplistModel', {
+Ext.define('Kmbsvle.view.lgroup.board.center.lgrouplist.LgroupBoardCenterLgrouplistModel', {
     extend: 'Ext.app.ViewModel',
 
     alias: 'viewmodel.lgroup.board.center.lgrouplist',

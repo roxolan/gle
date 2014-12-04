@@ -38,94 +38,9 @@ Ext.define('Kmbsvle.view.lgroup.board.right.lgroupform.LgroupBoardRightLgroupfor
             items: [
                 {
                     xtype: 'textfield',
-                    name: 'username',
-                    reference: 'usernameField',
-                    fieldLabel: 'ID користувача'
-                },
-                {
-                    xtype: 'textfield',
-                    name: 'firstName',
-                    fieldLabel: 'Ім\'я'
-                },
-                {
-                    xtype: 'textfield',
-                    name: 'lastName',
-                    fieldLabel: 'Прізвище'
-                },
-                {
-                    xtype: 'textfield',
-                    name: 'email',
-                    fieldLabel: 'email'
-                },
-                {
-                    xtype: 'textfield',
-                    name: 'password',
-                    fieldLabel: 'Пароль',
-                    inputType: 'password'                    
-                },
-                {
-                    xtype: 'radiogroup',
-                    fieldLabel: 'Навчається',
-                    items: [
-                        {
-                            boxLabel: 'Так',
-                            name: 'learnerRole',
-                            inputValue: 'Y'
-                        },
-                        {
-                            boxLabel: 'Ні',
-                            name: 'learnerRole',
-                            inputValue: 'N'
-                        }
-                    ]
-                },
-                {
-                    xtype: 'radiogroup',
-                    fieldLabel: 'Викладач',
-                    items: [
-                        {
-                            boxLabel: 'Так',
-                            name: 'professorRole',
-                            inputValue: 'Y'
-                        },
-                        {
-                            boxLabel: 'Ні',
-                            name: 'professorRole',
-                            inputValue: 'N'
-                        }
-                    ]
-                },
-                {
-                    xtype: 'radiogroup',
-                    fieldLabel: 'Менеджер',
-                    items: [
-                        {
-                            boxLabel: 'Так',
-                            name: 'managerRole',
-                            inputValue: 'Y'
-                        },
-                        {
-                            boxLabel: 'Ні',
-                            name: 'managerRole',
-                            inputValue: 'N'
-                        }
-                    ]
-                },
-                {
-                    xtype: 'radiogroup',
-                    fieldLabel: 'Адміністратор',
-                    items: [
-                        {
-                            boxLabel: 'Так',
-                            name: 'adminRole',
-                            inputValue: 'Y'
-                        },
-                        {
-                            boxLabel: 'Ні',
-                            name: 'adminRole',
-                            inputValue: 'N'
-                        }
-                    ]
+                    name: 'lgroupTitle',
+                    reference: 'lgroupTitleField',
+                    fieldLabel: 'Введіть назву групи... '
                 },
                 {
                     xtype: 'toolbar',
@@ -141,7 +56,16 @@ Ext.define('Kmbsvle.view.lgroup.board.right.lgroupform.LgroupBoardRightLgroupfor
                             glyph: 'xf00d@FontAwesome',
                             text: 'Видалити',
                             listeners: {
-                                click: 'deleteUser'
+                                click: 'deleteLgroup'
+                            }
+                        },
+                        {
+                            xtype: 'button',
+                            reference: 'addCourseBtn',
+                            glyph: 'xf00d@FontAwesome',
+                            text: 'Додати курс',
+                            listeners: {
+                                click: 'addCourse'
                             }
                         },
                         {
@@ -150,7 +74,7 @@ Ext.define('Kmbsvle.view.lgroup.board.right.lgroupform.LgroupBoardRightLgroupfor
                             glyph: 'xf0c7@FontAwesome',
                             text: 'Зберегти',
                             listeners: {
-                                click: 'saveUser'
+                                click: 'saveLgroup'
                             }
                         }
                     ]
@@ -162,7 +86,7 @@ Ext.define('Kmbsvle.view.lgroup.board.right.lgroupform.LgroupBoardRightLgroupfor
     header: false,
     
     listeners: {
-        // viewready: 'initStore'
+        viewready: 'initStore'
     }
   
 });

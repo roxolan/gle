@@ -35,34 +35,15 @@ Ext.define('Kmbsvle.view.lgroup.board.center.lgrouplist.LgroupBoardCenterLgroupl
     columns: [
         {
             xtype: 'gridcolumn',
-            dataIndex: 'username',
+            dataIndex: 'lgroupTitle',
             flex: 1,
-            text: 'ID користувача'
-        },
-        {
-            xtype: 'gridcolumn',
-            dataIndex: 'firstName',
-            flex: 1,
-            text: 'Ім\'я'
-        },
-        {
-            xtype: 'gridcolumn',
-            dataIndex: 'lastName',
-            flex: 1,
-            text: 'Прізвище'
-        },
-        {
-            xtype: 'gridcolumn',
-            dataIndex: 'email',
-            flex: 2,
-            text: 'Email'
+            text: 'Назва групи'
         }
     ],
 
     listeners: {
         viewready: 'initStore',
-        rowclick: 'selectLgroup',
-        rowdblclick: 'deleteLgroup'
+        rowclick: 'selectLgroup'
     }
   
 });

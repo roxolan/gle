@@ -8,7 +8,7 @@ Ext.define('Kmbsvle.view.lgroup.board.left.panel.LgroupBoardLeftPanelController'
         'Kmbsvle.view.lgroup.single.center.panel.LgroupSingleCenterPanel',
         'Kmbsvle.view.lgroup.single.right.panel.LgroupSingleRightPanel',
     
-        'Kmbsvle.view.lgroup.board.center.lgrouplist.LgroupBoardCenterLgrouplist',
+        'Kmbsvle.view.lgroup.board.center.lgrouplist.LgroupBoardCenterLgrouplist'
         
     ],
 
@@ -34,25 +34,20 @@ Ext.define('Kmbsvle.view.lgroup.board.left.panel.LgroupBoardLeftPanelController'
     addLgroup: function() {
         var me = this;
         var rhld = Ext.getCmp('rightholder');
-        var userformPanel = Ext.create('widget.auth.board.right.userform');
-        var userform = userformPanel.getForm();
+        var lgroupformPanel = Ext.create('widget.lgroup.board.right.lgroupform');
+        var lgroupform = lgroupformPanel.getForm();
         
         rhld.removeAll();
-        rhld.add(userformPanel);
-        rhld.setTitle('Новий користувач');
+        rhld.add(lgroupformPanel);
+        rhld.setTitle('Нова навчальна група');
         rhld.expand();
         
         
-        var newUser = Ext.create('Kmbsvle.model.User', {
-            username: 'kmbsuser',
-            learnerRole: 'N',
-            professorRole: 'N',
-            managerRole: 'N',
-            adminRole: 'N'
+        var newLgroup = Ext.create('Kmbsvle.model.Lgroup', {
         });
         
-        userform.loadRecord(newUser);
-        userformPanel.lookupReference('deleteBtn').disable();
+        lgroupform.loadRecord(newLgroup);
+        lgroupformPanel.lookupReference('deleteBtn').disable();
                 
     }
 

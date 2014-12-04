@@ -1,4 +1,4 @@
-Ext.define('Kmbsvle.view.lgroup.board.right.lgroupform.LgroupBoardRightUserformModel', {
+Ext.define('Kmbsvle.view.lgroup.board.right.lgroupform.LgroupBoardRightLgroupformModel', {
     extend: 'Ext.app.ViewModel',
 
     alias: 'viewmodel.lgroup.board.right.lgroupform',
