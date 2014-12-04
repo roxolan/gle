@@ -8,8 +8,8 @@ Ext.define('Kmbsvle.view.lgroup.board.right.lgroupform.LgroupBoardRightLgroupfor
         'Ext.form.RadioGroup', 
         'Ext.toolbar.Toolbar',
         
-        'Kmbsvle.view.lgroup.board.right.lgroupform.LgroupBoardRightUserformController',
-        'Kmbsvle.view.lgroup.board.right.lgroupform.LgroupBoardRightUserformModel'
+        'Kmbsvle.view.lgroup.board.right.lgroupform.LgroupBoardRightLgroupformController',
+        'Kmbsvle.view.lgroup.board.right.lgroupform.LgroupBoardRightLgroupformModel'
     ],
     controller: 'lgroup.board.right.lgroupform',
     viewModel: {
