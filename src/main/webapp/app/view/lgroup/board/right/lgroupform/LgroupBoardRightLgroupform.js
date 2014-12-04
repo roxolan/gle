@@ -1,7 +1,7 @@
-Ext.define('Kmbsvle.view.lgroup.board.right.lgroupform.LgroupBoardRightUserform', {
+Ext.define('Kmbsvle.view.lgroup.board.right.lgroupform.LgroupBoardRightLgroupform', {
     extend: 'Ext.form.Panel',
   
-    alias: 'widget.lgroup.board.right.lgroup',
+    alias: 'widget.lgroup.board.right.lgroupform',
     requires: [
         'Ext.form.FieldSet', 
         'Ext.form.field.Radio',        
@@ -17,7 +17,7 @@ Ext.define('Kmbsvle.view.lgroup.board.right.lgroupform.LgroupBoardRightUserform'
     },
     
 //    bind: {
-//        store: '{userstore}'
+//        store: '{lgroupstore}'
 //    },
     
     layout: {
@@ -34,7 +34,7 @@ Ext.define('Kmbsvle.view.lgroup.board.right.lgroupform.LgroupBoardRightUserform'
             fieldDefaults: {
                 anchor: '100%'
             },
-            title: 'Користувач',
+            title: 'Навчальна група',
             items: [
                 {
                     xtype: 'textfield',

@@ -19,9 +19,10 @@ Ext.define('Kmbsvle.view.lgroup.board.left.panel.LgroupBoardLeftPanel', {
             items: [
                 { 
                     xtype: 'menuitem',
-                    text: 'Група №1',
+                    glyph: 'xf03a@FontAwesome',
+                    text: 'Загальний список',
                     listeners: {
-                        click: 'openLgroupSingle'
+                        click: 'openLgroupBoard'
                     }
                 },
                 { 
@@ -29,19 +30,10 @@ Ext.define('Kmbsvle.view.lgroup.board.left.panel.LgroupBoardLeftPanel', {
                 },
                 { 
                     xtype: 'menuitem',
-                    text: 'Група №2',
+                    glyph: 'xf055@FontAwesome',
+                    text: 'Додати навчальну групу',
                     listeners: {
-                        click: 'openLgroupSingle'
-                    }
-                },
-                { 
-                    xtype: 'menuseparator' 
-                },
-                { 
-                    xtype: 'menuitem',
-                    text: 'Група №3',
-                    listeners: {
-                        click: 'openLgroupSingle'
+                        click: 'addLgroup'
                     }
                 }
             ]
