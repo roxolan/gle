@@ -1,14 +1,14 @@
-Ext.define('Kmbsvle.view.lgroup.board.left.panel.LgroupBoardLeftPanel', {
+Ext.define('Kmbsvle.view.lgroup.board.left.menu.LgroupBoardLeftMenu', {
     extend: 'Ext.panel.Panel',
   
-    alias: 'widget.lgroup.board.left.panel',
-    controller: 'lgroup.board.left.panel',
+    alias: 'widget.lgroup.board.left.menu',
+    controller: 'lgroup.board.left.menu',
     viewModel: {
-        type: 'lgroup.board.left.panel'
+        type: 'lgroup.board.left.menu'
     },
     requires: [
-        'Kmbsvle.view.lgroup.board.left.panel.LgroupBoardLeftPanelController',
-        'Kmbsvle.view.lgroup.board.left.panel.LgroupBoardLeftPanelModel'
+        'Kmbsvle.view.lgroup.board.left.menu.LgroupBoardLeftMenuController',
+        'Kmbsvle.view.lgroup.board.left.menu.LgroupBoardLeftMenuModel'
     ],
     header: false,
     width: 250,

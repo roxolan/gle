@@ -4,9 +4,9 @@ Ext.define('Kmbsvle.view.manage.board.left.panel.ManageBoardLeftPanelController'
     alias: 'controller.manage.board.left.panel',
   
     requires: [
-        'Kmbsvle.view.lgroup.board.left.panel.LgroupBoardLeftPanel',
-        'Kmbsvle.view.lgroup.board.center.panel.LgroupBoardCenterPanel',
-        'Kmbsvle.view.lgroup.board.right.panel.LgroupBoardRightPanel',
+        'Kmbsvle.view.lgroup.board.left.menu.LgroupBoardLeftMenu',
+        'Kmbsvle.view.lgroup.board.center.lgrouplist.LgroupBoardCenterLgrouplist',
+        'Kmbsvle.view.lgroup.board.right.lgroupform.LgroupBoardRightLgroupform',
 
         'Kmbsvle.view.course.board.left.panel.CourseBoardLeftPanel',
         'Kmbsvle.view.course.board.center.panel.CourseBoardCenterPanel',
@@ -34,9 +34,9 @@ Ext.define('Kmbsvle.view.manage.board.left.panel.ManageBoardLeftPanelController'
 
     openLgroupBoard: function() {
         var me = this;
-        me.changeLeftPanel('widget.lgroup.board.left.panel', 'lgroup_board_left_panel_title');
-        me.changeCenterPanel('widget.lgroup.board.center.panel');
-        me.changeRightPanel('widget.lgroup.board.right.panel', 'lgroup_board_right_panel_title');
+        me.changeLeftPanel('widget.lgroup.board.left.menu', 'lgroup_board_left_menu_title', 'expand');
+        me.changeCenterPanel('widget.lgroup.board.center.lgrouplist');
+        me.changeRightPanel('widget.lgroup.board.right.lgroupform', 'dummy', 'collapse');
         me.redirectTo('lgroup/board');
     },
 

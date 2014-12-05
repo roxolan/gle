@@ -1,13 +1,13 @@
-Ext.define('Kmbsvle.view.lgroup.board.left.panel.LgroupBoardLeftPanelController', {
+Ext.define('Kmbsvle.view.lgroup.board.left.menu.LgroupBoardLeftMenuController', {
     extend: 'Kmbsvle.view.base.BaseViewController',
 
-    alias: 'controller.lgroup.board.left.panel',
+    alias: 'controller.lgroup.board.left.menu',
   
     requires: [
         'Kmbsvle.view.lgroup.single.left.panel.LgroupSingleLeftPanel',
         'Kmbsvle.view.lgroup.single.center.panel.LgroupSingleCenterPanel',
         'Kmbsvle.view.lgroup.single.right.panel.LgroupSingleRightPanel',
-    
+        
         'Kmbsvle.view.lgroup.board.center.lgrouplist.LgroupBoardCenterLgrouplist'
         
     ],

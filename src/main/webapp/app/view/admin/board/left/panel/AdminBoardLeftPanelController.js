@@ -6,6 +6,10 @@ Ext.define('Kmbsvle.view.admin.board.left.panel.AdminBoardLeftPanelController', 
     requires: [
         'Kmbsvle.view.auth.board.left.panel.AuthBoardLeftPanel',
         
+        'Kmbsvle.view.lgroup.board.left.menu.LgroupBoardLeftMenu',
+        'Kmbsvle.view.lgroup.board.center.lgrouplist.LgroupBoardCenterLgrouplist',
+        'Kmbsvle.view.lgroup.board.right.lgroupform.LgroupBoardRightLgroupform',
+        
         'Kmbsvle.view.community.board.left.panel.CommunityBoardLeftPanel',
         'Kmbsvle.view.community.board.center.panel.CommunityBoardCenterPanel',
         'Kmbsvle.view.community.board.right.panel.CommunityBoardRightPanel',
@@ -18,7 +22,9 @@ Ext.define('Kmbsvle.view.admin.board.left.panel.AdminBoardLeftPanelController', 
     routes: {
         'library/board' : 'openLibraryBoard',
         'auth/board' : 'openAuthBoard',
-        'community/board' : 'openCommunityBoard'
+        'community/board' : 'openCommunityBoard',
+        'lgroup/board' : 'openLgroupBoard'
+
     },
 
 
@@ -32,9 +38,9 @@ Ext.define('Kmbsvle.view.admin.board.left.panel.AdminBoardLeftPanelController', 
 
     openLgroupBoard: function() {
         var me = this;
-        me.changeLeftPanel('widget.lgroup.board.left.panel', 'lgroup_board_left_panel_title', 'expand');
-        me.changeCenterPanel('widget.lgroup.board.center.panel', 'lgroup_board_center_panel_title');
-        me.changeRightPanel('widget.lgroup.board.right.panel', 'lgroup_board_right_panel_title', 'collapse');
+        me.changeLeftPanel('widget.lgroup.board.left.menu', 'lgroup_board_left_menu_title', 'expand');
+        me.changeCenterPanel('widget.lgroup.board.center.lgrouplist');
+        me.changeRightPanel('widget.lgroup.board.right.lgroupform', 'dummy', 'collapse');
         me.redirectTo('lgroup/board');
     },
     

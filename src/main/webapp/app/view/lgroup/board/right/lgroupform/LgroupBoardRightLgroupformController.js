@@ -45,7 +45,8 @@ Ext.define('Kmbsvle.view.lgroup.board.right.lgroupform.LgroupBoardRightLgroupfor
         var me = this;
         var form = me.getView().getForm();
         var record = form.getRecord();
-        var authBoardLeftPanelController = Ext.getCmp('leftholder').getComponent('authBoardLeftPanel').getController();
+        var leftPanelController = Ext.create('widget.lgroup.board.left.menu').getController();
+        Kmbsvle.console(leftPanelController);
 
         Ext.Msg.confirm(
             'Підтвердіть видалення навчальної групи', 
@@ -65,7 +66,7 @@ Ext.define('Kmbsvle.view.lgroup.board.right.lgroupform.LgroupBoardRightLgroupfor
                     } catch (ConstraintViolationException) {
                         throw new ConstraintViolationException("can not delete record: ", e);
                     }
-                    authBoardLeftPanelController.addUser();
+                    leftPanelController.addLgroup();
                 }
             });
     },

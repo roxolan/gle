@@ -119,7 +119,7 @@ public class LgroupHandler extends AbstractHandler {
         JsonObject jsonObj = parseJsonObject(jsonData);
 
         Result<Lgroup> ar = lgroupService.remove(
-                getIntegerValue(jsonObj.get("idCompany")), 
+                getIntegerValue(jsonObj.get("idLgroup")), 
                 sessionUser.getUsername());
 
         if (ar.isSuccess()) {
