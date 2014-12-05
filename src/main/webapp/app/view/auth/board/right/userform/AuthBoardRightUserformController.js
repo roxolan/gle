@@ -47,7 +47,7 @@ Ext.define('Kmbsvle.view.auth.board.right.userform.AuthBoardRightUserformControl
             'Ви впевнені, що бажаєте видалити користувача ' + record.get('fullName') + '?',
             function(btn) {
                 if (btn === 'yes') {
-                    try {
+                    // try {
                         Ext.Ajax.request({
                             url: 'user/remove.json',
                             params: {
@@ -68,9 +68,9 @@ Ext.define('Kmbsvle.view.auth.board.right.userform.AuthBoardRightUserformControl
                             }
                         });
                     */
-                    } catch (ConstraintViolationException) {
-                        throw new ConstraintViolationException("can not delete record: ", e);
-                    }
+                    // } catch (ConstraintViolationException) {
+                    //    throw new ConstraintViolationException("can not delete record: ", e);
+                    // }
                     authBoardLeftPanelController.addUser();
                 }
             });

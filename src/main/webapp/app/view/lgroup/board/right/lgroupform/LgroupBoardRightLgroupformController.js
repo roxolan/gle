@@ -53,7 +53,7 @@ Ext.define('Kmbsvle.view.lgroup.board.right.lgroupform.LgroupBoardRightLgroupfor
             'Ви впевнені, що бажаєте видалити навчальну групу ' + record.get('lgroupTitle') + '?',
             function(btn) {
                 if (btn === 'yes') {
-                    try {
+                    // try {
                         Ext.Ajax.request({
                             url: 'lgroup/remove.json',
                             params: {
@@ -63,9 +63,9 @@ Ext.define('Kmbsvle.view.lgroup.board.right.lgroupform.LgroupBoardRightLgroupfor
                                 me.refreshStore();
                             }
                         });
-                    } catch (ConstraintViolationException) {
-                        throw new ConstraintViolationException("can not delete record: ", e);
-                    }
+                    // } catch (ConstraintViolationException) {
+                    //    throw new ConstraintViolationException("can not delete record: ", e);
+                    // }
                     leftPanelController.addLgroup();
                 }
             });
