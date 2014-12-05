@@ -40,7 +40,7 @@ Ext.define('Kmbsvle.view.lgroup.board.right.lgroupform.LgroupBoardRightLgroupfor
                     xtype: 'textfield',
                     name: 'lgroupTitle',
                     reference: 'lgroupTitleField',
-                    fieldLabel: 'Введіть назву групи... '
+                    fieldLabel: 'Назва групи'
                 },
                 {
                     xtype: 'toolbar',

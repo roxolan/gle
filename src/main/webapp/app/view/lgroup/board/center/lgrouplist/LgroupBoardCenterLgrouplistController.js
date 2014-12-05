@@ -3,8 +3,13 @@ Ext.define('Kmbsvle.view.lgroup.board.center.lgrouplist.LgroupBoardCenterLgroupl
 
     alias: 'controller.lgroup.board.center.lgrouplist',
     
+    requires: [
+        'Kmbsvle.view.lgroup.board.right.lgroupform.LgroupBoardRightLgroupform'
+    ],
+    
     initStore: function() {
-        this.getStore('lgrouplist').load();
+        var me = this;
+        me.getStore('lgrouplist').load();
     },
     
     selectLgroup: function(grid, record){
@@ -15,7 +20,7 @@ Ext.define('Kmbsvle.view.lgroup.board.center.lgrouplist.LgroupBoardCenterLgroupl
         
         rhld.removeAll();
         rhld.add(lgroupformPanel);
-        rhld.setTitle('Редагування профіля ' + record.data.lgroupTitle);
+        rhld.setTitle('Редагування профіля групи ' + record.data.lgroupTitle);
         rhld.expand();
         
         lgroupform.loadRecord(record);

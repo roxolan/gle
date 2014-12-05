@@ -4,7 +4,7 @@ Ext.define('Kmbsvle.view.lgroup.board.center.lgrouplist.LgroupBoardCenterLgroupl
     alias: 'viewmodel.lgroup.board.center.lgrouplist',
 
     stores: {
-        userlist: {
+        lgrouplist: {
             model: 'Kmbsvle.model.Lgroup',
             proxy: {
                 type: 'ajax',
