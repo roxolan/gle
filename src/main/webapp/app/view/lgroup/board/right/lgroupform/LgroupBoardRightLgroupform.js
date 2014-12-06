@@ -3,6 +3,9 @@ Ext.define('Kmbsvle.view.lgroup.board.right.lgroupform.LgroupBoardRightLgroupfor
   
     alias: 'widget.lgroup.board.right.lgroupform',
     requires: [
+        'Ext.form.FieldSet', 
+        'Ext.form.RadioGroup',
+        
         'Kmbsvle.view.lgroup.board.right.lgroupform.LgroupBoardRightLgroupformController',
         'Kmbsvle.view.lgroup.board.right.lgroupform.LgroupBoardRightLgroupformModel'
     ],
