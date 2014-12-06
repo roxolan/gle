@@ -2,12 +2,7 @@ Ext.define('Kmbsvle.view.auth.board.right.userform.AuthBoardRightUserform', {
     extend: 'Ext.form.Panel',
   
     alias: 'widget.auth.board.right.userform',
-    requires: [
-        'Ext.form.FieldSet', 
-        'Ext.form.field.Radio',        
-        'Ext.form.RadioGroup', 
-        'Ext.toolbar.Toolbar',
-        
+    requires: [       
         'Kmbsvle.view.auth.board.right.userform.AuthBoardRightUserformController',
         'Kmbsvle.view.auth.board.right.userform.AuthBoardRightUserformModel'
     ],
