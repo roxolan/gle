@@ -12,9 +12,9 @@ Ext.define('Kmbsvle.view.toppanel.leftnav.ToppanelLeftnavController', {
         'Kmbsvle.view.learn.board.center.panel.LearnBoardCenterPanel',
         'Kmbsvle.view.learn.board.right.panel.LearnBoardRightPanel',
     
-        'Kmbsvle.view.community.selection.left.menu.CommunitySelectionLeftMenu',
-        'Kmbsvle.view.community.selection.center.communitylist.CommunitySelectionCenterCommunitylist',    
-        'Kmbsvle.view.community.selection.right.communityform.CommunitySelectionRightCommunityform',
+        'Kmbsvle.view.community.selection.left.list.CommunitySelectionLeftList',
+        'Kmbsvle.view.community.selection.center.dashboard.CommunitySelectionCenterDashboard',    
+        'Kmbsvle.view.community.selection.right.pad.CommunitySelectionRightPad',
         
         'Kmbsvle.view.course.board.left.panel.CourseBoardLeftPanel',
         'Kmbsvle.view.course.board.center.panel.CourseBoardCenterPanel',
@@ -89,9 +89,9 @@ Ext.define('Kmbsvle.view.toppanel.leftnav.ToppanelLeftnavController', {
   
     openCommunitySelection: function() {
         var me = this;
-        me.changeLeftPanel('widget.community.selection.left.menu', 'community_selection_left_menu_title', 'expand');
-        me.changeCenterPanel('widget.community.selection.center.communitylist');
-        me.changeRightPanel('widget.community.selection.right.communityform', 'community_selection_right_communityform_title', 'collapse');
+        me.changeLeftPanel('widget.community.selection.left.list', 'community_selection_left_list_title', 'expand');
+        me.changeCenterPanel('widget.community.selection.center.dashboard');
+        me.changeRightPanel('widget.community.selection.right.pad', 'community_selection_right_pad_title', 'collapse');
         me.redirectTo('community/selection');
     },
    

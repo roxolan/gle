@@ -1,7 +1,7 @@
-Ext.define('Kmbsvle.view.community.selection.left.menu.CommunitySelectionLeftMenuController', {
+Ext.define('Kmbsvle.view.community.selection.left.list.CommunitySelectionLeftListController', {
     extend: 'Kmbsvle.view.base.BaseViewController',
 
-    alias: 'controller.community.selection.left.menu',
+    alias: 'controller.community.selection.left.list',
   
     requires: [
         'Kmbsvle.view.community.single.left.panel.CommunitySingleLeftPanel',
