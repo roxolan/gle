@@ -49,7 +49,7 @@ Ext.define('Kmbsvle.view.toppanel.leftnav.ToppanelLeftnav', {
                             overCls: 'hoveronname',
                             margin: '0 15 0 0',
                             listeners: {
-                                click: 'openSocialBoard'
+                                click: 'openCommunitySelection'
                             }
                         },
                         { 

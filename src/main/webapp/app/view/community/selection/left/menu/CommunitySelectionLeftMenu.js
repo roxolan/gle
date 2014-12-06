@@ -1,14 +1,14 @@
-Ext.define('Kmbsvle.view.social.board.left.panel.SocialBoardLeftPanel', {
+Ext.define('Kmbsvle.view.community.selection.left.menu.CommunitySelectionLeftMenu', {
     extend: 'Ext.panel.Panel',
     
-    alias: 'widget.social.board.left.panel',
-    controller: 'social.board.left.panel',
+    alias: 'widget.community.selection.left.menu',
+    controller: 'community.selection.left.menu',
     viewModel: {
-        type: 'social.board.left.panel'
+        type: 'community.selection.left.menu'
     },
     requires: [
-        'Kmbsvle.view.social.board.left.panel.SocialBoardLeftPanelController',
-        'Kmbsvle.view.social.board.left.panel.SocialBoardLeftPanelModel'
+        'Kmbsvle.view.community.selection.left.menu.CommunitySelectionLeftMenuController',
+        'Kmbsvle.view.community.selection.left.menu.CommunitySelectionLeftMenuModel'
     ],
     header: false,
     width: 250,
@@ -45,17 +45,6 @@ Ext.define('Kmbsvle.view.social.board.left.panel.SocialBoardLeftPanel', {
                     glyph: 'xf0c0@FontAwesome',
                     listeners: {
                         click: 'openCommunitySingle'
-                    }
-                },
-                { 
-                    xtype: 'menuseparator' 
-                },
-                {
-                    xtype: 'menuitem',
-                    text: 'Мої спільноти',
-                    glyph: 'xf0c0@FontAwesome',
-                    listeners: {
-                        click: 'openCommunityBoard'
                     }
                 }
             ]

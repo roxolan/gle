@@ -12,9 +12,9 @@ Ext.define('Kmbsvle.view.toppanel.leftnav.ToppanelLeftnavController', {
         'Kmbsvle.view.learn.board.center.panel.LearnBoardCenterPanel',
         'Kmbsvle.view.learn.board.right.panel.LearnBoardRightPanel',
     
-        'Kmbsvle.view.social.board.left.panel.SocialBoardLeftPanel',
-        'Kmbsvle.view.social.board.center.panel.SocialBoardCenterPanel',    
-        'Kmbsvle.view.social.board.right.panel.SocialBoardRightPanel',
+        'Kmbsvle.view.community.selection.left.menu.CommunitySelectionLeftMenu',
+        'Kmbsvle.view.community.selection.center.communitylist.CommunitySelectionCenterCommunitylist',    
+        'Kmbsvle.view.community.selection.right.communityform.CommunitySelectionRightCommunityform',
         
         'Kmbsvle.view.course.board.left.panel.CourseBoardLeftPanel',
         'Kmbsvle.view.course.board.center.panel.CourseBoardCenterPanel',
@@ -35,7 +35,8 @@ Ext.define('Kmbsvle.view.toppanel.leftnav.ToppanelLeftnavController', {
         'social' : 'openSocialBoard',
         'courses' : 'openProfessorBoard',
         'manage' : 'openManageBoard',
-        'admin' : 'openAdminBoard'
+        'admin' : 'openAdminBoard',
+        'community/selection' : 'openCommunitySelection'
     },
 
     setLeftnavCaptions: function() {
@@ -86,12 +87,12 @@ Ext.define('Kmbsvle.view.toppanel.leftnav.ToppanelLeftnavController', {
         me.redirectTo('learn/board');
     },
   
-    openSocialBoard: function() {
+    openCommunitySelection: function() {
         var me = this;
-        me.changeLeftPanel('widget.social.board.left.panel', 'social_board_left_panel_title', 'expand');
-        me.changeCenterPanel('widget.social.board.center.panel');
-        me.changeRightPanel('widget.social.board.right.panel', 'social_board_right_panel_title', 'collapse');
-        me.redirectTo('social/board');
+        me.changeLeftPanel('widget.community.selection.left.menu', 'community_selection_left_menu_title', 'expand');
+        me.changeCenterPanel('widget.community.selection.center.communitylist');
+        me.changeRightPanel('widget.community.selection.right.communityform', 'community_selection_right_communityform_title', 'collapse');
+        me.redirectTo('community/selection');
     },
    
     openCalendarBoard: function() {
