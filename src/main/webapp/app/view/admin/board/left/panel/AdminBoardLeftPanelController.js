@@ -4,15 +4,15 @@ Ext.define('Kmbsvle.view.admin.board.left.panel.AdminBoardLeftPanelController', 
     alias: 'controller.admin.board.left.panel',
   
     requires: [
-        'Kmbsvle.view.auth.board.left.panel.AuthBoardLeftPanel',
+        'Kmbsvle.view.auth.board.left.menu.AuthBoardLeftMenu',
         
         'Kmbsvle.view.lgroup.board.left.menu.LgroupBoardLeftMenu',
         'Kmbsvle.view.lgroup.board.center.lgrouplist.LgroupBoardCenterLgrouplist',
         'Kmbsvle.view.lgroup.board.right.lgroupform.LgroupBoardRightLgroupform',
         
-        'Kmbsvle.view.community.board.left.panel.CommunityBoardLeftPanel',
-        'Kmbsvle.view.community.board.center.panel.CommunityBoardCenterPanel',
-        'Kmbsvle.view.community.board.right.panel.CommunityBoardRightPanel',
+        'Kmbsvle.view.community.board.left.menu.CommunityBoardLeftMenu',
+        'Kmbsvle.view.community.board.center.communitylist.CommunityBoardCenterCommunitylist',
+        'Kmbsvle.view.community.board.right.communityform.CommunityBoardRightCommunityform',
         
         'Kmbsvle.view.library.board.left.panel.LibraryBoardLeftPanel',
         'Kmbsvle.view.library.board.center.panel.LibraryBoardCenterPanel',
@@ -30,7 +30,7 @@ Ext.define('Kmbsvle.view.admin.board.left.panel.AdminBoardLeftPanelController', 
 
     openUserBoard: function() {
         var me = this;
-        me.changeLeftPanel('widget.auth.board.left.panel', 'auth_board_left_panel_title', 'expand');
+        me.changeLeftPanel('widget.auth.board.left.menu', 'auth_board_left_menu_title', 'expand');
         me.changeCenterPanel('widget.auth.board.center.userlist');
         me.changeRightPanel('widget.auth.board.right.userform', 'dummy', 'collapse');
         me.redirectTo('auth/board');
@@ -46,9 +46,9 @@ Ext.define('Kmbsvle.view.admin.board.left.panel.AdminBoardLeftPanelController', 
     
     openCommunityBoard: function() {
         var me = this;
-        me.changeLeftPanel('widget.community.board.left.panel', 'community_board_left_panel_title');
-        me.changeCenterPanel('widget.community.board.center.panel');
-        me.changeRightPanel('widget.community.board.right.panel', 'community_board_right_panel_title');
+        me.changeLeftPanel('widget.community.board.left.menu', 'community_board_left_menu_title');
+        me.changeCenterPanel('widget.community.board.center.communitylist');
+        me.changeRightPanel('widget.community.board.right.communityform', 'community_board_right_communityform_title');
         me.redirectTo('community/board');
     },
 

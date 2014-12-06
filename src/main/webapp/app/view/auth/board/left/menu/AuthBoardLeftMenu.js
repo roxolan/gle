@@ -1,17 +1,17 @@
-Ext.define('Kmbsvle.view.auth.board.left.panel.AuthBoardLeftPanel', {
+Ext.define('Kmbsvle.view.auth.board.left.menu.AuthBoardLeftMenu', {
   extend: 'Ext.panel.Panel',
   
-  alias: 'widget.auth.board.left.panel',
+  alias: 'widget.auth.board.left.menu',
   requires: [
-    'Kmbsvle.view.auth.board.left.panel.AuthBoardLeftPanelController',
-    'Kmbsvle.view.auth.board.left.panel.AuthBoardLeftPanelModel'
+    'Kmbsvle.view.auth.board.left.menu.AuthBoardLeftMenuController',
+    'Kmbsvle.view.auth.board.left.menu.AuthBoardLeftMenuModel'
   ],
-  controller: 'auth.board.left.panel',
+  controller: 'auth.board.left.menu',
   viewModel: {
-    type: 'auth.board.left.panel'
+    type: 'auth.board.left.menu'
   },
 
-  itemId: 'authBoardLeftPanel',
+  itemId: 'authBoardLeftMenu',
   header: false,
   width: 250,
   items: [

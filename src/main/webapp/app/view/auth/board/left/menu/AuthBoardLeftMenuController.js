@@ -1,7 +1,7 @@
-Ext.define('Kmbsvle.view.auth.board.left.panel.AuthBoardLeftPanelController', {
+Ext.define('Kmbsvle.view.auth.board.left.menu.AuthBoardLeftMenuController', {
     extend: 'Kmbsvle.view.base.BaseViewController',
 
-    alias: 'controller.auth.board.left.panel',
+    alias: 'controller.auth.board.left.menu',
   
     requires: [
         'Kmbsvle.view.auth.board.center.userlist.AuthBoardCenterUserlist',

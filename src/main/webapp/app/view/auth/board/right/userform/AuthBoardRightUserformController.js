@@ -40,7 +40,7 @@ Ext.define('Kmbsvle.view.auth.board.right.userform.AuthBoardRightUserformControl
         var me = this;
         var form = me.getView().getForm();
         var record = form.getRecord();
-        var authBoardLeftPanelController = Ext.getCmp('leftholder').getComponent('authBoardLeftPanel').getController();
+        var authBoardLeftMenuController = Ext.getCmp('leftholder').getComponent('authBoardLeftMenu').getController();
 
         Ext.Msg.confirm(
             'Підтвердіть видалення користувача', 
@@ -71,7 +71,7 @@ Ext.define('Kmbsvle.view.auth.board.right.userform.AuthBoardRightUserformControl
                     // } catch (ConstraintViolationException) {
                     //    throw new ConstraintViolationException("can not delete record: ", e);
                     // }
-                    authBoardLeftPanelController.addUser();
+                    authBoardLeftMenuController.addUser();
                 }
             });
     },
