@@ -1,14 +1,14 @@
-Ext.define('Kmbsvle.view.community.board.left.panel.CommunityBoardLeftPanel', {
+Ext.define('Kmbsvle.view.community.board.left.menu.CommunityBoardLeftMenu', {
     extend: 'Ext.panel.Panel',
     
-    alias: 'widget.community.board.left.panel',
-    controller: 'community.board.left.panel',
+    alias: 'widget.community.board.left.menu',
+    controller: 'community.board.left.menu',
     viewModel: {
-        type: 'community.board.left.panel'
+        type: 'community.board.left.menu'
     },
     requires: [
-        'Kmbsvle.view.community.board.left.panel.CommunityBoardLeftPanelController',
-        'Kmbsvle.view.community.board.left.panel.CommunityBoardLeftPanelModel'
+        'Kmbsvle.view.community.board.left.menu.CommunityBoardLeftMenuController',
+        'Kmbsvle.view.community.board.left.menu.CommunityBoardLeftMenuModel'
     ],
     header: false,
     width: 250,

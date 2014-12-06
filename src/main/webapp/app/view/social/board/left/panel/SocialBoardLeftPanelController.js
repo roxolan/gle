@@ -4,9 +4,9 @@ Ext.define('Kmbsvle.view.social.board.left.panel.SocialBoardLeftPanelController'
     alias: 'controller.social.board.left.panel',
   
     requires: [
-        'Kmbsvle.view.community.board.left.panel.CommunityBoardLeftPanel',
-        'Kmbsvle.view.community.board.center.panel.CommunityBoardCenterPanel',
-        'Kmbsvle.view.community.board.right.panel.CommunityBoardRightPanel',
+        'Kmbsvle.view.community.board.left.menu.CommunityBoardLeftMenu',
+        'Kmbsvle.view.community.board.center.communitylist.CommunityBoardCenterCommunitylist',
+        'Kmbsvle.view.community.board.right.communityform.CommunityBoardRightCommunityform',
 
         'Kmbsvle.view.community.single.left.panel.CommunitySingleLeftPanel',
         'Kmbsvle.view.community.single.center.panel.CommunitySingleCenterPanel',
@@ -28,9 +28,9 @@ Ext.define('Kmbsvle.view.social.board.left.panel.SocialBoardLeftPanelController'
 
     openCommunityBoard: function() {
         var me = this;
-        me.changeLeftPanel('widget.community.board.left.panel', 'community_board_left_panel_title', 'expand');
-        me.changeCenterPanel('widget.community.board.center.panel');
-        me.changeRightPanel('widget.community.board.right.panel', 'community_board_right_panel_title', 'collapse');
+        me.changeLeftPanel('widget.community.board.left.menu', 'community_board_left_menu_title', 'expand');
+        me.changeCenterPanel('widget.community.board.center.communitylist');
+        me.changeRightPanel('widget.community.board.right.communityform', 'community_board_right_communityform_title', 'collapse');
         me.redirectTo('community/board');
     }
     
