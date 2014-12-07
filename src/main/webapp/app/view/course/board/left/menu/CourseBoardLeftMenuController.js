@@ -1,7 +1,7 @@
-Ext.define('Kmbsvle.view.course.board.left.panel.CourseBoardLeftPanelController', {
+Ext.define('Kmbsvle.view.course.board.left.menu.CourseBoardLeftMenuController', {
     extend: 'Kmbsvle.view.base.BaseViewController',
 
-    alias: 'controller.course.board.left.panel',
+    alias: 'controller.course.board.left.menu',
   
     requires: [
         'Kmbsvle.view.course.single.left.panel.CourseSingleLeftPanel',
@@ -10,7 +10,7 @@ Ext.define('Kmbsvle.view.course.board.left.panel.CourseBoardLeftPanelController'
     ],
 
     routes: {
-        'course': 'openCourseSingle'
+        'course/1': 'openCourseSingle'
     },
 
 
@@ -19,7 +19,7 @@ Ext.define('Kmbsvle.view.course.board.left.panel.CourseBoardLeftPanelController'
         me.changeLeftPanel('widget.course.single.left.panel', 'course_single_left_panel_title', 'expand');
         me.changeCenterPanel('widget.course.single.center.panel', 'course_single_center_panel_title');
         me.changeRightPanel('widget.course.single.right.panel', 'course_single_right_panel_title', 'collapse');
-        me.redirectTo('course');
+        me.redirectTo('course/1');
     }
 
 }); 

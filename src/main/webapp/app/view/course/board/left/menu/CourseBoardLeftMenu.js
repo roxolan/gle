@@ -1,14 +1,14 @@
-Ext.define('Kmbsvle.view.course.board.left.panel.CourseBoardLeftPanel', {
+Ext.define('Kmbsvle.view.course.board.left.menu.CourseBoardLeftMenu', {
     extend: 'Ext.panel.Panel',
   
-    alias: 'widget.course.board.left.panel',
-    controller: 'course.board.left.panel',
+    alias: 'widget.course.board.left.menu',
+    controller: 'course.board.left.menu',
     viewModel: {
-        type: 'course.board.left.panel'
+        type: 'course.board.left.menu'
     },
     requires: [
-        'Kmbsvle.view.course.board.left.panel.CourseBoardLeftPanelController',
-        'Kmbsvle.view.course.board.left.panel.CourseBoardLeftPanelModel'
+        'Kmbsvle.view.course.board.left.menu.CourseBoardLeftMenuController',
+        'Kmbsvle.view.course.board.left.menu.CourseBoardLeftMenuModel'
     ],
     header: false,
     width: 250,
