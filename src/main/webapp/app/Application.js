@@ -29,7 +29,7 @@ Ext.define('Kmbsvle.Application', {
 
     stores: [],
 
-    models: ['User'],
+    models: ['User', 'Course'],
 
     views: [
     ],
