@@ -19,10 +19,10 @@ Ext.define('Kmbsvle.view.course.board.left.menu.CourseBoardLeftMenu', {
             items: [
                 { 
                     xtype: 'menuitem',
-                    text: 'Курс №1',
-                    glyph: 'xf0a2@FontAwesome',
+                    glyph: 'xf03a@FontAwesome',
+                    text: 'Загальний список курсів',
                     listeners: {
-                        click: 'openCourseSingle'
+                        click: 'openCourseBoard'
                     }
                 },
                 { 
@@ -30,21 +30,10 @@ Ext.define('Kmbsvle.view.course.board.left.menu.CourseBoardLeftMenu', {
                 },
                 { 
                     xtype: 'menuitem',
-                    text: 'Курс №2',
-                    glyph: 'xf0a2@FontAwesome',
+                    glyph: 'xf055@FontAwesome',
+                    text: 'Додати курс',
                     listeners: {
-                        click: 'openCourseSingle'
-                    }
-                },
-                { 
-                    xtype: 'menuseparator' 
-                },
-                { 
-                    xtype: 'menuitem',
-                    text: 'Курс №3',
-                    glyph: 'xf0a2@FontAwesome',
-                    listeners: {
-                        click: 'openCourseSingle'
+                        click: 'addCourse'
                     }
                 }
             ]
