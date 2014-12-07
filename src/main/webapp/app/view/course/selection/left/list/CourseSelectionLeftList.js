@@ -1,14 +1,14 @@
-Ext.define('Kmbsvle.view.learn.board.left.panel.LearnBoardLeftPanel', {
+Ext.define('Kmbsvle.view.course.selection.left.list.CourseSelectionLeftList', {
     extend: 'Ext.panel.Panel',
     
-    alias: 'widget.learn.board.left.panel',
-    controller: 'learn.board.left.panel',
+    alias: 'widget.course.selection.left.list',
+    controller: 'course.selection.left.list',
     viewModel: {
-        type: 'learn.board.left.panel'
+        type: 'course.selection.left.list'
     },
     requires: [
-        'Kmbsvle.view.learn.board.left.panel.LearnBoardLeftPanelController',
-        'Kmbsvle.view.learn.board.left.panel.LearnBoardLeftPanelModel'
+        'Kmbsvle.view.course.selection.left.list.CourseSelectionLeftListController',
+        'Kmbsvle.view.course.selection.left.list.CourseSelectionLeftListModel'
     ],  
   
     header: false,
@@ -20,7 +20,7 @@ Ext.define('Kmbsvle.view.learn.board.left.panel.LearnBoardLeftPanel', {
             items: [
                 { 
                     xtype: 'menuitem',
-                    text: 'Курс №1',
+                    text: 'Курс №1 у списку',
                     glyph: 'xf0a2@FontAwesome',
                     listeners: {
                         click: 'openCourseSingle'
@@ -31,7 +31,7 @@ Ext.define('Kmbsvle.view.learn.board.left.panel.LearnBoardLeftPanel', {
                 },
                 { 
                     xtype: 'menuitem',
-                    text: 'Курс №2',
+                    text: 'Курс №2 у списку',
                     glyph: 'xf0a2@FontAwesome',
                     listeners: {
                         click: 'openCourseSingle'
@@ -42,21 +42,10 @@ Ext.define('Kmbsvle.view.learn.board.left.panel.LearnBoardLeftPanel', {
                 },
                 { 
                     xtype: 'menuitem',
-                    text: 'Курс №3',
+                    text: 'Курс №3 у списку',
                     glyph: 'xf0a2@FontAwesome',
                     listeners: {
                         click: 'openCourseSingle'
-                    }
-                },
-                { 
-                    xtype: 'menuseparator' 
-                },
-                { 
-                    xtype: 'menuitem',
-                    text: 'Мої курси',
-                    glyph: 'xf0a2@FontAwesome',
-                    listeners: {
-                        click: 'openCourseBoard'
                     }
                 }
             ]

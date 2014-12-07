@@ -8,9 +8,9 @@ Ext.define('Kmbsvle.view.toppanel.leftnav.ToppanelLeftnavController', {
         'Kmbsvle.view.calendar.board.center.panel.CalendarBoardCenterPanel',
         'Kmbsvle.view.calendar.board.right.panel.CalendarBoardRightPanel',
     
-        'Kmbsvle.view.learn.board.left.panel.LearnBoardLeftPanel',
-        'Kmbsvle.view.learn.board.center.panel.LearnBoardCenterPanel',
-        'Kmbsvle.view.learn.board.right.panel.LearnBoardRightPanel',
+        'Kmbsvle.view.course.selection.left.list.CourseSelectionLeftList',
+        'Kmbsvle.view.course.selection.center.dashboard.CourseSelectionCenterDashboard',
+        'Kmbsvle.view.course.selection.right.pad.CourseSelectionRightPad',
     
         'Kmbsvle.view.community.selection.left.list.CommunitySelectionLeftList',
         'Kmbsvle.view.community.selection.center.dashboard.CommunitySelectionCenterDashboard',    
@@ -31,11 +31,11 @@ Ext.define('Kmbsvle.view.toppanel.leftnav.ToppanelLeftnavController', {
 
     routes: {
         'calendar' : 'openCalendarBoard',
-        'learn' : 'openLearnBoard',
         'social' : 'openSocialBoard',
         'courses' : 'openProfessorBoard',
         'manage' : 'openManageBoard',
         'admin' : 'openAdminBoard',
+        'course/selection' : 'openCourseSelection',
         'community/selection' : 'openCommunitySelection'
     },
 
@@ -79,12 +79,12 @@ Ext.define('Kmbsvle.view.toppanel.leftnav.ToppanelLeftnavController', {
         adminItem.setConfig('text', adminCaption);
     },
 
-    openLearnBoard: function() {
+    openCourseSelection: function() {
         var me = this;
-        me.changeLeftPanel('widget.learn.board.left.panel', 'learn_board_left_panel_title', 'expand');
-        me.changeCenterPanel('widget.learn.board.center.panel');
-        me.changeRightPanel('widget.learn.board.right.panel', 'learn_board_right_panel_title', 'collapse');
-        me.redirectTo('learn/board');
+        me.changeLeftPanel('widget.course.selection.left.list', 'course_selection_left_list_title', 'expand');
+        me.changeCenterPanel('widget.course.selection.center.dashboard');
+        me.changeRightPanel('widget.course.selection.right.pad', 'course_selection_right_pad_title', 'collapse');
+        me.redirectTo('course/selection');
     },
   
     openCommunitySelection: function() {
