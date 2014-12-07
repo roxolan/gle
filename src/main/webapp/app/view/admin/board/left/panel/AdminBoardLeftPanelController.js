@@ -11,8 +11,8 @@ Ext.define('Kmbsvle.view.admin.board.left.panel.AdminBoardLeftPanelController', 
         'Kmbsvle.view.lgroup.board.right.lgroupform.LgroupBoardRightLgroupform',
         
         'Kmbsvle.view.community.board.left.menu.CommunityBoardLeftMenu',
-        'Kmbsvle.view.community.board.center.communitylist.CommunityBoardCenterCommunitylist',
-        'Kmbsvle.view.community.board.right.communityform.CommunityBoardRightCommunityform',
+        'Kmbsvle.view.community.board.center.list.CommunityBoardCenterList',
+        'Kmbsvle.view.community.board.right.form.CommunityBoardRightForm',
         
         'Kmbsvle.view.library.board.left.panel.LibraryBoardLeftPanel',
         'Kmbsvle.view.library.board.center.panel.LibraryBoardCenterPanel',
@@ -47,8 +47,8 @@ Ext.define('Kmbsvle.view.admin.board.left.panel.AdminBoardLeftPanelController', 
     openCommunityBoard: function() {
         var me = this;
         me.changeLeftPanel('widget.community.board.left.menu', 'community_board_left_menu_title');
-        me.changeCenterPanel('widget.community.board.center.communitylist');
-        me.changeRightPanel('widget.community.board.right.communityform', 'community_board_right_communityform_title');
+        me.changeCenterPanel('widget.community.board.center.list');
+        me.changeRightPanel('widget.community.board.right.form', 'community_board_right_form_title');
         me.redirectTo('community/board');
     },
 
