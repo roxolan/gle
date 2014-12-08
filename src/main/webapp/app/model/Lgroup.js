@@ -1,5 +1,10 @@
 Ext.define('Kmbsvle.model.Lgroup', {
     extend: 'Ext.data.Model',
+    requires: [
+        'Ext.data.validator.Presence',
+        'Ext.data.validator.Length'
+    ],
+    
     fields: [
         { name: 'idLgroup', type: 'int', useNull:true },
         { name: 'lgroupTitle', type: 'string'}
