@@ -9,10 +9,7 @@ Ext.define('Kmbsvle.view.auth.board.center.userlist.AuthBoardCenterUserlistModel
             proxy: {
                 type: 'ajax',
                 api: {
-                    create: 'user/store.json',
-                    read: 'user/findAll.json',
-                    update: 'user/store.json',
-                    destroy: 'user/remove.json'                    
+                    read: 'user/findAll.json'
                 },
                 reader: {
                     type: 'json',
