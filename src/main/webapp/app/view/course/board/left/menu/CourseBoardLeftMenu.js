@@ -10,6 +10,7 @@ Ext.define('Kmbsvle.view.course.board.left.menu.CourseBoardLeftMenu', {
         'Kmbsvle.view.course.board.left.menu.CourseBoardLeftMenuController',
         'Kmbsvle.view.course.board.left.menu.CourseBoardLeftMenuModel'
     ],
+    itemId: 'courseBoardLeftMenu',
     header: false,
     width: 250,
     items: [

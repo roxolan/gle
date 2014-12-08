@@ -1,11 +1,11 @@
 Ext.define('Kmbsvle.view.auth.board.right.userform.AuthBoardRightUserformModel', {
     extend: 'Ext.app.ViewModel',
 
-    alias: 'viewmodel.auth.board.right.userform',
+    alias: 'viewmodel.auth.board.right.userform'
 
-    stores: {
-        userstore: {
-            source: 'viewmodel.auth.board.center.userlist'
+//    stores: {
+//        userstore: {
+//            source: 'viewmodel.auth.board.center.userlist'
 //            model: 'Kmbsvle.model.User',
 //            
 //            // autoLoad: true
@@ -25,7 +25,7 @@ Ext.define('Kmbsvle.view.auth.board.right.userform.AuthBoardRightUserformModel',
 //                    writeAllFields: true
 //                }
 //            }
-        }
-    }
+//        }
+//    }
 
 });

@@ -3,39 +3,6 @@ Ext.define('Kmbsvle.view.auth.board.right.userform.AuthBoardRightUserformControl
 
     alias: 'controller.auth.board.right.userform',
     
-//    initStore: function(view, eOpts) {
-//        var me = this;
-//        me.getStore('userlist').load(function(records, operation, success){
-//        });
-//    },
-    
-    saveUser: function() {
-        var me = this;
-        var form = me.getView().getForm();
-        var record = form.getRecord();
-
-        if (!Ext.isEmpty(record)) {
-            form.updateRecord();
-            var errs = record.validate();
-            if (errs.isValid()) {
-                record.save({
-                    success: function(record, operation) {
-                        if (typeof record.store === 'undefined') {
-                            Ext.getCmp('centerholder').getComponent('centerUserList').getStore().add(record);
-                            // me.getView().getStore().add(record);
-                        }
-                    },
-                    failure: function(record, operation) {
-                        Ext.Msg.alert('Save Failure', operation.request.scope.reader.jsonData.msg);
-                    }
-                });
-            } else {
-                form.markInvalid(errs);
-                Ext.Msg.alert('Invalid Fields', 'Please fix the invalid entries!');
-            }           
-        }
-    },
-    
     deleteUser: function(){
         var me = this;
         var form = me.getView().getForm();
@@ -74,14 +41,41 @@ Ext.define('Kmbsvle.view.auth.board.right.userform.AuthBoardRightUserformControl
                     authBoardLeftMenuController.addUser();
                 }
             });
-    }
+    },
     
-//    refreshStore: function() {
-//        var me = this;
-//        var authBoardCenterUserlistStore = Ext.getCmp('centerholder').getComponent('centerUserList').getStore('userlist');
-//        
-//        authBoardCenterUserlistStore.load();
-//    }
+    saveUser: function() {
+        var me = this;
+        var form = me.getView().getForm();
+        var record = form.getRecord();
+
+        if (!Ext.isEmpty(record)) {
+            form.updateRecord();
+            var errs = record.validate();
+            if (errs.isValid()) {
+                record.save({
+                    success: function(record, operation) {
+                        if (typeof record.store === 'undefined') {
+                            Ext.getCmp('centerholder').getComponent('centerUserList').getStore().add(record);
+                            // me.getView().getStore().add(record);
+                        }
+                    },
+                    failure: function(record, operation) {
+                        Ext.Msg.alert('Save Failure', operation.request.scope.reader.jsonData.msg);
+                    }
+                });
+            } else {
+                form.markInvalid(errs);
+                Ext.Msg.alert('Invalid Fields', 'Please fix the invalid entries!');
+            }           
+        }
+    },
+    
+    refreshStore: function() {
+        var me = this;
+        var authBoardCenterUserlistStore = Ext.getCmp('centerholder').getComponent('centerUserList').getStore('userlist');
+        
+        authBoardCenterUserlistStore.load();
+    }
 
 
 }); 

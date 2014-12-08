@@ -19,7 +19,23 @@ Ext.define('Kmbsvle.view.course.board.left.menu.CourseBoardLeftMenuController', 
     },
     
     addCourse: function() {
-        Ext.Msg.alert('addCourse');
+        var me = this;
+        var rhld = Ext.getCmp('rightholder');
+        var courseFormPanel = Ext.create('widget.course.board.right.form');
+        var courseForm = courseFormPanel.getForm();
+        
+        rhld.removeAll();
+        rhld.add(courseFormPanel);
+        rhld.setTitle('Новий курс');
+        rhld.expand();
+        
+        
+        var newCourse = Ext.create('Kmbsvle.model.Course', {
+            courseTitle: 'Новий курс'
+        });
+        
+        courseForm.loadRecord(newCourse);
+        courseFormPanel.lookupReference('deleteBtn').disable();                
     }
 
 
