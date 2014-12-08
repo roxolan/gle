@@ -3,14 +3,14 @@ Ext.define('Kmbsvle.view.auth.board.center.userlist.AuthBoardCenterUserlist', {
   
     alias: 'widget.auth.board.center.userlist',   
       
-    requires: [
-        'Kmbsvle.view.auth.board.center.userlist.AuthBoardCenterUserlistController',
-        'Kmbsvle.view.auth.board.center.userlist.AuthBoardCenterUserlistModel'
-    ],
     controller: 'auth.board.center.userlist',
     viewModel: {
         type: 'auth.board.center.userlist'
     },
+    requires: [
+        'Kmbsvle.view.auth.board.center.userlist.AuthBoardCenterUserlistController',
+        'Kmbsvle.view.auth.board.center.userlist.AuthBoardCenterUserlistModel'
+    ],
 
     title: 'Список користувачів',
     itemId: 'centerUserList',
@@ -61,8 +61,7 @@ Ext.define('Kmbsvle.view.auth.board.center.userlist.AuthBoardCenterUserlist', {
 
     listeners: {
         viewready: 'initStore',
-        rowclick: 'selectUser',
-        rowdblclick: 'deleteUser'
+        rowclick: 'selectUser'
     }
   
 });

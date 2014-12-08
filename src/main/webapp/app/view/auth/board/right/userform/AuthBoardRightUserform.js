@@ -2,6 +2,11 @@ Ext.define('Kmbsvle.view.auth.board.right.userform.AuthBoardRightUserform', {
     extend: 'Ext.form.Panel',
   
     alias: 'widget.auth.board.right.userform',
+
+    controller: 'auth.board.right.userform',
+    viewModel: {
+        type: 'auth.board.right.userform'
+    },
     requires: [
         'Ext.form.FieldSet', 
         'Ext.form.RadioGroup', 
@@ -9,10 +14,6 @@ Ext.define('Kmbsvle.view.auth.board.right.userform.AuthBoardRightUserform', {
         'Kmbsvle.view.auth.board.right.userform.AuthBoardRightUserformController',
         'Kmbsvle.view.auth.board.right.userform.AuthBoardRightUserformModel'
     ],
-    controller: 'auth.board.right.userform',
-    viewModel: {
-        type: 'auth.board.right.userform'
-    },
     
 //    bind: {
 //        store: '{userstore}'
