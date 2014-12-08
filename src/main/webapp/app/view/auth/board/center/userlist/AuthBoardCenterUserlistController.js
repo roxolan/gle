@@ -24,21 +24,6 @@ Ext.define('Kmbsvle.view.auth.board.center.userlist.AuthBoardCenterUserlistContr
         userformPanel.lookupReference('deleteBtn').enable();
     },
     
-    deleteUser: function(grid, record, tr, rowIndex, e, eOpts) {
-        var me = this;
-
-        Ext.Ajax.request({
-            url: 'user/remove.json',
-            params: {
-                data: Ext.JSON.encode(record.data)
-            },
-            success: function() {
-                me.refreshStore();
-            }
-        });
-        
-    },
-    
     refreshStore: function() {
         var me = this;
         var store = me.getStore('userlist');

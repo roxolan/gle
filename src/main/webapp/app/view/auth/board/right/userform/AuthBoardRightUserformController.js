@@ -3,11 +3,11 @@ Ext.define('Kmbsvle.view.auth.board.right.userform.AuthBoardRightUserformControl
 
     alias: 'controller.auth.board.right.userform',
     
-    initStore: function(view, eOpts) {
-        var me = this;
-        me.getStore('userlist').load(function(records, operation, success){
-        });
-    },
+//    initStore: function(view, eOpts) {
+//        var me = this;
+//        me.getStore('userlist').load(function(records, operation, success){
+//        });
+//    },
     
     saveUser: function() {
         var me = this;
@@ -74,14 +74,14 @@ Ext.define('Kmbsvle.view.auth.board.right.userform.AuthBoardRightUserformControl
                     authBoardLeftMenuController.addUser();
                 }
             });
-    },
-    
-    refreshStore: function() {
-        var me = this;
-        var authBoardCenterUserlistStore = Ext.getCmp('centerholder').getComponent('centerUserList').getStore('userlist');
-        
-        authBoardCenterUserlistStore.load();
     }
+    
+//    refreshStore: function() {
+//        var me = this;
+//        var authBoardCenterUserlistStore = Ext.getCmp('centerholder').getComponent('centerUserList').getStore('userlist');
+//        
+//        authBoardCenterUserlistStore.load();
+//    }
 
 
 }); 
