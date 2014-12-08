@@ -56,7 +56,7 @@ Ext.define('Kmbsvle.view.auth.board.right.userform.AuthBoardRightUserformControl
                     success: function(record, operation) {
                         if (typeof record.store === 'undefined') {
                             Ext.getCmp('centerholder').getComponent('centerUserList').getStore().add(record);
-                            // me.getView().getStore().add(record);
+                            Ext.getCmp('centerholder').getComponent('centerUserList').getSelectionModel().select(record, true);
                         }
                     },
                     failure: function(record, operation) {
