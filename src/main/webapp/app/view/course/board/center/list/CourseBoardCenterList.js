@@ -48,7 +48,8 @@ Ext.define('Kmbsvle.view.course.board.center.list.CourseBoardCenterList', {
     ],
     
     listeners: {
-        viewready: 'initStore'
+        viewready: 'initStore',
+        rowclick: 'selectCourse'
     }
   
 });
