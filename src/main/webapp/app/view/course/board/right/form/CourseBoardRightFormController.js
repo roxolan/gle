@@ -44,7 +44,29 @@ Ext.define('Kmbsvle.view.course.board.right.form.CourseBoardRightFormController'
     },
     
     saveCourse: function() {
-        Ext.Msg.alert('Controller function to be developed', 'saveCourse');        
+        var me = this;
+        var form = me.getView().getForm();
+        var record = form.getRecord();
+
+        if (!Ext.isEmpty(record)) {
+            form.updateRecord();
+            var errs = record.validate();
+            if (errs.isValid()) {
+                record.save({
+                    success: function(record, operation) {
+                        if (typeof record.store === 'undefined') {
+                            Ext.getCmp('centerholder').getComponent('courseBoardCenterList').getStore('courselist').add(record);
+                        }
+                    },
+                    failure: function(record, operation) {
+                        Ext.Msg.alert('Save Failure', operation.request.scope.reader.jsonData.msg);
+                    }
+                });
+            } else {
+                form.markInvalid(errs);
+                Ext.Msg.alert('Invalid Fields', 'Please fix the invalid entries!');
+            }           
+        }
     },
     
     refreshStore: function() {

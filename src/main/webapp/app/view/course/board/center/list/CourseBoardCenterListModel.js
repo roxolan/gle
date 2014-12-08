@@ -9,10 +9,7 @@ Ext.define('Kmbsvle.view.course.board.center.list.CourseBoardCenterListModel', {
             proxy: {
                 type: 'ajax',
                 api: {
-                    create: 'course/store.json',
-                    read: 'course/findAll.json',
-                    update: 'course/store.json',
-                    destroy: 'course/remove.json'                    
+                    read: 'course/findAll.json'
                 },
                 reader: {
                     type: 'json',
