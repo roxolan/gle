@@ -105,10 +105,10 @@ Ext.define('Kmbsvle.view.toppanel.leftnav.ToppanelLeftnavController', {
     
     openProfessorBoard: function() {
         var me = this;
-        me.changeLeftPanel('widget.course.board.left.panel', 'course_board_left_panel_title', 'expand');
-        me.changeCenterPanel('widget.course.board.center.panel');
-        me.changeRightPanel('widget.course.board.right.panel', 'course_board_right_panel_title', 'collapse');
-        me.redirectTo('courses');
+        me.changeLeftPanel('widget.course.selection.left.list', 'course_selection_left_list_title', 'expand');
+        me.changeCenterPanel('widget.course.selection.center.dashboard');
+        me.changeRightPanel('widget.course.board.right.pad', 'course_board_right_pad_title', 'collapse');
+        me.redirectTo('course/selection');
     },
     
     openManageBoard: function() {
