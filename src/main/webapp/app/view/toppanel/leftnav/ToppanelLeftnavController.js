@@ -107,7 +107,7 @@ Ext.define('Kmbsvle.view.toppanel.leftnav.ToppanelLeftnavController', {
         var me = this;
         me.changeLeftPanel('widget.course.selection.left.list', 'course_selection_left_list_title', 'expand');
         me.changeCenterPanel('widget.course.selection.center.dashboard');
-        me.changeRightPanel('widget.course.board.right.pad', 'course_board_right_pad_title', 'collapse');
+        me.changeRightPanel('widget.course.selection.right.pad', 'course_board_right_pad_title', 'collapse');
         me.redirectTo('course/selection');
     },
     
