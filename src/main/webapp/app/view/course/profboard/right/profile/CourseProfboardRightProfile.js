@@ -1,4 +1,4 @@
-Ext.define('Kmbsvle.view.course.profboard.right.profile.CourseProfoardRightProfile', {
+Ext.define('Kmbsvle.view.course.profboard.right.profile.CourseProfboardRightProfile', {
     extend: 'Ext.panel.Panel',
   
     alias: 'widget.course.profboard.right.profile',
@@ -7,8 +7,8 @@ Ext.define('Kmbsvle.view.course.profboard.right.profile.CourseProfoardRightProfi
         type: 'course.profboard.right.profile'
     },
     requires: [
-        'Kmbsvle.view.course.profboard.right.profile.CourseBoardRightFormController',
-        'Kmbsvle.view.course.profboard.right.profile.CourseBoardRightFormModel'
+        'Kmbsvle.view.course.profboard.right.profile.CourseProfboardRightProfileController',
+        'Kmbsvle.view.course.profboard.right.profile.CourseProfboardRightProfileModel'
     ],
 
     bodyPadding: 10,

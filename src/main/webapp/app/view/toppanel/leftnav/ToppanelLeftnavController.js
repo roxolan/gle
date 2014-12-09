@@ -11,6 +11,8 @@ Ext.define('Kmbsvle.view.toppanel.leftnav.ToppanelLeftnavController', {
         'Kmbsvle.view.course.selection.left.list.CourseSelectionLeftList',
         'Kmbsvle.view.course.selection.center.dashboard.CourseSelectionCenterDashboard',
         'Kmbsvle.view.course.selection.right.pad.CourseSelectionRightPad',
+        
+        
     
         'Kmbsvle.view.community.selection.left.list.CommunitySelectionLeftList',
         'Kmbsvle.view.community.selection.center.dashboard.CommunitySelectionCenterDashboard',    
@@ -105,9 +107,9 @@ Ext.define('Kmbsvle.view.toppanel.leftnav.ToppanelLeftnavController', {
     
     openProfessorBoard: function() {
         var me = this;
-        me.changeLeftPanel('widget.course.selection.left.list', 'course_selection_left_list_title', 'expand');
-        me.changeCenterPanel('widget.course.selection.center.dashboard');
-        me.changeRightPanel('widget.course.selection.right.pad', 'course_board_right_pad_title', 'collapse');
+        me.changeLeftPanel('widget.course.profboard.left.menu', 'course_profboard_left_menu_title', 'expand');
+        me.changeCenterPanel('widget.course.profboard.center.list');
+        me.changeRightPanel('widget.course.profboard.right.profile', 'course_board_right_profile_title', 'collapse');
         me.redirectTo('course/selection');
     },
     

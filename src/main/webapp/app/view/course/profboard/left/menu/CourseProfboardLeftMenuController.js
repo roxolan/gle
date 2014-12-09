@@ -5,7 +5,7 @@ Ext.define('Kmbsvle.view.course.profboard.left.menu.CourseProfboardLeftMenuContr
   
     requires: [
         'Kmbsvle.view.course.profboard.center.list.CourseProfboardCenterList',
-        'Kmbsvle.view.course.profboard.right.form.CourseProfboardRightForm'
+        'Kmbsvle.view.course.profboard.right.profile.CourseProfboardRightProfile'
     ],
 
     routes: {
