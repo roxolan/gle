@@ -12,7 +12,7 @@ Ext.define('Kmbsvle.view.toppanel.leftnav.ToppanelLeftnavController', {
         'Kmbsvle.view.course.selection.center.dashboard.CourseSelectionCenterDashboard',
         'Kmbsvle.view.course.selection.right.pad.CourseSelectionRightPad',
         
-        
+        'Kmbsvle.view.course.profboard.left.menu.CourseProfboardLeftMenu',
     
         'Kmbsvle.view.community.selection.left.list.CommunitySelectionLeftList',
         'Kmbsvle.view.community.selection.center.dashboard.CommunitySelectionCenterDashboard',    
