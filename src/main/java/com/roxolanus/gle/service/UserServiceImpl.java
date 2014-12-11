@@ -9,10 +9,14 @@ import org.springframework.transaction.annotation.Transactional;
 import com.roxolanus.gle.vo.Result;
 import com.roxolanus.gle.vo.ResultFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 @Transactional
 @Service("userService")
 public class UserServiceImpl extends AbstractService implements UserService {
+    
+    final protected Logger logger = LoggerFactory.getLogger(this.getClass());
 
     @Autowired
     protected AssignmentSubmissionDao assignmentSubmissionDao;
@@ -186,6 +190,9 @@ public class UserServiceImpl extends AbstractService implements UserService {
             return ResultFactory.getFailResult("Unable to load User for removal with username=" + username);
 
         } else if(userSubmissions.size() > 0) {
+
+            logger.info("Attempt to remove user with valid assignment submissions pending. Username: " + username);
+            logger.info("This user's submissions are: " + userSubmissions);
 
             // tasks have logs assigned: not allowed to delete
             return ResultFactory.getFailResult("Unable to remove User with username=" + username + " as valid assignment submissions are pending");
