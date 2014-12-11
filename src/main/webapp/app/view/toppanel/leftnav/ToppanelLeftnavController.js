@@ -8,9 +8,9 @@ Ext.define('Kmbsvle.view.toppanel.leftnav.ToppanelLeftnavController', {
         'Kmbsvle.view.calendar.board.center.panel.CalendarBoardCenterPanel',
         'Kmbsvle.view.calendar.board.right.panel.CalendarBoardRightPanel',
     
-        'Kmbsvle.view.course.selection.left.list.CourseSelectionLeftList',
-        'Kmbsvle.view.course.selection.center.dashboard.CourseSelectionCenterDashboard',
-        'Kmbsvle.view.course.selection.right.pad.CourseSelectionRightPad',
+        'Kmbsvle.view.course.selection.prof.left.list.CourseSelectionProfLeftList',
+        'Kmbsvle.view.course.selection.prof.center.dashboard.CourseSelectionProfCenterDashboard',
+        'Kmbsvle.view.course.selection.prof.right.pad.CourseSelectionProfRightPad',
         
         'Kmbsvle.view.course.board.prof.left.menu.CourseBoardProfLeftMenu',
     
@@ -79,9 +79,9 @@ Ext.define('Kmbsvle.view.toppanel.leftnav.ToppanelLeftnavController', {
 
     openCourseSelection: function() {
         var me = this;
-        me.changeLeftPanel('widget.course.selection.left.list', 'course_selection_left_list_title', 'expand');
-        me.changeCenterPanel('widget.course.selection.center.dashboard');
-        me.changeRightPanel('widget.course.selection.right.pad', 'course_selection_right_pad_title', 'collapse');
+        me.changeLeftPanel('widget.course.selection.prof.left.list', 'course_selection_prof_left_list_title', 'expand');
+        me.changeCenterPanel('widget.course.selection.prof.center.dashboard');
+        me.changeRightPanel('widget.course.selection.prof.right.pad', 'course_selection_prof_right_pad_title', 'collapse');
         me.redirectTo('course/selection');
     },
   
