@@ -1,7 +1,7 @@
-Ext.define('Kmbsvle.view.course.selection.left.list.CourseSelectionLeftListController', {
+Ext.define('Kmbsvle.view.course.selection.prof.left.list.CourseSelectionProfLeftListController', {
     extend: 'Kmbsvle.view.base.BaseViewController',
 
-    alias: 'controller.course.selection.left.list',
+    alias: 'controller.course.selection.prof.left.list',
   
     requires: [
         'Kmbsvle.view.course.single.left.panel.CourseSingleLeftPanel',

@@ -1,14 +1,14 @@
-Ext.define('Kmbsvle.view.course.selection.left.list.CourseSelectionLeftList', {
+Ext.define('Kmbsvle.view.course.selection.prof.left.list.CourseSelectionProfLeftList', {
     extend: 'Ext.panel.Panel',
     
-    alias: 'widget.course.selection.left.list',
-    controller: 'course.selection.left.list',
+    alias: 'widget.course.selection.prof.left.list',
+    controller: 'course.selection.prof.left.list',
     viewModel: {
-        type: 'course.selection.left.list'
+        type: 'course.selection.prof.left.list'
     },
     requires: [
-        'Kmbsvle.view.course.selection.left.list.CourseSelectionLeftListController',
-        'Kmbsvle.view.course.selection.left.list.CourseSelectionLeftListModel'
+        'Kmbsvle.view.course.selection.prof.left.list.CourseSelectionProfLeftListController',
+        'Kmbsvle.view.course.selection.prof.left.list.CourseSelectionProfLeftListModel'
     ],  
   
     header: false,
