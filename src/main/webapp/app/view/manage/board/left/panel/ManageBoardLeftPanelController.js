@@ -8,9 +8,9 @@ Ext.define('Kmbsvle.view.manage.board.left.panel.ManageBoardLeftPanelController'
         'Kmbsvle.view.lgroup.board.center.lgrouplist.LgroupBoardCenterLgrouplist',
         'Kmbsvle.view.lgroup.board.right.lgroupform.LgroupBoardRightLgroupform',
 
-        'Kmbsvle.view.course.board.left.menu.CourseBoardLeftMenu',
-        'Kmbsvle.view.course.board.center.list.CourseBoardCenterList',
-        'Kmbsvle.view.course.board.right.form.CourseBoardRightForm',
+        'Kmbsvle.view.course.board.manage.left.menu.CourseBoardManageLeftMenu',
+        'Kmbsvle.view.course.board.manage.center.list.CourseBoardManageCenterList',
+        'Kmbsvle.view.course.board.manage.right.form.CourseBoardManageRightForm',
         
         'Kmbsvle.view.community.board.left.menu.CommunityBoardLeftMenu',
         'Kmbsvle.view.community.board.center.list.CommunityBoardCenterList',
@@ -26,7 +26,7 @@ Ext.define('Kmbsvle.view.manage.board.left.panel.ManageBoardLeftPanelController'
     ],
     routes: {
         'lgroup/board': 'openLgroupBoard',
-        'course/board': 'openCourseBoard',
+        'course/manage': 'openCourseBoardManage',
         'community/board': 'openCommunityBoard',
         'calendar': 'openCalendarBoard',
         'reports': 'openReportBoard'
@@ -40,12 +40,12 @@ Ext.define('Kmbsvle.view.manage.board.left.panel.ManageBoardLeftPanelController'
         me.redirectTo('lgroup/board');
     },
 
-    openCourseBoard: function() {
+    openCourseBoardManage: function() {
         var me = this;        
-        me.changeLeftPanel('widget.course.board.left.menu', 'course_board_left_menu_title');
-        me.changeCenterPanel('widget.course.board.center.list');
-        me.changeRightPanel('widget.course.board.right.form', 'course_board_right_form_title');
-        me.redirectTo('course/board');
+        me.changeLeftPanel('widget.course.board.manage.left.menu', 'course_board_manage_left_menu_title');
+        me.changeCenterPanel('widget.course.board.manage.center.list');
+        me.changeRightPanel('widget.course.board.manage.right.form', 'course_board_manage_right_form_title');
+        me.redirectTo('course/manage');
     },
 
     openCommunityBoard: function() {

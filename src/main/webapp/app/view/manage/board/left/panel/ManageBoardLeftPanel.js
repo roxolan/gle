@@ -33,7 +33,7 @@ Ext.define('Kmbsvle.view.manage.board.left.panel.ManageBoardLeftPanel', {
                     text: 'Курси',
                     glyph: 'xf0a2@FontAwesome',
                     listeners: {
-                        click: 'openCourseBoard'
+                        click: 'openCourseBoardManage'
                     }
                 },
                 { 

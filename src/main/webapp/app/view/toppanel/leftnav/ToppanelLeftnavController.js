@@ -18,10 +18,6 @@ Ext.define('Kmbsvle.view.toppanel.leftnav.ToppanelLeftnavController', {
         'Kmbsvle.view.community.selection.center.dashboard.CommunitySelectionCenterDashboard',    
         'Kmbsvle.view.community.selection.right.pad.CommunitySelectionRightPad',
         
-        'Kmbsvle.view.course.board.left.menu.CourseBoardLeftMenu',
-        'Kmbsvle.view.course.board.center.list.CourseBoardCenterList',
-        'Kmbsvle.view.course.board.right.form.CourseBoardRightForm',
-        
         'Kmbsvle.view.manage.board.left.panel.ManageBoardLeftPanel',
         'Kmbsvle.view.manage.board.center.panel.ManageBoardCenterPanel',
         'Kmbsvle.view.manage.board.right.panel.ManageBoardRightPanel',

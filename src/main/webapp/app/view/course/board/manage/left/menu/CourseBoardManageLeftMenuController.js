@@ -1,11 +1,11 @@
-Ext.define('Kmbsvle.view.course.board.left.menu.CourseBoardLeftMenuController', {
+Ext.define('Kmbsvle.view.course.board.manage.left.menu.CourseBoardManageLeftMenuController', {
     extend: 'Kmbsvle.view.base.BaseViewController',
 
-    alias: 'controller.course.board.left.menu',
+    alias: 'controller.course.board.manage.left.menu',
   
     requires: [
-        'Kmbsvle.view.course.board.center.list.CourseBoardCenterList',
-        'Kmbsvle.view.course.board.right.form.CourseBoardRightForm'
+        'Kmbsvle.view.course.board.manage.center.list.CourseBoardManageCenterList',
+        'Kmbsvle.view.course.board.manage.right.form.CourseBoardManageRightForm'
     ],
 
     routes: {
@@ -14,14 +14,14 @@ Ext.define('Kmbsvle.view.course.board.left.menu.CourseBoardLeftMenuController', 
 
     openCourseBoard: function() {
         var me = this;
-        me.changeCenterPanel('widget.course.board.center.list');
-        me.changeRightPanel('widget.course.board.right.form', 'dummy', 'collapse');
+        me.changeCenterPanel('widget.course.board.manage.center.list');
+        me.changeRightPanel('widget.course.board.manage.right.form', 'dummy', 'collapse');
     },
     
     addCourse: function() {
         var me = this;
         var rhld = Ext.getCmp('rightholder');
-        var courseFormPanel = Ext.create('widget.course.board.right.form');
+        var courseFormPanel = Ext.create('widget.course.board.manage.right.form');
         var courseForm = courseFormPanel.getForm();
         
         rhld.removeAll();

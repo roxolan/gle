@@ -1,13 +1,13 @@
-Ext.define('Kmbsvle.view.course.board.right.form.CourseBoardRightFormController', {
+Ext.define('Kmbsvle.view.course.board.manage.right.form.CourseBoardManageRightFormController', {
     extend: 'Kmbsvle.view.base.BaseViewController',
 
-    alias: 'controller.course.board.right.form',
+    alias: 'controller.course.board.manage.right.form',
     
     deleteCourse: function(){
         var me = this;
         var form = me.getView().getForm();
         var record = form.getRecord();
-        var courseBoardLeftMenuController = Ext.getCmp('leftholder').getComponent('courseBoardLeftMenu').getController();
+        var courseBoardLeftMenuController = Ext.getCmp('leftholder').getComponent('courseBoardManageLeftMenu').getController();
 
         Ext.Msg.confirm(
             'Підтвердіть видалення курсу', 
@@ -55,7 +55,7 @@ Ext.define('Kmbsvle.view.course.board.right.form.CourseBoardRightFormController'
                 record.save({
                     success: function(record, operation) {
                         if (typeof record.store === 'undefined') {
-                            Ext.getCmp('centerholder').getComponent('courseBoardCenterList').getStore('courselist').add(record);
+                            Ext.getCmp('centerholder').getComponent('courseBoardManageCenterList').getStore('coursemanagelist').add(record);
                         }
                     },
                     failure: function(record, operation) {
@@ -71,7 +71,7 @@ Ext.define('Kmbsvle.view.course.board.right.form.CourseBoardRightFormController'
     
     refreshStore: function() {
         var me = this;
-        var courseBoardCenterListStore = Ext.getCmp('centerholder').getComponent('courseBoardCenterList').getStore('courselist');
+        var courseBoardCenterListStore = Ext.getCmp('centerholder').getComponent('courseBoardManageCenterList').getStore('coursemanagelist');
         
         courseBoardCenterListStore.load();
     }

@@ -1,10 +1,10 @@
-Ext.define('Kmbsvle.view.course.board.center.list.CourseBoardCenterListModel', {
+Ext.define('Kmbsvle.view.course.board.manage.center.list.CourseBoardManageCenterListModel', {
     extend: 'Ext.app.ViewModel',
 
-    alias: 'viewmodel.course.board.center.list',
+    alias: 'viewmodel.course.board.manage.center.list',
 
     stores: {
-        courselist: {
+        coursemanagelist: {
             model: 'Kmbsvle.model.Course',
             proxy: {
                 type: 'ajax',

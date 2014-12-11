@@ -1,22 +1,22 @@
-Ext.define('Kmbsvle.view.course.board.center.list.CourseBoardCenterList', {
+Ext.define('Kmbsvle.view.course.board.manage.center.list.CourseBoardManageCenterList', {
     extend: 'Ext.grid.Panel',
   
-    alias: 'widget.course.board.center.list',
+    alias: 'widget.course.board.manage.center.list',
     
-    controller: 'course.board.center.list',
+    controller: 'course.board.manage.center.list',
     viewModel: {
-        type: 'course.board.center.list'
+        type: 'course.board.manage.center.list'
     },
     requires: [
-        'Kmbsvle.view.course.board.center.list.CourseBoardCenterListController',
-        'Kmbsvle.view.course.board.center.list.CourseBoardCenterListModel'
+        'Kmbsvle.view.course.board.manage.center.list.CourseBoardManageCenterListController',
+        'Kmbsvle.view.course.board.manage.center.list.CourseBoardManageCenterListModel'
     ],
 
-    title: 'Список курсів',
-    itemId: 'courseBoardCenterList',
+    title: 'Список курсів для управління',
+    itemId: 'courseBoardManageCenterList',
     
     bind: {
-        store: '{courselist}'
+        store: '{coursemanagelist}'
     },
     
     viewConfig: {

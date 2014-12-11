@@ -1,14 +1,14 @@
-Ext.define('Kmbsvle.view.course.board.right.form.CourseBoardRightForm', {
+Ext.define('Kmbsvle.view.course.board.manage.right.form.CourseBoardManageRightForm', {
     extend: 'Ext.form.Panel',
   
-    alias: 'widget.course.board.right.form',
-    controller: 'course.board.right.form',
+    alias: 'widget.course.board.manage.right.form',
+    controller: 'course.board.manage.right.form',
     viewModel: {
-        type: 'course.board.right.form'
+        type: 'course.board.manage.right.form'
     },
     requires: [
-        'Kmbsvle.view.course.board.right.form.CourseBoardRightFormController',
-        'Kmbsvle.view.course.board.right.form.CourseBoardRightFormModel'
+        'Kmbsvle.view.course.board.manage.right.form.CourseBoardManageRightFormController',
+        'Kmbsvle.view.course.board.manage.right.form.CourseBoardManageRightFormModel'
     ],
     
     layout: {

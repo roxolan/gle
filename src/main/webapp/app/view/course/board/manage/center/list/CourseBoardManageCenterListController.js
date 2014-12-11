@@ -1,16 +1,17 @@
-Ext.define('Kmbsvle.view.course.board.center.list.CourseBoardCenterListController', {
+Ext.define('Kmbsvle.view.course.board.manage.center.list.CourseBoardManageCenterListController', {
     extend: 'Kmbsvle.view.base.BaseViewController',
 
-    alias: 'controller.course.board.center.list',
+    alias: 'controller.course.board.manage.center.list',
     
     initStore: function() {
-        this.getStore('courselist').load();
+        var me = this;
+        me.getStore('coursemanagelist').load();
     },
     
     selectCourse: function(grid, record){
         var me = this;
         var rhld = Ext.getCmp('rightholder');
-        var courseFormPanel = Ext.create('widget.course.board.right.form');
+        var courseFormPanel = Ext.create('widget.course.board.manage.right.form');
         var courseForm = courseFormPanel.getForm();
         
         rhld.removeAll();
@@ -25,8 +26,7 @@ Ext.define('Kmbsvle.view.course.board.center.list.CourseBoardCenterListControlle
     
     refreshStore: function() {
         var me = this;
-        var store = me.getStore('courselist');
-        store.load();
+        me.getStore('coursemanagelist').load();
     }
 
 
