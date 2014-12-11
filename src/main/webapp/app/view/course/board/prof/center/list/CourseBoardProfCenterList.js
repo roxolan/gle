@@ -1,19 +1,19 @@
-Ext.define('Kmbsvle.view.course.profboard.center.list.CourseProfboardCenterList', {
+Ext.define('Kmbsvle.view.course.board.prof.center.list.CourseBoardProfCenterList', {
     extend: 'Ext.grid.Panel',
   
-    alias: 'widget.course.profboard.center.list',
+    alias: 'widget.course.board.prof.center.list',
     
-    controller: 'course.profboard.center.list',
+    controller: 'course.board.prof.center.list',
     viewModel: {
-        type: 'course.profboard.center.list'
+        type: 'course.board.prof.center.list'
     },
     requires: [
-        'Kmbsvle.view.course.profboard.center.list.CourseProfboardCenterListController',
-        'Kmbsvle.view.course.profboard.center.list.CourseProfboardCenterListModel'
+        'Kmbsvle.view.course.board.prof.center.list.CourseBoardProfCenterListController',
+        'Kmbsvle.view.course.board.prof.center.list.CourseBoardProfCenterListModel'
     ],
 
     title: 'Перелік курсів, де є викладання',
-    itemId: 'courseProfboardCenterList',
+    itemId: 'courseBoardProfCenterList',
     
     bind: {
         store: '{courseproflist}'

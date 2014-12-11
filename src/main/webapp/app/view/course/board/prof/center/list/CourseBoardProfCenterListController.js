@@ -1,7 +1,7 @@
-Ext.define('Kmbsvle.view.course.profboard.center.list.CourseProfboardCenterListController', {
+Ext.define('Kmbsvle.view.course.board.prof.center.list.CourseBoardProfCenterListController', {
     extend: 'Kmbsvle.view.base.BaseViewController',
 
-    alias: 'controller.course.profboard.center.list',
+    alias: 'controller.course.board.prof.center.list',
     
     initStore: function() {
         this.getStore('courseproflist').load();
@@ -10,12 +10,12 @@ Ext.define('Kmbsvle.view.course.profboard.center.list.CourseProfboardCenterListC
     selectCourse: function(grid, record){
         var me = this;
         var rhld = Ext.getCmp('rightholder');
-        var courseProfilePanel = Ext.create('widget.course.profboard.right.profile');
+        var courseProfilePanel = Ext.create('widget.course.board.prof.right.profile');
         // var courseForm = courseFormPanel.getForm();
         
         rhld.removeAll();
         rhld.add(courseProfilePanel);
-        rhld.setTitle('Редагування курсу ' + record.data.courseTitle);
+        rhld.setTitle('Курс ' + record.data.courseTitle + ' групи ' + record.data.lgroupTitle);
         rhld.expand();
         
         // courseForm.loadRecord(record);

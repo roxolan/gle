@@ -1,16 +1,16 @@
-Ext.define('Kmbsvle.view.course.profboard.left.menu.CourseProfboardLeftMenu', {
+Ext.define('Kmbsvle.view.course.board.prof.left.menu.CourseBoardProfLeftMenu', {
     extend: 'Ext.panel.Panel',
   
-    alias: 'widget.course.profboard.left.menu',
-    controller: 'course.profboard.left.menu',
+    alias: 'widget.course.board.prof.left.menu',
+    controller: 'course.board.prof.left.menu',
     viewModel: {
-        type: 'course.profboard.left.menu'
+        type: 'course.board.prof.left.menu'
     },
     requires: [
-        'Kmbsvle.view.course.profboard.left.menu.CourseProfboardLeftMenuController',
-        'Kmbsvle.view.course.profboard.left.menu.CourseProfboardLeftMenuModel'
+        'Kmbsvle.view.course.board.prof.left.menu.CourseBoardProfLeftMenuController',
+        'Kmbsvle.view.course.board.prof.left.menu.CourseBoardProfLeftMenuModel'
     ],
-    itemId: 'courseProfboardLeftMenu',
+    itemId: 'courseBoardProfLeftMenu',
     header: false,
     width: 250,
     items: [
@@ -23,7 +23,7 @@ Ext.define('Kmbsvle.view.course.profboard.left.menu.CourseProfboardLeftMenu', {
                     glyph: 'xf03a@FontAwesome',
                     text: 'Поточні курси / викладання',
                     listeners: {
-                        click: 'openCourseProfboard'
+                        click: 'openCourseBoardProf'
                     }
                 },
                 { 
@@ -34,7 +34,7 @@ Ext.define('Kmbsvle.view.course.profboard.left.menu.CourseProfboardLeftMenu', {
                     glyph: 'xf03a@FontAwesome',
                     text: 'Завершені курси',
                     listeners: {
-                        click: 'openCourseProfboard'
+                        click: 'openCourseBoardProf'
                     }
                 },
                 { 
@@ -45,7 +45,7 @@ Ext.define('Kmbsvle.view.course.profboard.left.menu.CourseProfboardLeftMenu', {
                     glyph: 'xf03a@FontAwesome',
                     text: 'Повний перелік курсів',
                     listeners: {
-                        click: 'openCourseProfboard'
+                        click: 'openCourseBoardProf'
                     }
                 },
                 { 

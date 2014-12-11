@@ -12,7 +12,7 @@ Ext.define('Kmbsvle.view.toppanel.leftnav.ToppanelLeftnavController', {
         'Kmbsvle.view.course.selection.center.dashboard.CourseSelectionCenterDashboard',
         'Kmbsvle.view.course.selection.right.pad.CourseSelectionRightPad',
         
-        'Kmbsvle.view.course.profboard.left.menu.CourseProfboardLeftMenu',
+        'Kmbsvle.view.course.board.prof.left.menu.CourseBoardProfLeftMenu',
     
         'Kmbsvle.view.community.selection.left.list.CommunitySelectionLeftList',
         'Kmbsvle.view.community.selection.center.dashboard.CommunitySelectionCenterDashboard',    
@@ -107,9 +107,9 @@ Ext.define('Kmbsvle.view.toppanel.leftnav.ToppanelLeftnavController', {
     
     openProfessorBoard: function() {
         var me = this;
-        me.changeLeftPanel('widget.course.profboard.left.menu', 'course_profboard_left_menu_title', 'expand');
-        me.changeCenterPanel('widget.course.profboard.center.list');
-        me.changeRightPanel('widget.course.profboard.right.profile', 'course_board_right_profile_title', 'collapse');
+        me.changeLeftPanel('widget.course.board.prof.left.menu', 'course_board_prof_left_menu_title', 'expand');
+        me.changeCenterPanel('widget.course.board.prof.center.list');
+        me.changeRightPanel('widget.course.board.prof.right.profile', 'course_board_prof_right_profile_title', 'collapse');
         me.redirectTo('course/selection');
     },
     

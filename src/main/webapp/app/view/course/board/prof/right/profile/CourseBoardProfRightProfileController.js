@@ -1,7 +1,7 @@
-Ext.define('Kmbsvle.view.course.profboard.right.profile.CourseProfboardRightProfileController', {
+Ext.define('Kmbsvle.view.course.board.prof.right.profile.CourseBoardProfRightProfileController', {
     extend: 'Kmbsvle.view.base.BaseViewController',
 
-    alias: 'controller.course.profboard.right.profile',
+    alias: 'controller.course.board.prof.right.profile',
     
     editCourse: function(){
         

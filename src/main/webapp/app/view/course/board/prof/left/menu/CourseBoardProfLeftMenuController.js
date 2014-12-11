@@ -1,21 +1,21 @@
-Ext.define('Kmbsvle.view.course.profboard.left.menu.CourseProfboardLeftMenuController', {
+Ext.define('Kmbsvle.view.course.board.prof.left.menu.CourseBoardProfLeftMenuController', {
     extend: 'Kmbsvle.view.base.BaseViewController',
 
-    alias: 'controller.course.profboard.left.menu',
+    alias: 'controller.course.board.prof.left.menu',
   
     requires: [
-        'Kmbsvle.view.course.profboard.center.list.CourseProfboardCenterList',
-        'Kmbsvle.view.course.profboard.right.profile.CourseProfboardRightProfile'
+        'Kmbsvle.view.course.board.prof.center.list.CourseBoardProfCenterList',
+        'Kmbsvle.view.course.board.prof.right.profile.CourseBoardProfRightProfile'
     ],
 
     routes: {
         // 'course/1': 'openCourseSingle'
     },
 
-    openCourseProfboard: function() {
+    openCourseBoardProf: function() {
         var me = this;
-        me.changeCenterPanel('widget.course.profboard.center.list');
-        me.changeRightPanel('widget.course.profboard.right.profile', 'dummy', 'collapse');
+        me.changeCenterPanel('widget.course.board.prof.center.list');
+        me.changeRightPanel('widget.course.board.prof.right.profile', 'dummy', 'collapse');
     },
     
     createCourse: function() {

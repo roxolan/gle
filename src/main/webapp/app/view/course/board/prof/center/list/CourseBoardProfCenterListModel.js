@@ -1,7 +1,7 @@
-Ext.define('Kmbsvle.view.course.profboard.center.list.CourseProfboardCenterListModel', {
+Ext.define('Kmbsvle.view.course.board.prof.center.list.CourseBoardProfCenterListModel', {
     extend: 'Ext.app.ViewModel',
 
-    alias: 'viewmodel.course.profboard.center.list',
+    alias: 'viewmodel.course.board.prof.center.list',
 
     stores: {
         courseproflist: {
