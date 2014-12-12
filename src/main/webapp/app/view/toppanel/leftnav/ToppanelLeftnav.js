@@ -39,7 +39,7 @@ Ext.define('Kmbsvle.view.toppanel.leftnav.ToppanelLeftnav', {
                             margin: '0 15 0 0',
                             hidden: !Kmbsvle.getApplication().isLearner(),
                             listeners: {
-                                click: 'openCourseSelection'
+                                click: 'openCourseSelectionStud'
                             }
                         },
                         { 
@@ -70,7 +70,7 @@ Ext.define('Kmbsvle.view.toppanel.leftnav.ToppanelLeftnav', {
                             margin: '0 15 0 0',
                             hidden: !Kmbsvle.getApplication().isProfessor(),
                             listeners: {
-                                click: 'openProfessorBoard' // REALIZE
+                                click: 'openSelectionProf' 
                             }
                         },
                         { 

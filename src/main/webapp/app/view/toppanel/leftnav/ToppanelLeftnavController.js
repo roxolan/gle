@@ -77,11 +77,11 @@ Ext.define('Kmbsvle.view.toppanel.leftnav.ToppanelLeftnavController', {
         adminItem.setConfig('text', adminCaption);
     },
 
-    openCourseSelection: function() {
+    openCourseSelectionStud: function() {
         var me = this;
-        me.changeLeftPanel('widget.course.selection.prof.left.list', 'course_selection_prof_left_list_title', 'expand');
-        me.changeCenterPanel('widget.course.selection.prof.center.dashboard');
-        me.changeRightPanel('widget.course.selection.prof.right.pad', 'course_selection_prof_right_pad_title', 'collapse');
+        me.changeLeftPanel('widget.course.selection.stud.left.list', 'course_selection_stud_left_list_title', 'expand');
+        me.changeCenterPanel('widget.course.selection.stud.center.dashboard');
+        me.changeRightPanel('widget.course.selection.stud.right.pad', 'course_selection_stud_right_pad_title', 'collapse');
         me.redirectTo('course/selection');
     },
   
@@ -101,11 +101,11 @@ Ext.define('Kmbsvle.view.toppanel.leftnav.ToppanelLeftnavController', {
         me.redirectTo('calendar');
     },
     
-    openProfessorBoard: function() {
+    openSelectionProf: function() {
         var me = this;
-        me.changeLeftPanel('widget.course.board.prof.left.menu', 'course_board_prof_left_menu_title', 'expand');
-        me.changeCenterPanel('widget.course.board.prof.center.list');
-        me.changeRightPanel('widget.course.board.prof.right.profile', 'course_board_prof_right_profile_title', 'collapse');
+        me.changeLeftPanel('widget.course.selection.prof.left.list', 'course_selection_prof_left_list_title', 'expand');
+        me.changeCenterPanel('widget.course.selection.prof.center.dashboard');
+        me.changeRightPanel('widget.course.selection.prof.right.pad', 'course_selection_prof_right_pad_title', 'collapse');
         me.redirectTo('course/selection');
     },
     
