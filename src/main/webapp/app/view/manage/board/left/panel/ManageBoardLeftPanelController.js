@@ -4,6 +4,8 @@ Ext.define('Kmbsvle.view.manage.board.left.panel.ManageBoardLeftPanelController'
     alias: 'controller.manage.board.left.panel',
   
     requires: [
+        'Kmbsvle.view.professor.board.manage.left.menu.ProfessorBoardManageLeftMenu',
+        
         'Kmbsvle.view.lgroup.board.left.menu.LgroupBoardLeftMenu',
         'Kmbsvle.view.lgroup.board.center.lgrouplist.LgroupBoardCenterLgrouplist',
         'Kmbsvle.view.lgroup.board.right.lgroupform.LgroupBoardRightLgroupform',
@@ -25,6 +27,7 @@ Ext.define('Kmbsvle.view.manage.board.left.panel.ManageBoardLeftPanelController'
         'Kmbsvle.view.report.board.right.panel.ReportBoardRightPanel'
     ],
     routes: {
+        'professor/board': 'openProfBoardManage',
         'lgroup/board': 'openLgroupBoard',
         'course/manage': 'openCourseBoardManage',
         'community/board': 'openCommunityBoard',
@@ -32,6 +35,14 @@ Ext.define('Kmbsvle.view.manage.board.left.panel.ManageBoardLeftPanelController'
         'reports': 'openReportBoard'
     },
 
+    openProfBoardManage: function() {
+        var me = this;
+        me.changeLeftPanel('widget.professor.board.manage.left.menu', 'professor_board_manage_left_menu_title', 'expand');
+        me.changeCenterPanel('widget.professor.board.manage.center.list');
+        me.changeRightPanel('widget.professor.board.manage.right.form', 'dummy', 'collapse');
+        me.redirectTo('professor/board');        
+    },
+    
     openLgroupBoard: function() {
         var me = this;
         me.changeLeftPanel('widget.lgroup.board.left.menu', 'lgroup_board_left_menu_title', 'expand');

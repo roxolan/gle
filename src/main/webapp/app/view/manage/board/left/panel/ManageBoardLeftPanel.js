@@ -19,10 +19,21 @@ Ext.define('Kmbsvle.view.manage.board.left.panel.ManageBoardLeftPanel', {
             items: [
                 { 
                     xtype: 'menuitem',
-                    text: 'Навчальні групи',
-                    glyph: 'xf10c@FontAwesome',
+                    text: 'Учасники',
+                    glyph: 'xf007@FontAwesome',
                     listeners: {
-                        click: 'openLgroupBoard'
+                        click: 'openUserBoardManage'
+                    }
+                },
+                { 
+                    xtype: 'menuseparator' 
+                },
+                { 
+                    xtype: 'menuitem',
+                    text: 'Викладачі',
+                    glyph: 'xf19d@FontAwesome',
+                    listeners: {
+                        click: 'openProfBoardManage'
                     }
                 },
                 { 
@@ -34,6 +45,17 @@ Ext.define('Kmbsvle.view.manage.board.left.panel.ManageBoardLeftPanel', {
                     glyph: 'xf0a2@FontAwesome',
                     listeners: {
                         click: 'openCourseBoardManage'
+                    }
+                },
+                { 
+                    xtype: 'menuseparator' 
+                },
+                { 
+                    xtype: 'menuitem',
+                    text: 'Навчальні групи',
+                    glyph: 'xf10c@FontAwesome',
+                    listeners: {
+                        click: 'openLgroupBoard'
                     }
                 },
                 { 
