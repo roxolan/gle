@@ -7,6 +7,10 @@ Ext.define('Kmbsvle.view.toppanel.leftnav.ToppanelLeftnavController', {
         'Kmbsvle.view.calendar.board.left.panel.CalendarBoardLeftPanel',
         'Kmbsvle.view.calendar.board.center.panel.CalendarBoardCenterPanel',
         'Kmbsvle.view.calendar.board.right.panel.CalendarBoardRightPanel',
+        
+        'Kmbsvle.view.course.selection.stud.left.list.CourseSelectionStudLeftList',
+        'Kmbsvle.view.course.selection.stud.center.dashboard.CourseSelectionStudCenterDashboard',
+        'Kmbsvle.view.course.selection.stud.right.pad.CourseSelectionStudRightPad',
     
         'Kmbsvle.view.course.selection.prof.left.list.CourseSelectionProfLeftList',
         'Kmbsvle.view.course.selection.prof.center.dashboard.CourseSelectionProfCenterDashboard',
@@ -33,8 +37,9 @@ Ext.define('Kmbsvle.view.toppanel.leftnav.ToppanelLeftnavController', {
         'courses' : 'openProfessorBoard',
         'manage' : 'openManageBoard',
         'admin' : 'openAdminBoard',
-        'course/selection' : 'openCourseSelection',
-        'community/selection' : 'openCommunitySelection'
+        'course/selection' : 'openCourseSelectionStud',
+        'community/selection' : 'openCommunitySelection',
+        'teach/selection' : 'openCourseSelectionProf'
     },
 
     setLeftnavCaptions: function() {
@@ -101,12 +106,12 @@ Ext.define('Kmbsvle.view.toppanel.leftnav.ToppanelLeftnavController', {
         me.redirectTo('calendar');
     },
     
-    openSelectionProf: function() {
+    openCourseSelectionProf: function() {
         var me = this;
         me.changeLeftPanel('widget.course.selection.prof.left.list', 'course_selection_prof_left_list_title', 'expand');
         me.changeCenterPanel('widget.course.selection.prof.center.dashboard');
         me.changeRightPanel('widget.course.selection.prof.right.pad', 'course_selection_prof_right_pad_title', 'collapse');
-        me.redirectTo('course/selection');
+        me.redirectTo('teach/selection');
     },
     
     openManageBoard: function() {

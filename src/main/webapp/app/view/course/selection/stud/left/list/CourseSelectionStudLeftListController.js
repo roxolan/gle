@@ -5,9 +5,9 @@ Ext.define('Kmbsvle.view.course.selection.stud.left.list.CourseSelectionStudLeft
   
     requires: [
     	// TODO replace when course.single --> course.single.stud is refactored
-        'Kmbsvle.view.course.single.left.panel.CourseSingleLeftPanel',
-        'Kmbsvle.view.course.single.center.panel.CourseSingleCenterPanel',
-        'Kmbsvle.view.course.single.right.panel.CourseSingleRightPanel'
+        'Kmbsvle.view.course.single.stud.left.menu.CourseSingleStudLeftMenu',
+        'Kmbsvle.view.course.single.stud.center.info.CourseSingleStudCenterInfo',
+        'Kmbsvle.view.course.single.stud.right.pad.CourseSingleStudRightPad'
     ],
 
     routes: {
@@ -16,9 +16,9 @@ Ext.define('Kmbsvle.view.course.selection.stud.left.list.CourseSelectionStudLeft
 
     openCourseSingleStud: function() {
         var me = this;
-        me.changeLeftPanel('widget.course.single.left.panel', 'course_single_left_panel_title', 'expand');
-        me.changeCenterPanel('widget.course.single.center.panel', 'course_single_center_panel_title');
-        me.changeRightPanel('widget.course.single.right.panel', 'course_single_right_panel_title', 'collapse');
+        me.changeLeftPanel('widget.course.single.stud.left.menu', 'course_single_stud_left_menu_title', 'expand');
+        me.changeCenterPanel('widget.course.single.stud.center.info');
+        me.changeRightPanel('widget.course.single.stud.right.pad', 'course_single_stud_right_pad_title', 'collapse');
         me.redirectTo('course/1');
     },
     
