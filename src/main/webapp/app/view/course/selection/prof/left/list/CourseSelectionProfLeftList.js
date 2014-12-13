@@ -20,10 +20,10 @@ Ext.define('Kmbsvle.view.course.selection.prof.left.list.CourseSelectionProfLeft
             items: [
                 { 
                     xtype: 'menuitem',
-                    text: 'Курс №1 у списку',
+                    text: 'Поточний курс №1 у списку викладача',
                     glyph: 'xf0a2@FontAwesome',
                     listeners: {
-                        click: 'openCourseSingle'
+                        click: 'openCourseSingleProf'
                     }
                 },
                 { 
@@ -31,10 +31,10 @@ Ext.define('Kmbsvle.view.course.selection.prof.left.list.CourseSelectionProfLeft
                 },
                 { 
                     xtype: 'menuitem',
-                    text: 'Курс №2 у списку',
+                    text: 'Поточний курс №2 у списку викладача',
                     glyph: 'xf0a2@FontAwesome',
                     listeners: {
-                        click: 'openCourseSingle'
+                        click: 'openCourseSingleProf'
                     }
                 },
                 { 
@@ -42,10 +42,21 @@ Ext.define('Kmbsvle.view.course.selection.prof.left.list.CourseSelectionProfLeft
                 },
                 { 
                     xtype: 'menuitem',
-                    text: 'Курс №3 у списку',
+                    text: 'Поточний курс №3 у списку викладача',
                     glyph: 'xf0a2@FontAwesome',
                     listeners: {
-                        click: 'openCourseSingle'
+                        click: 'openCourseSingleProf'
+                    }
+                },
+                { 
+                    xtype: 'menuseparator' 
+                },                
+                { 
+                    xtype: 'menuitem',
+                    text: 'Управління курсами',
+                    glyph: 'xf0a2@FontAwesome',
+                    listeners: {
+                        click: 'openCourseBoardProf'
                     }
                 }
             ]
