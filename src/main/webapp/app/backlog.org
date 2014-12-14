@@ -1,24 +1,29 @@
 * High priority, SMART tasks
-** [@C00] Create system of local changes tracking in backlog
-	- this
-	
-** [@C00] @nb Check working of course.single.prof
-	compared to courses.single.stud 
-	manager's perspective needs to be added?
-** [@C41] Identify if course. subfolders refactored or still need some more works
-** [@C07] Enable membership of users(participants) in lgroups
+** /@C00/ changed locally
+   - this
+   - 
+  
+
+** /@C07/ manager's perspective to course.single needs to be added?
+** /@C07/ Enable membership of users/participants in lgroups
 	- some db relation / joints
 	
 
 
 * Medium priority, to be SMARTed
-** [@C07] Enable membership of users(participants) in lgroups
-** [@C07] Enhance lgroup view with list of participants
-** [@C07] Develop right-to-left selector/mover of users to join lgroups visually
+** /@C07/ Enhance lgroup view with list of participants
+** /@C07/ Develop right-to-left selector/mover of users to join lgroups visually
+** /@C01/ 
+
 
 * Epics / lower priorities
 
 
 * DoneDone
 
-
+** [2014-12-14 Sun]
+*** 1./@C00/ Create system of local changes tracking in backlog
+	 - this
+*** 2./@C41/ Identify if course. subfolders refactored or still need some more works	
+*** 3./@C00/ @nb Check working of course.single.prof
+    compared to course.single.stud 
