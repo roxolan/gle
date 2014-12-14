@@ -174,6 +174,12 @@ public class UserServiceImpl extends AbstractService implements UserService {
             return ResultFactory.getFailResult(USER_NOT_ADMIN);
 
         }
+        
+        if(actionUsername.equalsIgnoreCase(username)){
+
+            return ResultFactory.getFailResult("It is not allowed to delete yourself!");
+
+        }
 
         if(username == null){
 
