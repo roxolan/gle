@@ -1,3 +1,13 @@
+/*
+    ==С08
+    Перелік груп
+    - таблиця з піктограмами (аватарами груп)
+    - інформація про групи (назва, кількість учасників)
+    - можливість долучення / ... на групу
+ 
+ */
+
+
 Ext.define('Kmbsvle.view.lgroup.board.right.lgroupform.LgroupBoardRightLgroupformModel', {
     extend: 'Ext.app.ViewModel',
 

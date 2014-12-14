@@ -1,3 +1,24 @@
+/*
+    ==C09
+    Соціальна група (community)
+    - аватар
+    - назва
+    - опис
+    - кількість учасників
+    - стрічка (stream)
+    - налаштування групи
+ */
+
+/*
+    ==C10
+    Форма створення / редагування соціальної групи (community) + CRUD
+    - аватар (CRUD)
+    - назва
+    - опис
+    - налаштування підписок (управління учасниками)
+    - запрошення до групи
+ */
+
 Ext.define('Kmbsvle.view.community.single.right.panel.CommunitySingleRightPanelModel', {
     extend: 'Ext.app.ViewModel',
 

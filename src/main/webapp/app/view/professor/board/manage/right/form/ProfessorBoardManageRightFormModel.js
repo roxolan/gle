@@ -1,3 +1,16 @@
+/* 
+    ==C01
+    Досьє - Викладач
+    - курси
+    - календар викладача
+    - години: зайняті
+    - фінансові ...
+    - дедлайни
+
+    --> Досьє буде відкриватися у великій формі. У цій правій частині буде лише summary
+ * */
+
+
 Ext.define('Kmbsvle.view.professor.board.manage.right.form.ProfessorBoardManageRightFormModel', {
     extend: 'Ext.app.ViewModel',
 
@@ -16,15 +29,3 @@ Ext.define('Kmbsvle.view.professor.board.manage.right.form.ProfessorBoardManageR
     }
 
 });
-
-/* 
-    ==C01
-    Досьє - Викладач
-    - курси
-    - календар викладача
-    - години: зайняті
-    - фінансові ...
-    - дедлайни
-
-    --> Досьє буде відкриватися у великій формі. У цій правій частині буде лише summary
- * */
