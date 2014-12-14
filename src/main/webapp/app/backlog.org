@@ -1,20 +1,21 @@
 * High priority, SMART tasks
-** /@C00/ changed locally
-   - this
-   - 
-  
-
 ** /@C07/ manager's perspective to course.single needs to be added?
 ** /@C07/ Enable membership of users/participants in lgroups
 	- some db relation / joints
 	
 
+** /@C04/ Enable search among users in userlist
+
+** /@C38/ Enable date handling for assignments
+** /@C40/ Enable filtering assignments in list based on dates form
+	- from p.328
+	
 
 * Medium priority, to be SMARTed
 ** /@C07/ Enhance lgroup view with list of participants
 ** /@C07/ Develop right-to-left selector/mover of users to join lgroups visually
-** /@C01/ 
-
+** /@C04/ Enable signalling unvalidated entries on userform
+	- as in loginform where it seems to work
 
 * Epics / lower priorities
 

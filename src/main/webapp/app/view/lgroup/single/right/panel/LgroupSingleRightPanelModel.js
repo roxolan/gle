@@ -1,3 +1,12 @@
+/*
+    ==C07
+    Список учасників навчальноі групи
+    - таблиця з аватарами учасників
+    - інформація про учасників (email, ім'я, ...)
+    - можливість відправлення повідомлення
+    - вікно пошуку учасників
+*/
+
 Ext.define('Kmbsvle.view.lgroup.single.right.panel.LgroupSingleRightPanelModel', {
     extend: 'Ext.app.ViewModel',
 
