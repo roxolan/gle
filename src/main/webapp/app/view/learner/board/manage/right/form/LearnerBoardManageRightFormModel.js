@@ -1,6 +1,8 @@
 /* 
    
-    TODO implement 'learner.board.manage'
+   Досьє учасника @C02
+   
+   TODO implement 'learner.board.manage'
 
  */
 
