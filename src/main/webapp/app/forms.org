@@ -1,0 +1,125 @@
+* forms
+
+** 1.loginForm
+
+** 2.profileSelfCRUD
+
+** 3.C01F1.profDossierCRUD
+# opened as modal
+
+** 4.C02F1.crud.learnerDossierCRUD
+# opened as modal
+
+** 5.C02F2.ro.learnerDossierReadOnly
+# maybe
+# opens as modal
+
+** 6.C03F1.ro.profileReadOnly
+# Seeing other user's profile by other users
+
+** 7.C03F1.crudSelf.profileCRUDown
+# CRUD own user profile by the user
+
+** 8.C04F2.crudMan.profileCRUDbyManager
+# CRUD user profile by an authorized manager
+
+** 9.C05F1.ro.applicationReadOnly
+# Application fields read and filled by an applicant
+
+** 10.C05F2.crudPhoto.applicantPhotoUpload
+# Submitting and basic editing of an applicant's picture
+
+** 11.C08F1.mmbr.lgroupMembershipManage
+# add/remove lgroup members
+# maybe using facility of right-side panel
+# similar to F#14
+
+** 12.C08F2.crudPhoto.lgroupAvatarUpload
+# Submitting and basic editing of a group's avatar
+
+** 13.C10F1.crud.communityCRUD
+# will be available for every authorized user, but will need
+# moderation
+
+** 14.C10F2.mmbr.communityMembershipManage
+# similar to F#11
+# add/remove community members
+# maybe using facility of right-side panel
+
+** 15.C10F3.msg.communityInvitationSendout
+# initial form to invite friends to join community
+
+** 16.C14F1.crudMsg.messageGeneric
+# CRUD message, create new, destroy old etc.
+# later repeated? (change number?)
+
+** 17.C15F1.crudNot.notificationGeneric
+# CRUD notifications (system-wide)
+# selecting users to whom the message will be addressed
+
+** 18.C15F2.ro.summaryPopUpWindow
+# appears on user entering the system, contains deadlines,
+# notifications etc.
+
+** 19.C18F1.ro.financeForm
+# shows debts?
+
+** 20.C20F1.crud.eventCRUD
+# for creating and updating event
+
+** 21.C21F1.crud.calendarCRUD
+# relatively simple form, just to create calendar, name it,
+# permissions etc.
+
+** 22.C25F1.crud.materialCRUD
+# CRUD of particular content item
+
+** 23.C37F1.crud.courseCRUD
+# CRUD of course
+
+** 24.C38F1.ro.assignmentWindow
+# opens assignment dialog with actions available
+
+** 25.C39F1.crud.assignmentCRUD
+# creation & update of assignment
+
+** 26.C45F1.ro.financeReport
+# what is shown?
+
+** 27.C47F1.crud.lgroupCRUD
+# similar to F#13
+
+** 28.C53F1.crud.moduleCRUD
+# templates for adding courses' sessions
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+** PP.C07F1srch.userAdvancedSearch
+# Search for users using a form with more criteria than simple
+# "realtime" filter/update
+# postponed for later releases
+
+
+
+

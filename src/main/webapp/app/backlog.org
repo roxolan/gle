@@ -1,19 +1,48 @@
 * High priority, SMART tasks
-** /@C07/ manager's perspective to course.single needs to be added?
-** /@C07/ Enable membership of users/participants in lgroups
-	- some db relation / joints
-	
+** commit forms.org, this files
 
-** /@C04/ Enable search among users in userlist
+** /@C05/ create application form
+	- F#09
+	- connect to menu item in admin place
+
+** /@C41/ enable listing of courses
+	- with corresponding groups
+	- play with combobox element to list groups to select from	
+
+** /@C07/ Enable showing membership of users/participants in lgroups
+	- some db relation / joints
+
+** /@C25/ Create material CRUD form
+	- F#22
+
+** /@C08/ Create avatar/pictogram CRUD form
+	- special folder 'pics'
+	- renaming pattern. date-time as namestamp?
+	
+** /@C07/ Improve lgroup members list to include photos/avatars of users
+	
+** /@C04/ Enable realtime search among users in userlist
 
 ** /@C38/ Enable date handling for assignments
+
 ** /@C40/ Enable filtering assignments in list based on dates form
 	- from p.328
-	
+
+** /@C09/ Enable community concept
+	- end-to-end
+	- with membership relations of some users	
+
+** /@C07/ Enhance lgroup view with list of participants
+
+** /@C07/ Develop right-to-left selector/mover of users to join lgroups visually
+
+** /@C00/ check if mysql dbs for moodle, kpn available on redundant server
+
+** /@41/ enable missing columns/fields in course list
 
 * Medium priority, to be SMARTed
-** /@C07/ Enhance lgroup view with list of participants
-** /@C07/ Develop right-to-left selector/mover of users to join lgroups visually
+
+** /@C07/ Decide if manager's perspective to course.single needs to be added
 ** /@C04/ Enable signalling unvalidated entries on userform
 	- as in loginform where it seems to work
 
