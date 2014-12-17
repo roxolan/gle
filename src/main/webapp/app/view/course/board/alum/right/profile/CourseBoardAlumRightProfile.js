@@ -30,11 +30,11 @@ Ext.define('Kmbsvle.view.course.board.alum.right.profile.CourseBoardAlumRightPro
                     items: [
                         {
                             xtype: 'button',
-                            reference: 'gotoBtn',
+                            reference: 'goToCourseBtn',
                             glyph: 'xf061@FontAwesome',
                             text: 'Перейти',
                             listeners: {
-                                click: 'gotoCourse'
+                                click: 'goToCourse'
                             }
                         }
                     ]

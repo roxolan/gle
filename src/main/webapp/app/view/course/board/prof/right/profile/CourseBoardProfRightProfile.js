@@ -39,7 +39,7 @@ Ext.define('Kmbsvle.view.course.board.prof.right.profile.CourseBoardProfRightPro
                         },
                         {
                             xtype: 'button',
-                            reference: 'gotoBtn',
+                            reference: 'goToCourseBtn',
                             glyph: 'xf061@FontAwesome',
                             text: 'Перейти',
                             listeners: {

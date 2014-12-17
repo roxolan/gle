@@ -3,7 +3,7 @@ Ext.define('Kmbsvle.view.professor.board.manage.right.form.ProfessorBoardManageR
 
     alias: 'controller.professor.board.manage.right.form',
     
-    gotoProfProfile: function(){
+    goToProfProfile: function(){
         
     },
     

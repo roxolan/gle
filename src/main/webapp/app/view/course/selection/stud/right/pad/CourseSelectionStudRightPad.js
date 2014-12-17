@@ -29,7 +29,7 @@ Ext.define('Kmbsvle.view.course.selection.stud.right.pad.CourseSelectionStudRigh
                     items: [
                         {
                             xtype: 'button',
-                            reference: 'gotoBtn',
+                            reference: 'goToCourseBtn',
                             glyph: 'xf061@FontAwesome',
                             text: 'Перейти',
                             listeners: {

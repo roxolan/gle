@@ -47,7 +47,7 @@ Ext.define('Kmbsvle.view.professor.board.manage.right.form.ProfessorBoardManageR
                             glyph: 'xf061@FontAwesome',
                             text: 'Перейти до повного профілю',
                             listeners: {
-                                click: 'gotoProfProfile'
+                                click: 'goToProfProfile'
                             }
                         }
                     ]
