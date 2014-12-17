@@ -6,11 +6,11 @@ Ext.define('Kmbsvle.view.course.selection.prof.left.list.CourseSelectionProfLeft
     data: {
 
         en: {
-            course_selection_prof_left_list_title: 'My courses'
+            course_selection_prof_left_list_title: 'Current courses'
         },
 
         uk: {
-            course_selection_prof_left_list_title: 'Мої курси'
+            course_selection_prof_left_list_title: 'Поточні курси'
         }
 
     }

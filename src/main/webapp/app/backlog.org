@@ -1,8 +1,10 @@
-* High priority, SMART tasks
+* High priority, SMART tasks	
 
 ** /@C00/ check if right profile for professor's courses selection has an additional button opening editing form - board.right.form
 	- in course.selection
 	- check if student's and professor's selections are differentiated
+
+** /@C00/ duplicate selected course form in selection as in board, stud & prof
 
 ** /@C00/ check if disabled double clicking 
    - for central panel userlist
@@ -195,9 +197,12 @@
    - Check turnitin - lms? for functionality ideas
 
 ** /@C00/ legacy transfer - moodle, pn
+
 ** /@C00/ role management system
+
 ** /@C00/ video server
    - or some mechanism to manage videos
+
 ** /@C00/ webinar functionality 
    - based on Lync?
    - some entity for webinars to be created?
@@ -205,6 +210,7 @@
 ** /@C13/ chat functionality
    - chat.single should be a modal window
    - but maybe will not be needed because of Lync
+
 ** /@C00/ rtfm re: flex
    - flex fix to fractions of one in toppanel?
 

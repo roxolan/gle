@@ -12,7 +12,7 @@ Ext.define('Kmbsvle.view.course.selection.stud.left.list.CourseSelectionStudLeft
     ],
 
     routes: {
-        'course/1': 'openCourseSingle'
+        'course/1': 'openCourseSingleStud'
     },
 
     openCourseSingleStud: function() {

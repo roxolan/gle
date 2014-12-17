@@ -34,7 +34,7 @@ Ext.define('Kmbsvle.view.course.board.stud.right.profile.CourseBoardStudRightPro
                             glyph: 'xf061@FontAwesome',
                             text: 'Перейти',
                             listeners: {
-                                click: 'gotoCourse'
+                                click: 'goToCourse'
                             }
                         }
                     ]

@@ -10,9 +10,37 @@ Ext.define('Kmbsvle.view.course.selection.stud.right.pad.CourseSelectionStudRigh
         'Kmbsvle.view.course.selection.stud.right.pad.CourseSelectionStudRightPadController',
         'Kmbsvle.view.course.selection.stud.right.pad.CourseSelectionStudRightPadModel'    
     ],
-    header: false,
-    html: 'Particular Course Info Pad, like a brief form',
-    width: 200,
-    bodyPadding: 10
+    bodyPadding: 10,
+
+    items: [
+        {
+            xtype: 'panel',
+            padding: 10,
+            width: 400,
+            title: 'Курс',
+            items: [         
+                {
+                    xtype: 'toolbar',
+                    ui: 'footer',
+                    layout: {
+                        pack: 'end',
+                        type: 'hbox'
+                    },
+                    items: [
+                        {
+                            xtype: 'button',
+                            reference: 'gotoBtn',
+                            glyph: 'xf061@FontAwesome',
+                            text: 'Перейти',
+                            listeners: {
+                                click: 'goToCourse'
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+
 
 });

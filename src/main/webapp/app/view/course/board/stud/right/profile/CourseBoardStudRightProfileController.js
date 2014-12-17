@@ -3,7 +3,7 @@ Ext.define('Kmbsvle.view.course.board.stud.right.profile.CourseBoardStudRightPro
 
     alias: 'controller.course.board.stud.right.profile',
     
-    gotoCourse: function() {
+    goToCourse: function() {
         
     }
 

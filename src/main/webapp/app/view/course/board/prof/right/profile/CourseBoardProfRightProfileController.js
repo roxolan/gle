@@ -7,7 +7,7 @@ Ext.define('Kmbsvle.view.course.board.prof.right.profile.CourseBoardProfRightPro
         
     },
     
-    gotoCourse: function() {
+    goToCourse: function() {
         
     }
 
