@@ -12,8 +12,8 @@ Ext.define('Kmbsvle.view.course.selection.prof.center.dashboard.CourseSelectionP
     ],
 
     bodyPadding: 10,
-    title: 'Learn Center',
+    title: 'Поточні курси викладача',
     
-    html: 'Main Events will unfold here about Learning of individuals'
+    html: 'Зведення даних про курс'
 
 });
