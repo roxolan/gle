@@ -1,27 +1,78 @@
 * High priority, SMART tasks
-** commit forms.org, this files
+
+** /@C00/ check if right profile for professor's courses selection has an additional button opening editing form - board.right.form
+	- in course.selection
+	- check if student's and professor's selections are differentiated
+
+** /@C00/ check if disabled double clicking 
+   - for central panel userlist
+
+** /@C00/ remove panel subdirectories that are not used anymore
 
 ** /@C05/ create application form
 	- F#09
 	- connect to menu item in admin place
 
-** /@C41/ enable listing of courses
+** /@C41/ enable listing of courses - board & single
 	- with corresponding groups
 	- play with combobox element to list groups to select from	
+        - analogously to userlist
+        - learning path idea - make them look like it
+
+** /@C35/ enable course description page
+   - key dates
+     == assignments & deadlines
+   - course "profile"
+     == showcase professors
+     == showcase managers (on program pages?)
+   - later similarly lgroup description (prorgam perspective)
+     == @C07
+     
+** /@C37/ Create course CRUD form
+   - Enable creating Courses: has to identify group it is related to -
+     and be able to connect to it
+   - CRUD courses in admin & selection
+
+** /@C00/ enable listing of assignments - board
+   - analogously to userlist
+
+** /@C38/ Create assignment window - single
+   - F#24
+
+** /@C39/ Create assignment CRUD form
+
+** /@C00/ Check all current models
+   - check for enableNull for JSON interoperability
+   - Models: Course, Community, User ...
 
 ** /@C07/ Enable showing membership of users/participants in lgroups
 	- some db relation / joints
 
 ** /@C25/ Create material CRUD form
-	- F#22
-
+    - F#22
+    - files uploaded, managed, CRUD
+    - take into account video standards
+    - When uploaded -> where will they be stored? Directory management
+         
 ** /@C08/ Create avatar/pictogram CRUD form
-	- special folder 'pics'
-	- renaming pattern. date-time as namestamp?
-	
+    - transfer to own profile/group/community/course avatar picture CRUD
+    - special folder 'pics'?
+    - renaming pattern. date-time as namestamp?
+    - How to manage photos / avatar?
+
+** /@C35/ Enable commenting particular material in courses
+   - comments stored in relation to material, user and course
+   - when lead to discussions, should be stored like discussions
+     (how?)
+   - discussions library?
+
 ** /@C07/ Improve lgroup members list to include photos/avatars of users
 	
 ** /@C04/ Enable realtime search among users in userlist
+   - in auth.board
+   - filter/search
+   - emptytext in center panel reacting to filter/search:
+         There are no...
 
 ** /@C38/ Enable date handling for assignments
 
@@ -31,22 +82,144 @@
 ** /@C09/ Enable community concept
 	- end-to-end
 	- with membership relations of some users	
+        - CRUD, like course, lgroup
+        
+** /@C09/ Make community board & single visible
 
-** /@C07/ Enhance lgroup view with list of participants
+** /@C07/ Enhance lgroup view with list of participants & program perspective
+    - program perspective = more than just a selection of courses
+    - lgroup should show learning path
 
 ** /@C07/ Develop right-to-left selector/mover of users to join lgroups visually
 
 ** /@C00/ check if mysql dbs for moodle, kpn available on redundant server
 
-** /@41/ enable missing columns/fields in course list
+** /@C41/ enable missing columns/fields in course list
+
+** /@C00/ dashboard center divide into info zones
+   - Deadlines: typical deadline box
+   -- for assignment, showing status
+   - See how requested in dantoniuk's
+   - differentiate from the informer popping up at launch time
+
+** /@C00/ logout button create
+   - p.309
+   - move away from logo
+   - Prompt before actual log off: p.323
+
+** /@C03/ profile window create
+
+** /@C04/ CRUD profile form create
+   - User data entering form - same on clicking username
+
+** /@C00/ Design: base color towards grey change a little
+   - OS: should move away from light blue
+
+** /@C14/ Messages board left menu
+   - not list of messages themselves, but: 1) inbox; 2) create message
+** /@C00/ Clean list design: find the best view & serialize
+   - for wall/stream, inbox for messages, group stream etc.
+
+
 
 * Medium priority, to be SMARTed
 
+** /@C00/ PDF viewer functionality add
+   - enable pdf viewer for displaying pdf resources for users
+
+** /@C19/ Calendar functionality add
+   - should help with schedule conflicts
+   - will that plugin work?
+   - Dates/Events CRUD
+** /@C00/ VLE Deployment
+   - How to really deploy?
+   - Machine?
+   - Glassfish, mysql needed
+   - vagrant?
+   
+** /@C14/ Enable messaging mechanism
+    - email integration?
+    - editing before send
+    - reminder to teachers and managers on deadline ends
+
+** /@C00/ Browser history: proper work of back button enable
+   - how to make it open from the browser C-l
+   - Existdissolve walkthrough4.2 #3. Albeit for old system
 ** /@C07/ Decide if manager's perspective to course.single needs to be added
+
 ** /@C04/ Enable signalling unvalidated entries on userform
 	- as in loginform where it seems to work
+	
+** /@C00/ make war slimmer by excluding some directories
+
+** /@C00/ figure out in docs what anchor 100% does for fields
+   - fieldDefaults anchor 100% - what is anchor for fields?
+   - p.334
+   - in CompanyForm.js:
+               fieldDefaults: {
+                   anchor: '100%'
+               },
+               // What does it do, exactly?
+   - Why hidden?
+   - autoScroll p.334
+
+** /@C00/ password field - to fill from persisted data, no need to enter every time
+   - need to get filled with password data from persisted record
+   - perhaps add some additional form as mentioned on p.316 (the only
+     page where it's ever considered)
+
+** /@C00/ data transfer via csv
+
+
 
 * Epics / lower priorities
+
+** /@C00/ Project stack: create
+   - maybe
+   - like an lgroup
+
+** /@C00/ Statistics functionality
+   - Statistics on user activities
+   - Like it's in moodle
+
+** /@C00/ kmbsvle import ldap catalog to apache tree
+** /@C00/ translation
+   - use 'package' for translation?
+
+** /@C00/ include more specifications
+   - maybe
+   - klms specifications on paper outlined in the strategy ->backlog
+     - in ecofolder
+     - carried in sacco
+   - myakover and vrakitina isssues/suggestions list find ->backlog
+   - Check turnitin - lms? for functionality ideas
+
+** /@C00/ legacy transfer - moodle, pn
+** /@C00/ role management system
+** /@C00/ video server
+   - or some mechanism to manage videos
+** /@C00/ webinar functionality 
+   - based on Lync?
+   - some entity for webinars to be created?
+
+** /@C13/ chat functionality
+   - chat.single should be a modal window
+   - but maybe will not be needed because of Lync
+** /@C00/ rtfm re: flex
+   - flex fix to fractions of one in toppanel?
+
+** /@C00/ ref -- explore options for learning platforms
+article
+http://finance.bigmir.net/career/36875-Uchimsja-v-Seti--luchshie-besplatnye-kursy-v-internete?utm_medium=informer&utm_source=korrespondent.net&utm_campaign=inf_Finance_korrbiz
+
+** /@C00/ ref -- alternative JS-based scheduler: dxhtml
+scheduler improvement like (or by using) dhtmlx
+components
+http://www.dhtmlx.com/index.shtml
+
+managing multiple resources (people, rooms, projects):
+http://www.dhtmlx.com/docs/products/dhtmlxScheduler/sample_units.shtml
+http://www.dhtmlx.com/docs/products/dhtmlxScheduler/index.shtml
 
 
 * DoneDone
