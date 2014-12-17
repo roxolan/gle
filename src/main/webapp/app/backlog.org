@@ -1,14 +1,5 @@
 * High priority, SMART tasks	
 
-** /@C00/ check if right profile for professor's courses selection has an additional button opening editing form - board.right.form
-	- in course.selection
-	- check if student's and professor's selections are differentiated
-
-** /@C00/ duplicate selected course form in selection as in board, stud & prof
-
-** /@C00/ check if disabled double clicking 
-   - for central panel userlist
-
 ** /@C00/ remove panel subdirectories that are not used anymore
 
 ** /@C05/ create application form
@@ -119,6 +110,7 @@
 
 ** /@C14/ Messages board left menu
    - not list of messages themselves, but: 1) inbox; 2) create message
+
 ** /@C00/ Clean list design: find the best view & serialize
    - for wall/stream, inbox for messages, group stream etc.
 
@@ -147,6 +139,7 @@
 ** /@C00/ Browser history: proper work of back button enable
    - how to make it open from the browser C-l
    - Existdissolve walkthrough4.2 #3. Albeit for old system
+
 ** /@C07/ Decide if manager's perspective to course.single needs to be added
 
 ** /@C04/ Enable signalling unvalidated entries on userform
@@ -236,3 +229,11 @@ http://www.dhtmlx.com/docs/products/dhtmlxScheduler/index.shtml
 *** 2./@C41/ Identify if course. subfolders refactored or still need some more works	
 *** 3./@C00/ @nb Check working of course.single.prof
     compared to course.single.stud 
+
+
+
+*** 4./@C00/ check if right profile for professor's courses selection has an additional button opening editing form - board.right.form
+	- in course.selection
+	- check if student's and professor's selections are differentiated
+*** 5./@C00/ check if disabled double clicking 
+   - for central panel userlist

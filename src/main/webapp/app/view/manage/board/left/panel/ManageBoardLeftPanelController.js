@@ -87,6 +87,10 @@ Ext.define('Kmbsvle.view.manage.board.left.panel.ManageBoardLeftPanelController'
         me.changeCenterPanel('widget.report.board.center.panel');
         me.changeRightPanel('widget.report.board.right.panel', 'report_board_right_panel_title');
         me.redirectTo('reports');
+    },
+    
+    openApplicationForm: function() {
+        var me = this;
     }
 
 }); 

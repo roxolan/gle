@@ -90,6 +90,17 @@ Ext.define('Kmbsvle.view.manage.board.left.panel.ManageBoardLeftPanel', {
                     listeners: {
                         click: 'openReportBoard'
                     }
+                },
+                { 
+                    xtype: 'menuseparator' 
+                },
+                { 
+                    xtype: 'menuitem',
+                    text: 'Аплікаційна форма',
+                    glyph: 'xf022@FontAwesome',
+                    listeners: {
+                        click: 'openApplicationForm'
+                    }
                 }
             ]
         }
