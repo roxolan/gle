@@ -91,6 +91,9 @@ Ext.define('Kmbsvle.view.manage.board.left.panel.ManageBoardLeftPanelController'
     
     openApplicationForm: function() {
         var me = this;
+        
+        me.applyForm = Ext.create('Kmbsvle.view.apply.form.ApplyForm');
+        me.applyForm.show();
     }
 
 }); 
