@@ -1,7 +1,5 @@
 * High priority, SMART tasks	
 
-** /@C00/ remove panel subdirectories that are not used anymore
-
 ** /@C05/ create application form
 	- F#09
 	- connect to menu item in admin place
@@ -33,19 +31,14 @@
    - F#24
 
 ** /@C39/ Create assignment CRUD form
-
-** /@C00/ Check all current models
-   - check for enableNull for JSON interoperability
-   - Models: Course, Community, User ...
-
-** /@C07/ Enable showing membership of users/participants in lgroups
-	- some db relation / joints
-
 ** /@C25/ Create material CRUD form
     - F#22
     - files uploaded, managed, CRUD
     - take into account video standards
     - When uploaded -> where will they be stored? Directory management
+
+** /@C07/ Enable showing membership of users/participants in lgroups
+	- some db relation / joints
          
 ** /@C08/ Create avatar/pictogram CRUD form
     - transfer to own profile/group/community/course avatar picture CRUD
@@ -60,48 +53,39 @@
    - discussions library?
 
 ** /@C07/ Improve lgroup members list to include photos/avatars of users
-	
+** /@C07/ Enhance lgroup view with list of participants & program perspective
+    - program perspective = more than just a selection of courses
+    - lgroup should show learning path
+
+** /@C07/ Develop right-to-left selector/mover of users to join lgroups visually
 ** /@C04/ Enable realtime search among users in userlist
    - in auth.board
    - filter/search
    - emptytext in center panel reacting to filter/search:
          There are no...
 
-** /@C38/ Enable date handling for assignments
-
 ** /@C40/ Enable filtering assignments in list based on dates form
 	- from p.328
 
+** /@C38/ Enable date handling for assignments
 ** /@C09/ Enable community concept
 	- end-to-end
 	- with membership relations of some users	
         - CRUD, like course, lgroup
         
 ** /@C09/ Make community board & single visible
-
-** /@C07/ Enhance lgroup view with list of participants & program perspective
-    - program perspective = more than just a selection of courses
-    - lgroup should show learning path
-
-** /@C07/ Develop right-to-left selector/mover of users to join lgroups visually
-
-** /@C00/ check if mysql dbs for moodle, kpn available on redundant server
-
-** /@C41/ enable missing columns/fields in course list
-
 ** /@C00/ dashboard center divide into info zones
    - Deadlines: typical deadline box
    -- for assignment, showing status
    - See how requested in dantoniuk's
    - differentiate from the informer popping up at launch time
-
+** /@C41/ enable missing columns/fields in course list
 ** /@C00/ logout button create
    - p.309
    - move away from logo
    - Prompt before actual log off: p.323
 
 ** /@C03/ profile window create
-
 ** /@C04/ CRUD profile form create
    - User data entering form - same on clicking username
 
@@ -113,6 +97,18 @@
 
 ** /@C00/ Clean list design: find the best view & serialize
    - for wall/stream, inbox for messages, group stream etc.
+
+
+
+
+
+** ----------------------sprint#2-------------------------------
+** /@C00/ remove panel subdirectories that are not used anymore
+** /@C00/ Check all current models
+   - check for enableNull for JSON interoperability
+   - Models: Course, Community, User ...
+
+** /@C00/ check if mysql dbs for moodle, kpn available on redundant server
 
 
 
