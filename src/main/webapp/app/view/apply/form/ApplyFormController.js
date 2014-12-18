@@ -11,7 +11,7 @@ Ext.define('Kmbsvle.view.apply.form.ApplyFormController', {
   
     applySubmit: function() {
         var me = this;
-  
+        me.getView().hide();
     }
     
 }); 
