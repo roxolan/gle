@@ -17,7 +17,7 @@ Ext.define('Kmbsvle.view.apply.form.ApplyForm', {
     title: 'Аплікаційна форма',
     frame: true,
     bodyPadding: 5,
-    width: 750,
+    width: 735,
             
     fieldDefaults: {
         labelAlign: 'right',
@@ -186,7 +186,10 @@ Ext.define('Kmbsvle.view.apply.form.ApplyForm', {
                     items: [
                         {
                             xtype: 'fieldcontainer',
-                            layout: 'hbox',
+                            layout: {
+                                type: 'hbox',
+                                pack: 'start'
+                            },
                             combineErrors: true,
                             items: [
                                 {
@@ -208,6 +211,35 @@ Ext.define('Kmbsvle.view.apply.form.ApplyForm', {
                                     reference: 'birthPlace',
                                     margin: '0 0 0 50',
                                     flex: 2                                    
+                                }
+                            ]
+                        },
+                        {
+                            xtype: 'fieldcontainer',
+                            combineErrors: true,
+                            layout: {
+                                type: 'hbox',
+                                pack: 'start'
+                            },
+                            items: [
+                                {
+                                    xtype: 'textfield',
+                                    name: 'citizenship', 
+                                    fieldLabel: 'Громадянство',
+                                    emptyText: '',
+                                    reference: 'citizenship',
+                                    width: 300,
+                                    labelWidth: 100,
+                                    flex: 1                                    
+                                },
+                                {
+                                    xtype: 'textfield',
+                                    name: 'residence', 
+                                    fieldLabel: 'Країна проживання',
+                                    emptyText: '',
+                                    reference: 'residence',
+                                    margin: '0 0 0 50',
+                                    flex: 1                                    
                                 }
                             ]
                         }
