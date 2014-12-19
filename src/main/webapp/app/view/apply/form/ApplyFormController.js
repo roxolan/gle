@@ -12,6 +12,10 @@ Ext.define('Kmbsvle.view.apply.form.ApplyFormController', {
     applySubmit: function() {
         var me = this;
         me.getView().hide();
+    },
+    
+    openUploadForm: function() {
+        Ext.Msg.alert('Opened upload form', 'here to be');
     }
     
 }); 
