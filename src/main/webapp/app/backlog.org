@@ -3,12 +3,25 @@
 ** /@C05/ create application form
 	- F#09
 	- connect to menu item in admin place
+     
+** /@C37/ Create course CRUD form
+   - Enable creating Courses: has to identify group it is related to -
+     and be able to connect to it
+   - CRUD courses in admin & selection
 
-** /@C41/ enable listing of courses - board & single
-	- with corresponding groups
-	- play with combobox element to list groups to select from	
-        - analogously to userlist
-        - learning path idea - make them look like it
+
+** /@C38/ Create assignment window - single
+   - F#24
+
+
+** /@C39/ Create assignment CRUD form
+
+** /@C25/ Create material CRUD form
+    - F#22
+    - files uploaded, managed, CRUD
+    - take into account video standards
+    - When uploaded -> where will they be stored? Directory management
+
 
 ** /@C35/ enable course description page
    - key dates
@@ -18,24 +31,16 @@
      == showcase managers (on program pages?)
    - later similarly lgroup description (prorgam perspective)
      == @C07
-     
-** /@C37/ Create course CRUD form
-   - Enable creating Courses: has to identify group it is related to -
-     and be able to connect to it
-   - CRUD courses in admin & selection
+
+
+** /@C41/ enable listing of courses - board & single
+	- with corresponding groups
+	- play with combobox element to list groups to select from	
+        - analogously to userlist
+        - learning path idea - make them look like it
 
 ** /@C00/ enable listing of assignments - board
    - analogously to userlist
-
-** /@C38/ Create assignment window - single
-   - F#24
-
-** /@C39/ Create assignment CRUD form
-** /@C25/ Create material CRUD form
-    - F#22
-    - files uploaded, managed, CRUD
-    - take into account video standards
-    - When uploaded -> where will they be stored? Directory management
 
 ** /@C07/ Enable showing membership of users/participants in lgroups
 	- some db relation / joints
