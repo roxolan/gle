@@ -17,7 +17,7 @@ Ext.define('Kmbsvle.view.apply.form.ApplyForm', {
     title: 'Аплікаційна форма',
     frame: true,
     bodyPadding: 5,
-    width: 735,
+    width: 835,
             
     fieldDefaults: {
         labelAlign: 'right',
@@ -36,7 +36,7 @@ Ext.define('Kmbsvle.view.apply.form.ApplyForm', {
                     xtype: 'fieldset',
                     title: 'Контактна інформація',
                     defaultType: 'textfield',
-                    width: 605,
+                    width: 705,
                     layout: 'anchor',
                     defaults: {
                         anchor: '100%'
@@ -93,7 +93,7 @@ Ext.define('Kmbsvle.view.apply.form.ApplyForm', {
                                     fieldLabel: 'Робочий email',
                                     name: 'email',
                                     vtype: 'email',
-                                    flex: 1,
+                                    flex: 1
                                 }, 
                                 {
                                     fieldLabel: 'Моб. телефон',
@@ -103,7 +103,7 @@ Ext.define('Kmbsvle.view.apply.form.ApplyForm', {
                                     emptyText: 'xxx-xxx-xxxx',
                                     maskRe: /[\d\-]/,
                                     regex: /^\d{3}-\d{3}-\d{4}$/,
-                                    regexText: 'Повинен мати форматs   xxx-xxx-xxxx'
+                                    regexText: 'Повинен мати формат   xxx-xxx-xxxx'
                                 }
                             ]
                         },
@@ -117,7 +117,7 @@ Ext.define('Kmbsvle.view.apply.form.ApplyForm', {
                                     fieldLabel: 'Особистий email',
                                     name: 'email',
                                     vtype: 'email',
-                                    flex: 1,
+                                    flex: 1
                                 }, 
                                 {
                                     fieldLabel: 'Роб. телефон',
@@ -178,7 +178,7 @@ Ext.define('Kmbsvle.view.apply.form.ApplyForm', {
                 {
                     xtype: 'fieldset',
                     title: 'Персональні дані',
-                    width: 720,
+                    width: 820,
                     layout: 'anchor',
                     defaults: {
                         anchor: '100%'
@@ -256,7 +256,7 @@ Ext.define('Kmbsvle.view.apply.form.ApplyForm', {
                 {
                     xtype: 'fieldset',
                     title: 'Адреса (фактична)',
-                    width: 720,
+                    width: 405,
                     layout: 'anchor',
                     defaults: {
                         anchor: '100%'
@@ -265,6 +265,7 @@ Ext.define('Kmbsvle.view.apply.form.ApplyForm', {
                         {
                             xtype: 'fieldcontainer',
                             combineErrors: true,
+                            margin: '35 0 5 0',
                             layout: {
                                 type: 'hbox',
                                 pack: 'start'
@@ -272,31 +273,32 @@ Ext.define('Kmbsvle.view.apply.form.ApplyForm', {
                             items: [
                                 {
                                     xtype: 'textfield',
-                                    name: 'addrStreet',
-                                    fieldLabel: 'Адреса',
+                                    name: 'factAddrStreet',
+                                    fieldLabel: '',
+                                    hideLabel: 'true',
                                     emptyText: 'вулиця',
-                                    width: 300,
-                                    labelWidth: 100,
-                                    flex: 3                                                        
+                                    // width: 300,
+                                    // labelWidth: 100,
+                                    flex: 5                                                        
                                 },
                                 {
                                     xtype: 'textfield',
-                                    name: 'addrHouse',
+                                    name: 'factAddrHouse',
                                     fieldLabel: '',
                                     hideLabel: 'true',
-                                    emptyText: 'будинок',
-                                    margin: '0 0 0 50',
-                                    width: 100,
+                                    emptyText: 'буд.',
+                                    margin: '0 0 0 30',
+                                    // width: 100,
                                     flex: 1                                                        
                                 },
                                 {
                                     xtype: 'textfield',
-                                    name: 'addrApt',
+                                    name: 'factAddrApt',
                                     fieldLabel: '',
                                     hideLabel: 'true',
-                                    emptyText: 'квартира',
-                                    margin: '0 0 0 50',
-                                    width: 100,
+                                    emptyText: 'кв.',
+                                    margin: '0 0 0 20',
+                                    // width: 100,
                                     flex: 1                                                        
                                 }
                             ]
@@ -311,51 +313,44 @@ Ext.define('Kmbsvle.view.apply.form.ApplyForm', {
                             items: [
                                 {
                                     xtype: 'textfield',
-                                    name: 'addrStreet',
-                                    fieldLabel: ' ',
-                                    labelSeparator: '',
-                                    // hideLabel: 'true',
+                                    name: 'factAddrCity',
+                                    fieldLabel: '',
+                                    // labelSeparator: '',
+                                    hideLabel: 'true',
                                     emptyText: 'місто',
-                                    width: 300,
-                                    labelWidth: 100,
+                                    // width: 300,
+                                    // labelWidth: 100,
                                     flex: 3                                                        
                                 },
                                 {
                                     xtype: 'textfield',
-                                    name: 'addrHouse',
+                                    name: 'factAddrZipcode',
                                     fieldLabel: '',
                                     hideLabel: 'true',
                                     emptyText: 'індекс',
-                                    margin: '0 0 0 50',
-                                    width: 150,
-                                    flex: 1                                                        
+                                    margin: '0 0 0 20',
+                                    // width: 150,
+                                    flex: 2                                                        
                                 },
                                 {
                                     xtype: 'textfield',
-                                    name: 'addrApt',
+                                    name: 'factAddrCountry',
                                     fieldLabel: '',
                                     hideLabel: 'true',
                                     emptyText: 'країна',
-                                    margin: '0 0 0 50',
-                                    width: 200,
-                                    flex: 1                                                        
+                                    margin: '0 0 0 20',
+                                    // width: 200,
+                                    flex: 2                                                        
                                 }
                             ]
-                        } 
+                        }
                     ]
-                }
-            ]
-        },
-        {
-            layout: {
-                type: 'hbox',
-                pack: 'start'                    
-            },
-            items: [
+                },
                 {
                     xtype: 'fieldset',
                     title: 'Постійна адреса (прописка)',
-                    width: 720,
+                    width: 405,
+                    margin: '0 0 0 10',
                     layout: 'anchor',
                     defaults: {
                         anchor: '100%'
@@ -383,33 +378,34 @@ Ext.define('Kmbsvle.view.apply.form.ApplyForm', {
                             items: [
                                 {
                                     xtype: 'textfield',
-                                    name: 'addrStreet',
-                                    fieldLabel: 'Адреса',
+                                    name: 'permAddrStreet',
+                                    fieldLabel: '',
+                                    hideLabel: 'true',
                                     emptyText: 'вулиця',
-                                    width: 300,
-                                    labelWidth: 100,
-                                    flex: 3,
+                                    // width: 300,
+                                    // labelWidth: 100,
+                                    flex: 5,
                                     style: 'opacity:.3'
                                 },
                                 {
                                     xtype: 'textfield',
-                                    name: 'addrHouse',
+                                    name: 'permAddrHouse',
                                     fieldLabel: '',
                                     hideLabel: 'true',
-                                    emptyText: 'будинок',
-                                    margin: '0 0 0 50',
-                                    width: 100,
+                                    emptyText: 'буд.',
+                                    margin: '0 0 0 30',
+                                    // width: 100,
                                     flex: 1,                                                        
                                     style: 'opacity:.3'
                                 },
                                 {
                                     xtype: 'textfield',
-                                    name: 'addrApt',
+                                    name: 'permAddrApt',
                                     fieldLabel: '',
                                     hideLabel: 'true',
-                                    emptyText: 'квартира',
-                                    margin: '0 0 0 50',
-                                    width: 100,
+                                    emptyText: 'кв.',
+                                    margin: '0 0 0 20',
+                                    // width: 100,
                                     flex: 1,
                                     style: 'opacity:.3'
                                 }
@@ -425,36 +421,36 @@ Ext.define('Kmbsvle.view.apply.form.ApplyForm', {
                             items: [
                                 {
                                     xtype: 'textfield',
-                                    name: 'addrStreet',
-                                    fieldLabel: ' ',
-                                    labelSeparator: '',
-                                    // hideLabel: 'true',
+                                    name: 'permAddrCity',
+                                    fieldLabel: '',
+                                    // labelSeparator: '',
+                                    hideLabel: 'true',
                                     emptyText: 'місто',
-                                    width: 300,
-                                    labelWidth: 100,
+                                    // width: 300,
+                                    // labelWidth: 100,
                                     flex: 3,
                                     style: 'opacity:.3'
                                 },
                                 {
                                     xtype: 'textfield',
-                                    name: 'addrHouse',
+                                    name: 'permAddrZipcode',
                                     fieldLabel: '',
                                     hideLabel: 'true',
                                     emptyText: 'індекс',
-                                    margin: '0 0 0 50',
-                                    width: 150,
-                                    flex: 1,
+                                    margin: '0 0 0 20',
+                                    // width: 150,
+                                    flex: 2,
                                     style: 'opacity:.3'
                                 },
                                 {
                                     xtype: 'textfield',
-                                    name: 'addrApt',
+                                    name: 'permAddrCountry',
                                     fieldLabel: '',
                                     hideLabel: 'true',
                                     emptyText: 'країна',
-                                    margin: '0 0 0 50',
-                                    width: 200,
-                                    flex: 1,
+                                    margin: '0 0 0 20',
+                                    // width: 200,
+                                    flex: 2,
                                     style: 'opacity:.3'
                                 }
                             ]
@@ -465,14 +461,14 @@ Ext.define('Kmbsvle.view.apply.form.ApplyForm', {
         },
         {
             layout: {
-                type: 'vbox',
+                type: 'hbox',
                 pack: 'start'                    
             },
             items: [
                 {
                     xtype: 'fieldset',
                     title: 'Професійний досвід (найбільш нещодавній)',
-                    width: 720,
+                    width: 405,
                     layout: 'anchor',
                     defaults: {
                         anchor: '100%'
@@ -502,9 +498,9 @@ Ext.define('Kmbsvle.view.apply.form.ApplyForm', {
                                     fieldLabel: '',
                                     hideLabel: 'true',
                                     emptyText: 'посада / роль',
-                                    margin: '0 0 0 30',
+                                    margin: '0 0 0 20',
                                     width: 100,
-                                    flex: 3                                                       
+                                    flex: 3
                                 },
                                 {
                                     xtype: 'textfield',
@@ -512,7 +508,7 @@ Ext.define('Kmbsvle.view.apply.form.ApplyForm', {
                                     fieldLabel: '',
                                     hideLabel: 'true',
                                     emptyText: 'період',
-                                    margin: '0 0 0 30',
+                                    margin: '0 0 0 20',
                                     width: 100,
                                     flex: 1
                                 }
@@ -529,9 +525,10 @@ Ext.define('Kmbsvle.view.apply.form.ApplyForm', {
                                 {
                                     xtype: 'textarea',
                                     grow: true,
-                                    fieldLabel: 'Обов\'язки та досягнення',
-                                    width: 680,
-                                    labelWidth: 90
+                                    fieldLabel: '',
+                                    hideLabel: 'true',
+                                    emptyText: 'Обов\'язки та досягнення',
+                                    width: 382
                                 }
                             ]
                         }
@@ -540,8 +537,9 @@ Ext.define('Kmbsvle.view.apply.form.ApplyForm', {
                 {
                     xtype: 'fieldset',
                     title: 'Професійний досвід (нещодавній)',
-                    width: 720,
+                    width: 405,
                     layout: 'anchor',
+                    margin: '0 0 0 10',
                     defaults: {
                         anchor: '100%'
                     },
@@ -570,9 +568,9 @@ Ext.define('Kmbsvle.view.apply.form.ApplyForm', {
                                     fieldLabel: '',
                                     hideLabel: 'true',
                                     emptyText: 'посада / роль',
-                                    margin: '0 0 0 30',
+                                    margin: '0 0 0 20',
                                     width: 100,
-                                    flex: 3                                                       
+                                    flex: 3
                                 },
                                 {
                                     xtype: 'textfield',
@@ -580,7 +578,7 @@ Ext.define('Kmbsvle.view.apply.form.ApplyForm', {
                                     fieldLabel: '',
                                     hideLabel: 'true',
                                     emptyText: 'період',
-                                    margin: '0 0 0 30',
+                                    margin: '0 0 0 20',
                                     width: 100,
                                     flex: 1
                                 }
@@ -597,14 +595,26 @@ Ext.define('Kmbsvle.view.apply.form.ApplyForm', {
                                 {
                                     xtype: 'textarea',
                                     grow: true,
-                                    fieldLabel: 'Обов\'язки та досягнення',
-                                    width: 680,
-                                    labelWidth: 90
+                                    fieldLabel: '',
+                                    hideLabel: 'true',
+                                    emptyText: 'Обов\'язки та досягнення',
+                                    width: 382
                                 }
                             ]
                         }
                     ]
                 }
+                
+            ]
+        },
+        {
+            layout: {
+                type: 'vbox',
+                pack: 'start'                    
+            },
+            items: [
+
+
             ]
         }
     ],
