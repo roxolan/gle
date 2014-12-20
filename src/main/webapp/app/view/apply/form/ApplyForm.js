@@ -246,6 +246,366 @@ Ext.define('Kmbsvle.view.apply.form.ApplyForm', {
                     ]
                 }
             ]
+        },
+        {
+            layout: {
+                type: 'hbox',
+                pack: 'start'                    
+            },
+            items: [
+                {
+                    xtype: 'fieldset',
+                    title: 'Адреса (фактична)',
+                    width: 720,
+                    layout: 'anchor',
+                    defaults: {
+                        anchor: '100%'
+                    },
+                    items: [
+                        {
+                            xtype: 'fieldcontainer',
+                            combineErrors: true,
+                            layout: {
+                                type: 'hbox',
+                                pack: 'start'
+                            },
+                            items: [
+                                {
+                                    xtype: 'textfield',
+                                    name: 'addrStreet',
+                                    fieldLabel: 'Адреса',
+                                    emptyText: 'вулиця',
+                                    width: 300,
+                                    labelWidth: 100,
+                                    flex: 3                                                        
+                                },
+                                {
+                                    xtype: 'textfield',
+                                    name: 'addrHouse',
+                                    fieldLabel: '',
+                                    hideLabel: 'true',
+                                    emptyText: 'будинок',
+                                    margin: '0 0 0 50',
+                                    width: 100,
+                                    flex: 1                                                        
+                                },
+                                {
+                                    xtype: 'textfield',
+                                    name: 'addrApt',
+                                    fieldLabel: '',
+                                    hideLabel: 'true',
+                                    emptyText: 'квартира',
+                                    margin: '0 0 0 50',
+                                    width: 100,
+                                    flex: 1                                                        
+                                }
+                            ]
+                        },
+                        {
+                            xtype: 'fieldcontainer',
+                            combineErrors: true,
+                            layout: {
+                                type: 'hbox',
+                                pack: 'start'
+                            },
+                            items: [
+                                {
+                                    xtype: 'textfield',
+                                    name: 'addrStreet',
+                                    fieldLabel: ' ',
+                                    labelSeparator: '',
+                                    // hideLabel: 'true',
+                                    emptyText: 'місто',
+                                    width: 300,
+                                    labelWidth: 100,
+                                    flex: 3                                                        
+                                },
+                                {
+                                    xtype: 'textfield',
+                                    name: 'addrHouse',
+                                    fieldLabel: '',
+                                    hideLabel: 'true',
+                                    emptyText: 'індекс',
+                                    margin: '0 0 0 50',
+                                    width: 150,
+                                    flex: 1                                                        
+                                },
+                                {
+                                    xtype: 'textfield',
+                                    name: 'addrApt',
+                                    fieldLabel: '',
+                                    hideLabel: 'true',
+                                    emptyText: 'країна',
+                                    margin: '0 0 0 50',
+                                    width: 200,
+                                    flex: 1                                                        
+                                }
+                            ]
+                        } 
+                    ]
+                }
+            ]
+        },
+        {
+            layout: {
+                type: 'hbox',
+                pack: 'start'                    
+            },
+            items: [
+                {
+                    xtype: 'fieldset',
+                    title: 'Постійна адреса (прописка)',
+                    width: 720,
+                    layout: 'anchor',
+                    defaults: {
+                        anchor: '100%'
+                    },
+                    items: [
+                        {
+                            xtype: 'checkbox',
+                            name: 'permanentSameAsFactual',
+                            boxLabel: 'Співпадає з фактичною адресою?',
+                            hideLabel: true,
+                            checked: true,
+                            margin: '0 0 10 0',
+                            listeners: {
+                                activate: 'onSameAddressChange',
+                                change: 'onSameAddressChange'
+                            }
+                        },
+                        {
+                            xtype: 'fieldcontainer',
+                            combineErrors: true,
+                            layout: {
+                                type: 'hbox',
+                                pack: 'start'
+                            },
+                            items: [
+                                {
+                                    xtype: 'textfield',
+                                    name: 'addrStreet',
+                                    fieldLabel: 'Адреса',
+                                    emptyText: 'вулиця',
+                                    width: 300,
+                                    labelWidth: 100,
+                                    flex: 3,
+                                    style: 'opacity:.3'
+                                },
+                                {
+                                    xtype: 'textfield',
+                                    name: 'addrHouse',
+                                    fieldLabel: '',
+                                    hideLabel: 'true',
+                                    emptyText: 'будинок',
+                                    margin: '0 0 0 50',
+                                    width: 100,
+                                    flex: 1,                                                        
+                                    style: 'opacity:.3'
+                                },
+                                {
+                                    xtype: 'textfield',
+                                    name: 'addrApt',
+                                    fieldLabel: '',
+                                    hideLabel: 'true',
+                                    emptyText: 'квартира',
+                                    margin: '0 0 0 50',
+                                    width: 100,
+                                    flex: 1,
+                                    style: 'opacity:.3'
+                                }
+                            ]
+                        },
+                        {
+                            xtype: 'fieldcontainer',
+                            combineErrors: true,
+                            layout: {
+                                type: 'hbox',
+                                pack: 'start'
+                            },
+                            items: [
+                                {
+                                    xtype: 'textfield',
+                                    name: 'addrStreet',
+                                    fieldLabel: ' ',
+                                    labelSeparator: '',
+                                    // hideLabel: 'true',
+                                    emptyText: 'місто',
+                                    width: 300,
+                                    labelWidth: 100,
+                                    flex: 3,
+                                    style: 'opacity:.3'
+                                },
+                                {
+                                    xtype: 'textfield',
+                                    name: 'addrHouse',
+                                    fieldLabel: '',
+                                    hideLabel: 'true',
+                                    emptyText: 'індекс',
+                                    margin: '0 0 0 50',
+                                    width: 150,
+                                    flex: 1,
+                                    style: 'opacity:.3'
+                                },
+                                {
+                                    xtype: 'textfield',
+                                    name: 'addrApt',
+                                    fieldLabel: '',
+                                    hideLabel: 'true',
+                                    emptyText: 'країна',
+                                    margin: '0 0 0 50',
+                                    width: 200,
+                                    flex: 1,
+                                    style: 'opacity:.3'
+                                }
+                            ]
+                        } 
+                    ]
+                }
+            ]
+        },
+        {
+            layout: {
+                type: 'vbox',
+                pack: 'start'                    
+            },
+            items: [
+                {
+                    xtype: 'fieldset',
+                    title: 'Професійний досвід (найбільш нещодавній)',
+                    width: 720,
+                    layout: 'anchor',
+                    defaults: {
+                        anchor: '100%'
+                    },
+                    items: [
+                        {
+                            xtype: 'fieldcontainer',
+                            combineErrors: true,
+                            layout: {
+                                type: 'hbox',
+                                pack: 'end'
+                            },
+                            items: [
+                                {
+                                    xtype: 'textfield',
+                                    name: 'company1',
+                                    fieldLabel: '',
+                                    hideLabel: 'true',
+                                    emptyText: 'компанія',
+                                    width: 300,
+                                    labelWidth: 100,
+                                    flex: 2
+                                },
+                                {
+                                    xtype: 'textfield',
+                                    name: 'position1',
+                                    fieldLabel: '',
+                                    hideLabel: 'true',
+                                    emptyText: 'посада / роль',
+                                    margin: '0 0 0 30',
+                                    width: 100,
+                                    flex: 3                                                       
+                                },
+                                {
+                                    xtype: 'textfield',
+                                    name: 'period1',
+                                    fieldLabel: '',
+                                    hideLabel: 'true',
+                                    emptyText: 'період',
+                                    margin: '0 0 0 30',
+                                    width: 100,
+                                    flex: 1
+                                }
+                            ]
+                        },
+                        {
+                            xtype: 'fieldcontainer',
+                            combineErrors: true,
+                            layout: {
+                                type: 'hbox',
+                                pack: 'end'
+                            },
+                            items: [
+                                {
+                                    xtype: 'textarea',
+                                    grow: true,
+                                    fieldLabel: 'Обов\'язки та досягнення',
+                                    width: 680,
+                                    labelWidth: 90
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    xtype: 'fieldset',
+                    title: 'Професійний досвід (нещодавній)',
+                    width: 720,
+                    layout: 'anchor',
+                    defaults: {
+                        anchor: '100%'
+                    },
+                    items: [
+                        {
+                            xtype: 'fieldcontainer',
+                            combineErrors: true,
+                            layout: {
+                                type: 'hbox',
+                                pack: 'end'
+                            },
+                            items: [
+                                {
+                                    xtype: 'textfield',
+                                    name: 'company1',
+                                    fieldLabel: '',
+                                    hideLabel: 'true',
+                                    emptyText: 'компанія',
+                                    width: 300,
+                                    labelWidth: 100,
+                                    flex: 2
+                                },
+                                {
+                                    xtype: 'textfield',
+                                    name: 'position1',
+                                    fieldLabel: '',
+                                    hideLabel: 'true',
+                                    emptyText: 'посада / роль',
+                                    margin: '0 0 0 30',
+                                    width: 100,
+                                    flex: 3                                                       
+                                },
+                                {
+                                    xtype: 'textfield',
+                                    name: 'period1',
+                                    fieldLabel: '',
+                                    hideLabel: 'true',
+                                    emptyText: 'період',
+                                    margin: '0 0 0 30',
+                                    width: 100,
+                                    flex: 1
+                                }
+                            ]
+                        },
+                        {
+                            xtype: 'fieldcontainer',
+                            combineErrors: true,
+                            layout: {
+                                type: 'hbox',
+                                pack: 'end'
+                            },
+                            items: [
+                                {
+                                    xtype: 'textarea',
+                                    grow: true,
+                                    fieldLabel: 'Обов\'язки та досягнення',
+                                    width: 680,
+                                    labelWidth: 90
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
         }
     ],
     buttons: [
