@@ -609,14 +609,153 @@ Ext.define('Kmbsvle.view.apply.form.ApplyForm', {
         },
         {
             layout: {
-                type: 'vbox',
-                pack: 'start'                    
+                type: 'hbox',
+                pack: 'start'
             },
             items: [
-
+                {
+                    xtype: 'fieldset',
+                    title: 'Освіта (найбільш нещодавня)',
+                    width: 405,
+                    layout: 'anchor',
+                    defaults: {
+                        anchor: '100%'
+                    },
+                    items: [
+                        {
+                            xtype: 'fieldcontainer',
+                            combineErrors: true,
+                            layout: {
+                                type: 'hbox',
+                                pack: 'end'
+                            },
+                            items: [
+                                {
+                                    xtype: 'textfield',
+                                    name: 'company1',
+                                    fieldLabel: '',
+                                    hideLabel: 'true',
+                                    emptyText: 'компанія',
+                                    width: 300,
+                                    labelWidth: 100,
+                                    flex: 2
+                                },
+                                {
+                                    xtype: 'textfield',
+                                    name: 'position1',
+                                    fieldLabel: '',
+                                    hideLabel: 'true',
+                                    emptyText: 'посада / роль',
+                                    margin: '0 0 0 20',
+                                    width: 100,
+                                    flex: 3
+                                },
+                                {
+                                    xtype: 'textfield',
+                                    name: 'period1',
+                                    fieldLabel: '',
+                                    hideLabel: 'true',
+                                    emptyText: 'період',
+                                    margin: '0 0 0 20',
+                                    width: 100,
+                                    flex: 1
+                                }
+                            ]
+                        },
+                        {
+                            xtype: 'fieldcontainer',
+                            combineErrors: true,
+                            layout: {
+                                type: 'hbox',
+                                pack: 'end'
+                            },
+                            items: [
+                                {
+                                    xtype: 'textarea',
+                                    grow: true,
+                                    fieldLabel: '',
+                                    hideLabel: 'true',
+                                    emptyText: 'Обов\'язки та досягнення',
+                                    width: 382
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    xtype: 'fieldset',
+                    title: 'Освіта',
+                    width: 405,
+                    layout: 'anchor',
+                    margin: '0 0 0 10',
+                    defaults: {
+                        anchor: '100%'
+                    },
+                    items: [
+                        {
+                            xtype: 'fieldcontainer',
+                            combineErrors: true,
+                            layout: {
+                                type: 'hbox',
+                                pack: 'end'
+                            },
+                            items: [
+                                {
+                                    xtype: 'textfield',
+                                    name: 'company1',
+                                    fieldLabel: '',
+                                    hideLabel: 'true',
+                                    emptyText: 'компанія',
+                                    width: 300,
+                                    labelWidth: 100,
+                                    flex: 2
+                                },
+                                {
+                                    xtype: 'textfield',
+                                    name: 'position1',
+                                    fieldLabel: '',
+                                    hideLabel: 'true',
+                                    emptyText: 'посада / роль',
+                                    margin: '0 0 0 20',
+                                    width: 100,
+                                    flex: 3
+                                },
+                                {
+                                    xtype: 'textfield',
+                                    name: 'period1',
+                                    fieldLabel: '',
+                                    hideLabel: 'true',
+                                    emptyText: 'період',
+                                    margin: '0 0 0 20',
+                                    width: 100,
+                                    flex: 1
+                                }
+                            ]
+                        },
+                        {
+                            xtype: 'fieldcontainer',
+                            combineErrors: true,
+                            layout: {
+                                type: 'hbox',
+                                pack: 'end'
+                            },
+                            items: [
+                                {
+                                    xtype: 'textarea',
+                                    grow: true,
+                                    fieldLabel: '',
+                                    hideLabel: 'true',
+                                    emptyText: 'Обов\'язки та досягнення',
+                                    width: 382
+                                }
+                            ]
+                        }
+                    ]
+                }
 
             ]
         }
+
     ],
     buttons: [
         { 
