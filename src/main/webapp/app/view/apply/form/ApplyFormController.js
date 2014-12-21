@@ -8,6 +8,11 @@ Ext.define('Kmbsvle.view.apply.form.ApplyFormController', {
     routes: { },
   
     control: { },
+    
+    applyReset: function() {
+    	var me = this;
+    	me.getView().getForm().reset();
+    },
   
     applySubmit: function() {
         var me = this;

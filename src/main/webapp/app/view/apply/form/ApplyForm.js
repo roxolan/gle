@@ -724,12 +724,146 @@ Ext.define('Kmbsvle.view.apply.form.ApplyForm', {
                         }
                     ]
                 }
-
+            ]
+        },
+        {
+            layout: {
+                type: 'hbox',
+                pack: 'start'
+            },
+            items: [
+                {
+                    xtype: 'fieldset',
+                    title: 'Рекомендації',
+                    width: 820,
+                    layout: 'anchor',
+                    defaults: {
+                        anchor: '100%'
+                    },
+                    items: [
+                        {
+                            xtype: 'fieldcontainer',
+                            combineErrors: true,
+                            layout: {
+                                type: 'hbox',
+                                pack: 'end'
+                            },
+                            items: [
+                                {
+                                    xtype: 'textfield',
+                                    name: 'recommPerson1FirstName',
+                                    fieldLabel: 'Рекомендант 1',
+                                    labelAlign: 'right',
+                                    emptyText: 'ім\'я',
+                                    labelWidth: 100,
+                                    flex: 4
+                                },
+                                {
+                                    xtype: 'textfield',
+                                    name: 'recommPerson1LastName',
+                                    fieldLabel: '',
+                                    hideLabel: 'true',
+                                    emptyText: 'прізвище',
+                                    margin: '0 0 0 20',
+                                    flex: 3
+                                },
+                                {
+                                    xtype: 'textfield',
+                                    name: 'recommPerson1Company',
+                                    fieldLabel: '',
+                                    hideLabel: 'true',
+                                    emptyText: 'компанія',
+                                    margin: '0 0 0 20',
+                                    flex: 3
+                                },
+                                {
+                                    xtype: 'textfield',
+                                    name: 'recommPerson1Position',
+                                    fieldLabel: '',
+                                    hideLabel: 'true',
+                                    emptyText: 'посада',
+                                    margin: '0 0 0 20',
+                                    flex: 2
+                                },
+                                {
+                                    xtype: 'textfield',
+                                    name: 'recommPerson1Telephone',
+                                    fieldLabel: '',
+                                    hideLabel: 'true',
+                                    emptyText: 'телефон',
+                                    margin: '0 0 0 20',
+                                    flex: 2
+                                }
+                            ]
+                        },
+                        {
+                            xtype: 'fieldcontainer',
+                            combineErrors: true,
+                            layout: {
+                                type: 'hbox',
+                                pack: 'end'
+                            },
+                            items: [
+                                {
+                                    xtype: 'textfield',
+                                    name: 'recommPerson2FirstName',
+                                    fieldLabel: 'Рекомендант 2',
+                                    labelAlign: 'right',
+                                    emptyText: 'ім\'я',
+                                    labelWidth: 100,
+                                    flex: 4
+                                },
+                                {
+                                    xtype: 'textfield',
+                                    name: 'recommPerson2LastName',
+                                    fieldLabel: '',
+                                    hideLabel: 'true',
+                                    emptyText: 'прізвище',
+                                    margin: '0 0 0 20',
+                                    flex: 3
+                                },
+                                {
+                                    xtype: 'textfield',
+                                    name: 'recommPerson2Company',
+                                    fieldLabel: '',
+                                    hideLabel: 'true',
+                                    emptyText: 'компанія',
+                                    margin: '0 0 0 20',
+                                    flex: 3
+                                },
+                                {
+                                    xtype: 'textfield',
+                                    name: 'recommPerson2Position',
+                                    fieldLabel: '',
+                                    hideLabel: 'true',
+                                    emptyText: 'посада',
+                                    margin: '0 0 0 20',
+                                    flex: 2
+                                },
+                                {
+                                    xtype: 'textfield',
+                                    name: 'recommPerson2Telephone',
+                                    fieldLabel: '',
+                                    hideLabel: 'true',
+                                    emptyText: 'телефон',
+                                    margin: '0 0 0 20',
+                                    flex: 2
+                                }
+                            ]
+                        }
+                    ]
+                }
             ]
         }
 
     ],
     buttons: [
+        {
+            text: 'Перевантажити',
+            listeners: {
+                click: 'applyReset'
+            }
+        },
         { 
             text: 'Подати заявку',
             listeners: {
