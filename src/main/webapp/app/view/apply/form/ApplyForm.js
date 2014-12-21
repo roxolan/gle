@@ -121,7 +121,6 @@ Ext.define('Kmbsvle.view.apply.form.ApplyForm', {
                                 }, 
                                 {
                                     fieldLabel: 'Роб. телефон',
-                                    // labelWidth: 100,
                                     name: 'phone',
                                     width: 200,
                                     emptyText: 'xxx-xxx-xxxx',
@@ -142,7 +141,6 @@ Ext.define('Kmbsvle.view.apply.form.ApplyForm', {
                             items: [ 
                                 {
                                     fieldLabel: 'Дом. телефон',
-                                    // labelWidth: 100,
                                     name: 'phone',
                                     width: 200,
                                     emptyText: 'xxx-xxx-xxxx',
@@ -277,8 +275,6 @@ Ext.define('Kmbsvle.view.apply.form.ApplyForm', {
                                     fieldLabel: '',
                                     hideLabel: 'true',
                                     emptyText: 'вулиця',
-                                    // width: 300,
-                                    // labelWidth: 100,
                                     flex: 5                                                        
                                 },
                                 {
@@ -288,7 +284,6 @@ Ext.define('Kmbsvle.view.apply.form.ApplyForm', {
                                     hideLabel: 'true',
                                     emptyText: 'буд.',
                                     margin: '0 0 0 30',
-                                    // width: 100,
                                     flex: 1                                                        
                                 },
                                 {
@@ -298,7 +293,6 @@ Ext.define('Kmbsvle.view.apply.form.ApplyForm', {
                                     hideLabel: 'true',
                                     emptyText: 'кв.',
                                     margin: '0 0 0 20',
-                                    // width: 100,
                                     flex: 1                                                        
                                 }
                             ]
@@ -315,11 +309,8 @@ Ext.define('Kmbsvle.view.apply.form.ApplyForm', {
                                     xtype: 'textfield',
                                     name: 'factAddrCity',
                                     fieldLabel: '',
-                                    // labelSeparator: '',
                                     hideLabel: 'true',
                                     emptyText: 'місто',
-                                    // width: 300,
-                                    // labelWidth: 100,
                                     flex: 3                                                        
                                 },
                                 {
@@ -329,7 +320,6 @@ Ext.define('Kmbsvle.view.apply.form.ApplyForm', {
                                     hideLabel: 'true',
                                     emptyText: 'індекс',
                                     margin: '0 0 0 20',
-                                    // width: 150,
                                     flex: 2                                                        
                                 },
                                 {
@@ -339,7 +329,6 @@ Ext.define('Kmbsvle.view.apply.form.ApplyForm', {
                                     hideLabel: 'true',
                                     emptyText: 'країна',
                                     margin: '0 0 0 20',
-                                    // width: 200,
                                     flex: 2                                                        
                                 }
                             ]
@@ -382,8 +371,6 @@ Ext.define('Kmbsvle.view.apply.form.ApplyForm', {
                                     fieldLabel: '',
                                     hideLabel: 'true',
                                     emptyText: 'вулиця',
-                                    // width: 300,
-                                    // labelWidth: 100,
                                     flex: 5,
                                     style: 'opacity:.3'
                                 },
@@ -394,7 +381,6 @@ Ext.define('Kmbsvle.view.apply.form.ApplyForm', {
                                     hideLabel: 'true',
                                     emptyText: 'буд.',
                                     margin: '0 0 0 30',
-                                    // width: 100,
                                     flex: 1,                                                        
                                     style: 'opacity:.3'
                                 },
@@ -405,7 +391,6 @@ Ext.define('Kmbsvle.view.apply.form.ApplyForm', {
                                     hideLabel: 'true',
                                     emptyText: 'кв.',
                                     margin: '0 0 0 20',
-                                    // width: 100,
                                     flex: 1,
                                     style: 'opacity:.3'
                                 }
@@ -423,11 +408,8 @@ Ext.define('Kmbsvle.view.apply.form.ApplyForm', {
                                     xtype: 'textfield',
                                     name: 'permAddrCity',
                                     fieldLabel: '',
-                                    // labelSeparator: '',
                                     hideLabel: 'true',
                                     emptyText: 'місто',
-                                    // width: 300,
-                                    // labelWidth: 100,
                                     flex: 3,
                                     style: 'opacity:.3'
                                 },
@@ -438,7 +420,6 @@ Ext.define('Kmbsvle.view.apply.form.ApplyForm', {
                                     hideLabel: 'true',
                                     emptyText: 'індекс',
                                     margin: '0 0 0 20',
-                                    // width: 150,
                                     flex: 2,
                                     style: 'opacity:.3'
                                 },
@@ -449,7 +430,6 @@ Ext.define('Kmbsvle.view.apply.form.ApplyForm', {
                                     hideLabel: 'true',
                                     emptyText: 'країна',
                                     margin: '0 0 0 20',
-                                    // width: 200,
                                     flex: 2,
                                     style: 'opacity:.3'
                                 }
@@ -632,32 +612,19 @@ Ext.define('Kmbsvle.view.apply.form.ApplyForm', {
                             items: [
                                 {
                                     xtype: 'textfield',
-                                    name: 'company1',
+                                    name: 'educUniversity1',
                                     fieldLabel: '',
                                     hideLabel: 'true',
-                                    emptyText: 'компанія',
-                                    width: 300,
-                                    labelWidth: 100,
-                                    flex: 2
-                                },
-                                {
-                                    xtype: 'textfield',
-                                    name: 'position1',
-                                    fieldLabel: '',
-                                    hideLabel: 'true',
-                                    emptyText: 'посада / роль',
-                                    margin: '0 0 0 20',
-                                    width: 100,
+                                    emptyText: 'назва закладу',
                                     flex: 3
                                 },
                                 {
                                     xtype: 'textfield',
-                                    name: 'period1',
+                                    name: 'educDegree1',
                                     fieldLabel: '',
                                     hideLabel: 'true',
-                                    emptyText: 'період',
+                                    emptyText: 'ступінь',
                                     margin: '0 0 0 20',
-                                    width: 100,
                                     flex: 1
                                 }
                             ]
@@ -671,12 +638,21 @@ Ext.define('Kmbsvle.view.apply.form.ApplyForm', {
                             },
                             items: [
                                 {
-                                    xtype: 'textarea',
-                                    grow: true,
+                                    xtype: 'textfield',
+                                    name: 'educSpecialty1',
                                     fieldLabel: '',
                                     hideLabel: 'true',
-                                    emptyText: 'Обов\'язки та досягнення',
-                                    width: 382
+                                    emptyText: 'спеціальність',
+                                    flex: 3
+                                },
+                                {
+                                    xtype: 'textfield',
+                                    name: 'educDateGrad1',
+                                    fieldLabel: '',
+                                    hideLabel: 'true',
+                                    emptyText: 'дата зак.',
+                                    margin: '0 0 0 20',
+                                    flex: 2
                                 }
                             ]
                         }
@@ -702,32 +678,19 @@ Ext.define('Kmbsvle.view.apply.form.ApplyForm', {
                             items: [
                                 {
                                     xtype: 'textfield',
-                                    name: 'company1',
+                                    name: 'educUniversity2',
                                     fieldLabel: '',
                                     hideLabel: 'true',
-                                    emptyText: 'компанія',
-                                    width: 300,
-                                    labelWidth: 100,
-                                    flex: 2
-                                },
-                                {
-                                    xtype: 'textfield',
-                                    name: 'position1',
-                                    fieldLabel: '',
-                                    hideLabel: 'true',
-                                    emptyText: 'посада / роль',
-                                    margin: '0 0 0 20',
-                                    width: 100,
+                                    emptyText: 'назва закладу',
                                     flex: 3
                                 },
                                 {
                                     xtype: 'textfield',
-                                    name: 'period1',
+                                    name: 'educDegree2',
                                     fieldLabel: '',
                                     hideLabel: 'true',
-                                    emptyText: 'період',
+                                    emptyText: 'ступінь',
                                     margin: '0 0 0 20',
-                                    width: 100,
                                     flex: 1
                                 }
                             ]
@@ -741,12 +704,21 @@ Ext.define('Kmbsvle.view.apply.form.ApplyForm', {
                             },
                             items: [
                                 {
-                                    xtype: 'textarea',
-                                    grow: true,
+                                    xtype: 'textfield',
+                                    name: 'educSpecialty2',
                                     fieldLabel: '',
                                     hideLabel: 'true',
-                                    emptyText: 'Обов\'язки та досягнення',
-                                    width: 382
+                                    emptyText: 'спеціальність',
+                                    flex: 3
+                                },
+                                {
+                                    xtype: 'textfield',
+                                    name: 'educDateGrad2',
+                                    fieldLabel: '',
+                                    hideLabel: 'true',
+                                    emptyText: 'дата зак.',
+                                    margin: '0 0 0 20',
+                                    flex: 2
                                 }
                             ]
                         }
