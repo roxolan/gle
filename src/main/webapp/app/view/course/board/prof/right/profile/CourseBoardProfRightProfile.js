@@ -1,5 +1,5 @@
 Ext.define('Kmbsvle.view.course.board.prof.right.profile.CourseBoardProfRightProfile', {
-    extend: 'Ext.panel.Panel',
+    extend: 'Ext.form.Panel',
   
     alias: 'widget.course.board.prof.right.profile',
     controller: 'course.board.prof.right.profile',

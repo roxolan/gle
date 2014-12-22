@@ -5,7 +5,8 @@ Ext.define('Kmbsvle.view.course.board.prof.left.menu.CourseBoardProfLeftMenuCont
   
     requires: [
         'Kmbsvle.view.course.board.prof.center.list.CourseBoardProfCenterList',
-        'Kmbsvle.view.course.board.prof.right.profile.CourseBoardProfRightProfile'
+        'Kmbsvle.view.course.board.prof.right.profile.CourseBoardProfRightProfile',
+        'Kmbsvle.view.course.single.form.CreateForm'
     ],
 
     routes: {
@@ -21,7 +22,8 @@ Ext.define('Kmbsvle.view.course.board.prof.left.menu.CourseBoardProfLeftMenuCont
     createCourse: function() {
         var me = this;
         var rhld = Ext.getCmp('rightholder');
-        var courseFormPanel = Ext.create('widget.course.board.right.form');
+        var courseFormPanel = Ext.create('widget.course.board.prof.right.profile');
+        Kmbsvle.console(courseFormPanel);
         var courseForm = courseFormPanel.getForm();
         
         rhld.removeAll();
@@ -35,7 +37,11 @@ Ext.define('Kmbsvle.view.course.board.prof.left.menu.CourseBoardProfLeftMenuCont
         });
         
         courseForm.loadRecord(newCourse);
-        courseFormPanel.lookupReference('deleteBtn').disable();                
+    },
+
+    createCourseModal: function() {
+        var me = this;
+        Ext.create('widget.course.single.form.create');
     }
 
 

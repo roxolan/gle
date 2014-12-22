@@ -56,7 +56,7 @@ Ext.define('Kmbsvle.view.course.board.prof.left.menu.CourseBoardProfLeftMenu', {
                     glyph: 'xf055@FontAwesome',
                     text: 'Створити курс',
                     listeners: {
-                        click: 'createCourse'
+                        click: 'createCourseModal'
                     }
                 }
             ]
