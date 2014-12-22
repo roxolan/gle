@@ -41,7 +41,8 @@ Ext.define('Kmbsvle.view.course.board.prof.left.menu.CourseBoardProfLeftMenuCont
 
     createCourseModal: function() {
         var me = this;
-        Ext.create('widget.course.single.form.create');
+        var courseCreateForm = Ext.create('widget.course.single.form.create');
+        Kmbsvle.console(courseCreateForm);
     }
 
 
