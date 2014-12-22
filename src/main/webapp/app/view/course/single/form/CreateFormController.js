@@ -1,4 +1,4 @@
-Ext.define('Kmbsvle.course.single.form.CreateFormController', {
+Ext.define('Kmbsvle.view.course.single.form.CreateFormController', {
     extend: 'Kmbsvle.view.base.BaseViewController',
 
     alias: 'controller.course.single.form.create',
@@ -13,6 +13,14 @@ Ext.define('Kmbsvle.course.single.form.CreateFormController', {
 
     addProfessorToCourse: function() {
         
+    },
+    
+    courseFormReset: function() {
+        this.getView().getForm().reset();
+    },
+    
+    courseCreate: function() {
+        this.getView().hide();
     }
 
 });

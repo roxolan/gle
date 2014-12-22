@@ -10,13 +10,11 @@ Ext.define('Kmbsvle.view.apply.form.ApplyFormController', {
     control: { },
     
     applyReset: function() {
-    	var me = this;
-    	me.getView().getForm().reset();
+    	this.getView().getForm().reset();
     },
   
     applySubmit: function() {
-        var me = this;
-        me.getView().hide();
+        this.getView().hide();
     },
     
     openUploadForm: function() {
