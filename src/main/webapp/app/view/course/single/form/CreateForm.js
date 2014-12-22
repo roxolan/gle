@@ -74,48 +74,43 @@ Ext.define('Kmbsvle.view.course.single.form.CreateForm', {
                                 type: 'hbox',
                                 pack: 'start'
                             },
-                            // defaultType: 'textfield',
-                            // margin: '0 0 5 0',
-                            items: [
-                                {
-                                    fieldLabel: 'Код курсу',
-                                    name: 'courseCode',
-                                    xtype: 'textfield',
-                                    labelWidth: 100,
-                                    flex: 1
-                                }, 
-                                {
-                                    fieldLabel: 'Програма',
-                                    xtype: 'combobox',
-                                    // labelWidth: 100,
-                                    name: 'lgroup'
-                                    // width: 200
-                                    // TODO add store
-                                }
-                            ]
-                        },
-                        {
-                            xtype: 'fieldcontainer',
-                            layout: {
-                                type: 'hbox',
-                                pack: 'start'
-                            },
                             defaultType: 'textfield',
                             // margin: '0 0 5 0',
                             items: [
                                 {
-                                    fieldLabel: 'Кількість годин',
-                                    name: 'hours',
+                                    xtype: 'combobox',
+                                    fieldLabel: 'Програма',
                                     labelWidth: 100,
-                                    width: 140,
+                                    name: 'lgroup',
+                                    width: 200,
+                                    flex: 2
+                                    // TODO add store
+                                },
+                                {
+                                    fieldLabel: 'Код курсу',
+                                    hideLabel: 'true',
+                                    name: 'courseCode',
+                                    emptyText: 'код курсу',
+                                    width: 150,
+                                    margin: '0 0 0 10',
+                                    flex: 2
+                                },
+                                {
+                                    fieldLabel: 'Кількість годин',
+                                    hideLabel: 'true',
+                                    name: 'hours',
+                                    emptyText: 'години',
+                                    width: 70,
+                                    margin: '0 0 0 10',
                                     flex: 1
                                 },
                                 {
                                     fieldLabel: 'Кількість кредитів',
+                                    hideLabel: 'true',
                                     name: 'credits',
-                                    labelWidth: 100,
-                                    width: 140,
-                                    margin: '0 0 0 200',
+                                    emptyText: 'кредити',
+                                    width: 70,
+                                    margin: '0 0 0 10',
                                     flex: 1
                                 }
                             ]
