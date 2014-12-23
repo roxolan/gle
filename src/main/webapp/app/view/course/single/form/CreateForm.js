@@ -8,6 +8,7 @@ Ext.define('Kmbsvle.view.course.single.form.CreateForm', {
 
     requires: [
         'Ext.form.field.Text',
+        'Ext.tree.View',
         'Kmbsvle.view.course.single.form.CreateFormController'
     ],
     controller: 'course.single.form.create',
@@ -235,8 +236,16 @@ Ext.define('Kmbsvle.view.course.single.form.CreateForm', {
                 {
                     xtype: 'fieldset',
                     title: 'Модулі курсу',
-                    width: 820
+                    width: 820,
                     // visual tree to add, select, regroup course topics & subtopics
+                    items: [
+                        {
+                            xtype: 'treepanel',
+                            width: 780,
+                            height: 300,
+                            store: 'CourseModules'
+                        }
+                    ]
                 },
                 {
                     xtype: 'fieldset',
