@@ -37,7 +37,7 @@ Ext.define('Kmbsvle.view.course.single.form.CreateForm', {
                     xtype: 'fieldset',
                     title: 'Загальна інформація',
                     defaultType: 'textfield',
-                    width: 720,
+                    width: 700,
                     layout: 'anchor',
                     defaults: {
                         anchor: '100%'
@@ -136,17 +136,21 @@ Ext.define('Kmbsvle.view.course.single.form.CreateForm', {
                     ]
                 },
                 {
-                    xtype: 'image',
+                    // xtype: 'image',
+                    xtype: 'filefield',
                     autoRender: true,
-                    src: 'resources/img/dummy_course_logo.png',
-                    width: 64,
-                    height: 64,
-                    margin: '10 20 0 30',
-                    listeners: {
-                        el: {
-                            click: 'openCourseLogoUploadForm'
-                        }
-                    }
+                    buttonOnly: true,
+                    hideLabel: true,
+                    buttonConfig: {
+                        text: '',
+                        // icon: 'resources/img/dummy_course_logo.png',
+                        // iconCls: 'course-logo-update-btn',
+                        glyph: 'xf0a2@FontAwesome',
+                        width: 64,
+                        height: 64,
+                        scale: 'large'
+                    },
+                    margin: '10 50 0 30'
                 }
             ]
         },
@@ -184,11 +188,15 @@ Ext.define('Kmbsvle.view.course.single.form.CreateForm', {
                                     // TODO add professor store
                                 },
                                 {
-                                    xtype: 'image',
+                                    xtype: 'button',
                                     autoRender: true,
-                                    src: 'resources/img/add_professor_btn.png',
+                                    text: '',
+                                    // src: 'resources/img/add_professor_btn.png',
+                                    // iconCls: 'professor-add-to-course-btn',
+                                    glyph: 'xf19d@FontAwesome',
                                     width: 32,
                                     height: 32,
+                                    scale: 'small',
                                     margin: '0 0 0 20',
                                     listeners: {
                                         el: {
@@ -221,7 +229,7 @@ Ext.define('Kmbsvle.view.course.single.form.CreateForm', {
     ],
     buttons: [
         {
-            text: 'Перевантажити',
+            text: 'Очистити',
             listeners: {
                 click: 'courseFormReset'
             }
