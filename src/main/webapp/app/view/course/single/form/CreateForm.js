@@ -178,14 +178,38 @@ Ext.define('Kmbsvle.view.course.single.form.CreateForm', {
                             },
                             items: [
                                 {
+                                    xtype: 'menu',
+                                    // width: 210,
+                                    height: 32,
+                                    floating: false,
+                                    layout: {
+                                        type: 'hbox',
+                                        pack: 'end'
+                                    },
+                                    items: [
+                                        {
+                                            xtype: 'menuitem',
+                                            reference: 'courseCreationFormFirstProfessor',
+                                            text: 'Ім\'я викладача',
+                                            glyph: 'xf19d@FontAwesome',
+                                            listeners: {
+                                                click: 'openProfessorProfileEdit'
+                                            }
+                                        }
+                                    ]
+                                    // flex: 1
+                                },
+                                {
                                     fieldLabel: '',
                                     xtype: 'combobox',
-                                    emptyText: 'оберіть викладача',
+                                    emptyText: 'оберіть другого викладача',
                                     labelWidth: 100,
                                     name: 'professor',
-                                    flex: 1,
-                                    width: 200
-                                    // TODO add professor store
+                                    // flex: 1,
+                                    width: 200,
+                                    height: 32,
+                                    margin: '0 0 0 20'
+                                    // TODO add second professor store
                                 },
                                 {
                                     xtype: 'button',
