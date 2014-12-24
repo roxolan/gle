@@ -12,45 +12,22 @@ Ext.define('Kmbsvle.view.course.selection.prof.left.list.CourseSelectionProfLeft
     ],  
   
     header: false,
-    width: 250,
+    width: 300,
     items: [
+        {
+            xtype: 'treepanel',
+            // width: 300,
+            store: 'CourseSelectionProfLeftMenuListStore'
+            // nodeType: 'lgroup',
+            // name: 'EMBA24'
+            // padding: '0 0 0 0',
+            // store: 'courseselectionprofmenulist'
+            // rootVisible: false
+        },
         {
             xtype: 'menu',
             floating: false,
             items: [
-                { 
-                    xtype: 'menuitem',
-                    text: 'Поточний курс №1 у списку викладача',
-                    glyph: 'xf0a2@FontAwesome',
-                    listeners: {
-                        click: 'openCourseSingleProf'
-                    }
-                },
-                { 
-                    xtype: 'menuseparator' 
-                },
-                { 
-                    xtype: 'menuitem',
-                    text: 'Поточний курс №2 у списку викладача',
-                    glyph: 'xf0a2@FontAwesome',
-                    listeners: {
-                        click: 'openCourseSingleProf'
-                    }
-                },
-                { 
-                    xtype: 'menuseparator' 
-                },
-                { 
-                    xtype: 'menuitem',
-                    text: 'Поточний курс №3 у списку викладача',
-                    glyph: 'xf0a2@FontAwesome',
-                    listeners: {
-                        click: 'openCourseSingleProf'
-                    }
-                },
-                { 
-                    xtype: 'menuseparator' 
-                },                
                 { 
                     xtype: 'menuitem',
                     text: 'Управління курсами',
