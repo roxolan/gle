@@ -859,7 +859,7 @@ Ext.define('Kmbsvle.view.apply.form.ApplyForm', {
     ],
     buttons: [
         {
-            text: 'Перевантажити',
+            text: 'Оновити',
             listeners: {
                 click: 'applyReset'
             }

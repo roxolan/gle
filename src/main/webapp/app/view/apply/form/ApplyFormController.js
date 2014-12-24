@@ -18,7 +18,7 @@ Ext.define('Kmbsvle.view.apply.form.ApplyFormController', {
     },
     
     openUploadForm: function() {
-        Ext.Msg.alert('Opened upload form', 'here to be');
+        Ext.Msg.alert('Opened upload form', 'to upload user photo');
     },
     
     onSameAddressChange: function(box, checked) {
