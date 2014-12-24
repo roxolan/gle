@@ -235,7 +235,7 @@ Ext.define('Kmbsvle.view.course.single.form.CreateForm', {
                 },
                 {
                     xtype: 'panel',
-                    title: 'Модулі курсу',
+                    title: 'Модулі та завдання курсу',
                     width: 820,
                     items: [
                         {
@@ -251,22 +251,26 @@ Ext.define('Kmbsvle.view.course.single.form.CreateForm', {
                             dock: 'bottom',
                             items: [
                                 {
-                                    xtype: 'textfield'
+                                    xtype: 'textfield',
+                                    width: 200
                                 },
                                 {
                                     xtype: 'button',
                                     text: 'Додати модуль'
+                                },
+                                {
+                                    xtype: 'textfield',
+                                    width: 200,
+                                    margin: '0 8 0 40'
+                                },
+                                {
+                                    xtype: 'button',
+                                    text: 'Додати завдання'
                                 }
                             ]
                         }
 
                     ]
-                },
-                {
-                    xtype: 'fieldset',
-                    title: 'Завдання з курсу',
-                    width: 820
-                    // visual assignment creator buttons with datepickers etc.
                 }
 
 
