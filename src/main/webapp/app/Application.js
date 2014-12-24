@@ -27,7 +27,7 @@ Ext.define('Kmbsvle.Application', {
         'MainController'
     ],
 
-    stores: ['CourseModules'],
+    stores: ['CourseModules', 'CourseSelectionProfLeftMenuListStore'],
 
     models: ['User', 'Course'],
 
