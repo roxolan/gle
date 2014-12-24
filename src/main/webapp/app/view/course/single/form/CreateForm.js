@@ -203,7 +203,7 @@ Ext.define('Kmbsvle.view.course.single.form.CreateForm', {
                                 {
                                     fieldLabel: '',
                                     xtype: 'combobox',
-                                    emptyText: 'оберіть другого викладача',
+                                    emptyText: 'додати другого викладача',
                                     labelWidth: 100,
                                     name: 'professor',
                                     // flex: 1,
@@ -234,17 +234,32 @@ Ext.define('Kmbsvle.view.course.single.form.CreateForm', {
                     ]
                 },
                 {
-                    xtype: 'fieldset',
+                    xtype: 'panel',
                     title: 'Модулі курсу',
                     width: 820,
-                    // visual tree to add, select, regroup course topics & subtopics
                     items: [
                         {
                             xtype: 'treepanel',
                             width: 780,
-                            height: 300,
+                            height: 250,
                             store: 'CourseModules'
                         }
+                    ],
+                    dockedItems: [
+                        {
+                            xtype: 'toolbar',
+                            dock: 'bottom',
+                            items: [
+                                {
+                                    xtype: 'textfield'
+                                },
+                                {
+                                    xtype: 'button',
+                                    text: 'Додати модуль'
+                                }
+                            ]
+                        }
+
                     ]
                 },
                 {
