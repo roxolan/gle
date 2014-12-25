@@ -1,19 +1,26 @@
 * High priority, SMART tasks	
+** /flow/ group.board.right editing profile -> leave just buttons "Edit" and "goto"
+   - instead of "save" - inspired by course.board right profile
+   - edit -> group.single profile editing (редагувати профіль програми)
+        -- special command / button to edit learning path
 
-** /@C05/ create application form
-	- F#09
-	- connect to menu item in admin place
-     
-** /@C37/ Create course CRUD form
-   - Enable creating Courses: has to identify group it is related to -
-     and be able to connect to it
-   - CRUD courses in admin & selection
+** /flow/ group.board.right profile to contain tree of courses
+   - current courses & courses that are finished - separated
+   - open courses directly on click (some intermediary profile?)
+
+** /flow/ teach.selection - move course tree to center
+
+** /flow/ course.board -> course.single with preserving the name & data
+   - group number
+
+** /flow/ group.single for stud
+
+
+
 
 
 ** /@C38/ Create assignment window - single
    - F#24
-
-
 ** /@C39/ Create assignment CRUD form
 
 ** /@C25/ Create material CRUD form
@@ -115,6 +122,11 @@
 
 ** /@C00/ check if mysql dbs for moodle, kpn available on redundant server
 
+
+** /@C37/ CRUD course creation form
+   - Enable creating Courses: has to identify group it is related to -
+     and be able to connect to it
+   - CRUD courses in admin & selection
 
 
 * Medium priority, to be SMARTed
@@ -232,9 +244,16 @@ http://www.dhtmlx.com/docs/products/dhtmlxScheduler/index.shtml
     compared to course.single.stud 
 
 
-
 *** 4./@C00/ check if right profile for professor's courses selection has an additional button opening editing form - board.right.form
 	- in course.selection
 	- check if student's and professor's selections are differentiated
 *** 5./@C00/ check if disabled double clicking 
    - for central panel userlist
+
+** [2014-12-24 Wed]
+*** 6./@C05/ create unconnected stub for application form
+	- F#09
+	- connect to menu item in admin place
+
+** [2014-12-25 Thu]
+*** /flow/ course name /CSR/ return to within the leaf / disable no-whitespace formatting
