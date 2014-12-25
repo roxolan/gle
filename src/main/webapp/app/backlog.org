@@ -1,5 +1,8 @@
-* High priority, SMART tasks	
-** /flow/ group.board.right editing profile -> leave just buttons "Edit" and "goto"
+* High priority, SMART tasks
+
+** /flow/ lgroup.board -> lgroup.board.manage
+	
+** /flow/ lgroup.board.right editing profile -> leave just buttons "Edit" and "goto"
    - instead of "save" - inspired by course.board right profile
    - edit -> group.single profile editing (редагувати профіль програми)
         -- special command / button to edit learning path
@@ -257,3 +260,5 @@ http://www.dhtmlx.com/docs/products/dhtmlxScheduler/index.shtml
 
 ** [2014-12-25 Thu]
 *** /flow/ course name /CSR/ return to within the leaf / disable no-whitespace formatting
+*** /flow/ remove redundant items from admin menu
+    - that are repeated in management menu
